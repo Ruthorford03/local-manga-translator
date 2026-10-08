@@ -1,0 +1,20 @@
+# Main runtime: install the CPU torch/torchvision wheels first (see SETUP).
+-r tools/BallonsTranslator/requirements.txt
+torch==2.14.0+cpu
+torchvision==0.29.0+cpu
+transformers==4.57.6
+openai==3.22.1
+PyQt6==6.11.0
+PyQt6-Qt6==6.11.2
+qtpy==2.4.3
+numpy==2.5.3
+Pillow==12.3.0
+opencv-python==5.0.0.93
+opencc-python-reimplemented==0.1.7
+requests==2.34.2
+jaconv==0.5.0
+fugashi==1.5.2
+unidic-lite==1.0.8
+spacy-pkuseg==1.0.1
+einops==0.8.2
+numba==0.67.0

@@ -1,0 +1,66 @@
+{
+  "module": {
+    "textdetector": "ctd",
+    "ocr": "manga_ocr",
+    "translator": "Sakura",
+    "inpainter": "opencv-tela",
+    "enable_detect": true,
+    "enable_ocr": true,
+    "enable_translate": true,
+    "enable_inpaint": true,
+    "filter_mask_by_bboxes": false,
+    "textdetector_params": {
+      "ctd": {
+        "device": "cpu",
+        "detect_size": 1280,
+        "mask dilate size": 5
+      }
+    },
+    "ocr_params": {
+      "manga_ocr": {
+        "device": "cpu"
+      }
+    },
+    "translate_source": "日本語",
+    "translate_target": "繁體中文",
+    "llm_translate_vision": false,
+    "llm_translate_context": "page",
+    "llm_glossary_path": "",
+    "llm_glossary_mode": "matching",
+    "translator_llm_id": "",
+    "llm_profiles": [],
+    "translator_params": {
+      "Sakura": {
+        "api baseurl": "http://127.0.0.1:11436/v1",
+        "version": "1.0",
+        "dict path": "",
+        "max tokens": 2048,
+        "retry attempts": 1,
+        "timeout": 180,
+        "low vram mode": true,
+        "do enlarge small kana": false,
+        "force apply dict": false
+      }
+    },
+    "llm_translate_summary_memory": false
+  },
+  "package_manager": {
+    "auto_install_missing_packages": false
+  },
+  "mirrors": {
+    "huggingface": null,
+    "pypi": null
+  },
+  "check_update_on_startup": false,
+  "open_recent_on_startup": false,
+  "restore_ocr_empty": true,
+  "let_family_flag": 1,
+  "imgsave_ext": ".png",
+  "imgsave_quality": 100,
+  "global_fontformat": {
+    "font_family": "Microsoft JhengHei",
+    "font_size": 24,
+    "vertical": true
+  },
+  "display_lang": "zh_TW"
+}

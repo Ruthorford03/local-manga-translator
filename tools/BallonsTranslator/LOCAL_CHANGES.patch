@@ -1,0 +1,74 @@
+--- a/ballontranslator/modules/translators/trans_sakura.py
++++ b/ballontranslator/modules/translators/trans_sakura.py
+@@ -418,23 +418,23 @@
+ 
+     @property 
+     def timeout(self) -> int:
+-        return self.params['timeout']
++        return self.get_param_value('timeout')
+     
+     @property
+     def retry_attempts(self) -> int:
+-        return self.params['retry attempts']
++        return self.get_param_value('retry attempts')
+     
+     @property
+     def repeat_detect_threshold(self) -> int:
+-        return self.params['repeat detect threshold']
++        return self.get_param_value('repeat detect threshold')
+ 
+     @property
+     def max_tokens(self) -> int:
+-        return self.params['max tokens']
++        return self.get_param_value('max tokens')
+ 
+     @property
+     def api_base_raw(self) -> str:
+-        return self.params['api baseurl']
++        return self.get_param_value('api baseurl')
+ 
+     @property
+     def api_base(self) -> str:
+@@ -447,19 +447,19 @@
+ 
+     @property
+     def sakura_version(self) -> str:
+-        return self.params['version']['value']
++        return self.get_param_value('version')
+ 
+     @property
+     def dict_path(self) -> str:
+-        return self.params['dict path']
++        return self.get_param_value('dict path')
+ 
+     @property
+     def force_apply_dict(self) -> bool:
+-        return self.params['force apply dict']['value']
++        return self.get_param_value('force apply dict')
+     
+     @property
+     def do_enlarge_small_kana(self) -> bool:
+-        return self.params['do enlarge small kana']['value']
++        return self.get_param_value('do enlarge small kana')
+ 
+     def _setup_translator(self):
+         self.lang_map['简体中文'] = 'Simplified Chinese'
+@@ -479,11 +479,13 @@
+         super().updateParam(param_key, param_content)
+ 
+         if param_key == 'dict path' or param_key == 'version':
+-            self.set_dict_path(self.params['dict path'])
+-
+-    def set_dict_path(self, path: str):
+-        self.params['dict path'] = path
+-        self.sakura_dict = SakuraDict(path, self.logger, self.sakura_version)
++            self.set_dict_path(self.dict_path)
++
++    def set_dict_path(self, path: str) -> None:
++        # Keep the standardized value wrapper used by saved config and the UI.
++        self.set_param_value('dict path', path)
++        version = '1.0' if self.sakura_version == 'galtransl-v1' else self.sakura_version
++        self.sakura_dict = SakuraDict(path, self.logger, version)
+         self.logger.debug(f'更新Sakura字典路径为: {path}')
+ 
+     @staticmethod

@@ -1,0 +1,23 @@
+name: Source and offline tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install only offline-test dependencies
+        run: python -m pip install Pillow==12.3.0 PyQt6==6.11.0 PyQt6-Qt6==6.11.2
+      - name: Synthetic and offscreen GUI tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python -B -X utf8 -m unittest discover -s tests -v
+      - name: Check release contents
+        run: python -B -X utf8 scripts/check_public_tree.py

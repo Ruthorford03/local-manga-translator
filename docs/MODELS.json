@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "measured_date": "2026-10-08",
+  "note": "Weights are excluded from Git. SHA-256 pins content even for URLs using main. Magi and Sakura weight hashes were verified against upstream LFS metadata in the original download records; smaller asset hashes bind the observed local installation.",
+  "files": [
+    {
+      "path": "tools/local-manga-translation/sakura-14b-qwen2.5-v1.0-q6k.gguf",
+      "url": "https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2.5-v1.0-GGUF/resolve/f370f85114971e556ba9ab7cdfd00fe9fe88dd53/sakura-14b-qwen2.5-v1.0-q6k.gguf",
+      "bytes": 12124683584,
+      "sha256": "2c1fc22a43c15cc42cf1443822115b979c2f9143671f5369df0158d9fc184b77",
+      "group": "sakura"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/config.json",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/config.json",
+      "bytes": 13383,
+      "sha256": "d55b3b0b6c16d61c97c4afd79b0d0e9b2371a4a3442f7dbef2ff838cb089e19f",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/configuration_magiv2.py",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/configuration_magiv2.py",
+      "bytes": 1696,
+      "sha256": "28e65be99f4287dea300a49ae65ced263054b756113d1f37baf8f1b0fd94e72b",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/modelling_magiv2.py",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/modelling_magiv2.py",
+      "bytes": 40723,
+      "sha256": "1188ebcb84985fe812e222e51bf0889c586bdbe6f2913f7cbefaf43ffe74e6de",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/processing_magiv2.py",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/processing_magiv2.py",
+      "bytes": 10060,
+      "sha256": "2ff8e760e65848ee5d02eaca84ce24381ced97e4cbcf26d2f838d05362a946a8",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/pytorch_model.bin",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/pytorch_model.bin",
+      "bytes": 2063693064,
+      "sha256": "56392403204d3a4cca38694a3a260a6929d741869d802d6b14de35b4eab4c4b8",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/README.md",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/README.md",
+      "bytes": 4607,
+      "sha256": "e66a3e036dddd8b2437a1caa80e4bab5c1685220be498b5e82d230ce679873a2",
+      "group": "magi"
+    },
+    {
+      "path": "tools/magi-pilot/models/magiv2/utils.py",
+      "url": "https://huggingface.co/ragavsachdeva/magiv2/resolve/fbc890fec52977142e8ee00bfe26e9458b65517c/utils.py",
+      "bytes": 16433,
+      "sha256": "ea9d9182ee2d02f8dba1cca634dfc3e3528bab50de9e9efa286822ac5ee3195f",
+      "group": "magi"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/comictextdetector.pt",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/comictextdetector.pt",
+      "bytes": 79948869,
+      "sha256": "1f90fa60aeeb1eb82e2ac1167a66bf139a8a61b8780acd351ead55268540cccb",
+      "group": "ctd"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/comictextdetector.pt.onnx",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/comictextdetector.pt.onnx",
+      "bytes": 94669756,
+      "sha256": "1a86ace74961413cbd650002e7bb4dcec4980ffa21b2f19b86933372071d718f",
+      "group": "ctd"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/config.json",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/config.json",
+      "bytes": 77546,
+      "sha256": "8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/preprocessor_config.json",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/preprocessor_config.json",
+      "bytes": 228,
+      "sha256": "af4eb4d79cf61b47010fc0bc9352ee967579c417423b4917188d809b7e048948",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/pytorch_model.bin",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/pytorch_model.bin",
+      "bytes": 444135475,
+      "sha256": "c63e0bb5b3ff798c5991de18a8e0956c7ee6d1563aca6729029815eda6f5c2eb",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/README.md",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/README.md",
+      "bytes": 705,
+      "sha256": "32f413afcc4295151e77d25202c5c5d81ef621b46f947da1c3bde13256dc0d5f",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/special_tokens_map.json",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/special_tokens_map.json",
+      "bytes": 112,
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/tokenizer_config.json",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/tokenizer_config.json",
+      "bytes": 486,
+      "sha256": "d775ad1deac162dc56b84e9b8638f95ed8a1f263d0f56f4f40834e26e205e266",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/manga-ocr-base/vocab.txt",
+      "url": "https://huggingface.co/kha-white/manga-ocr-base/resolve/main/vocab.txt",
+      "bytes": 24072,
+      "sha256": "344fbb6b8bf18c57839e924e2c9365434697e0227fac00b88bb4899b78aa594d",
+      "group": "ocr"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/pkuseg/postag/features.pkl",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/postag.zip",
+      "bytes": 3974710,
+      "sha256": "17d734c186a0f6e76d15f4990e766a00eed5f72bea099575df23677435ee749d",
+      "group": "pkuseg",
+      "archive_member": "features.pkl"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/pkuseg/postag/weights.npz",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/postag.zip",
+      "bytes": 46563354,
+      "sha256": "2bbd53b366be82a1becedb4d29f76296b36ad7560b6a8c85d54054900336d59a",
+      "group": "pkuseg",
+      "archive_member": "weights.npz"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/pkuseg/spacy_ontonotes/features.msgpack",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/spacy_ontonotes.zip",
+      "bytes": 22685181,
+      "sha256": "fd4322482a7018b9bce9216173ae9d2848efe6d310b468bbb4383fb55c874a18",
+      "group": "pkuseg",
+      "archive_member": "features.msgpack"
+    },
+    {
+      "path": "tools/BallonsTranslator/data/models/pkuseg/spacy_ontonotes/weights.npz",
+      "url": "https://huggingface.co/dreMaz/mit_models/resolve/main/spacy_ontonotes.zip",
+      "bytes": 37508754,
+      "sha256": "5ada075eb25a854f71d6e6fa4e7d55e7be0ae049255b1f8f19d05c13b1b68c9e",
+      "group": "pkuseg",
+      "archive_member": "weights.npz"
+    }
+  ]
+}

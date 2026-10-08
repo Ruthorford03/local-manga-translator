@@ -1,0 +1,382 @@
+"""Shared request dispatch for API Chat Completions and Codex Responses."""
+
+from __future__ import annotations
+
+import re
+import threading
+import time
+import uuid
+from dataclasses import dataclass
+from typing import Any, Dict, Optional, Tuple
+
+from .context.errors import provider_error_message
+from .context.token_usage import format_completion_token_usage
+from .exceptions import (
+    LLMApiKeyRequiredError,
+    LLMOutputLimitError,
+    LLMRequestStopped,
+    LLMUserActionRequiredError,
+)
+from ballontranslator.utils.llm_profiles import (
+    LLMProfile,
+    PROVIDER_DEFAULTS,
+    THINKING_AUTO,
+    THINKING_DISABLED,
+    normalize_thinking_level,
+    resolve_api_key,
+)
+
+
+OPENAI_MAX_TOKENS_MODELS = frozenset({
+    "gpt-4.1",
+    "gpt-4.1-mini",
+    "gpt-4o",
+    "gpt-4o-mini",
+})
+_CHAT_COMPLETIONS_SUFFIX = '/chat/completions'
+
+
+def _normalized_base_url(url: str) -> str:
+    return str(url or '').strip().rstrip('/')
+
+
+def _openai_sdk_base_url(url: str) -> str:
+    """Return the API base expected by the OpenAI SDK chat resource.
+
+    Provider documentation often presents the complete HTTP endpoint, while
+    ``client.chat.completions.create`` adds that endpoint path itself.
+
+    >>> _openai_sdk_base_url('https://example.test/v1/chat/completions/')
+    'https://example.test/v1'
+    >>> _openai_sdk_base_url('https://example.test/v1')
+    'https://example.test/v1'
+    """
+    base_url = str(url or '').strip()
+    endpoint_url = base_url.rstrip('/')
+    if endpoint_url.endswith(_CHAT_COMPLETIONS_SUFFIX):
+        parent_url = endpoint_url[:-len(_CHAT_COMPLETIONS_SUFFIX)]
+        if parent_url:
+            return parent_url
+    return base_url
+
+
+def _uses_provider_base_url(base_url: str, provider: str) -> bool:
+    provider_url = _normalized_base_url(
+        PROVIDER_DEFAULTS[provider]['base_url']
+    ).lower()
+    base_url = _normalized_base_url(base_url).lower()
+    return base_url == provider_url or base_url.startswith(
+        f'{provider_url}/'
+    )
+
+
+def gpt_model_version(model: str) -> Optional[Tuple[int, int]]:
+    """Recognize GPT IDs, including gateway namespaces and model suffixes.
+
+    >>> gpt_model_version('openai/gpt-5.6-luna')
+    (5, 6)
+    >>> gpt_model_version('gpt-4o-mini')
+    (4, 0)
+    >>> gpt_model_version('custom-gpt-6') is None
+    True
+    """
+    name = str(model or '').strip().rsplit('/', 1)[-1].lower()
+    match = re.match(r'^gpt-(\d+)(?:\.(\d+)|o)?(?:[-:]|$)', name)
+    return (int(match[1]), int(match[2] or 0)) if match else None
+
+
+def openai_chat_completion_args(
+    profile: LLMProfile,
+    model: str,
+) -> Dict[str, Any]:
+    """Map provider-neutral profile values to OpenAI chat API arguments.
+
+    Native OpenAI models default to ``max_completion_tokens`` so future model
+    names do not need version-pattern guesses. Only explicitly listed older
+    models and compatibility endpoints retain ``max_tokens``. GPT-5.5+ models
+    omit temperature and top_p regardless of the endpoint, including gateways.
+
+    >>> profile = LLMProfile.from_provider('OpenAI')
+    >>> openai_chat_completion_args(profile, 'gpt-5.5')
+    {'max_completion_tokens': 8192}
+    >>> openai_chat_completion_args(profile, 'gpt-4o')['temperature']
+    0.1
+    """
+    if profile.backend == 'codex':
+        return {}
+    base_url = _normalized_base_url(_openai_sdk_base_url(profile.base_url))
+    openai_base_url = _normalized_base_url(
+        PROVIDER_DEFAULTS['OpenAI']['base_url']
+    )
+    model_name = str(model or '').strip().rsplit('/', 1)[-1].lower()
+    is_native_openai = not base_url or base_url == openai_base_url
+    args: Dict[str, Any] = {}
+    gpt_version = gpt_model_version(model)
+    if gpt_version is None or gpt_version < (5, 5):
+        args['top_p'] = float(profile.top_p)
+        args['temperature'] = float(profile.temperature)
+    token_limit_key = (
+        'max_completion_tokens'
+        if is_native_openai and model_name not in OPENAI_MAX_TOKENS_MODELS
+        else 'max_tokens'
+    )
+    args[token_limit_key] = int(profile.max_tokens)
+
+    thinking_level = normalize_thinking_level(profile.thinking_level)
+    if thinking_level == THINKING_AUTO:
+        return args
+    if thinking_level != THINKING_DISABLED:
+        args['reasoning_effort'] = thinking_level
+        return args
+    if _uses_provider_base_url(base_url, 'DeepSeek'):
+        args['extra_body'] = {'thinking': {'type': 'disabled'}}
+    elif _uses_provider_base_url(base_url, 'OpenRouter'):
+        args['extra_body'] = {'reasoning': {'effort': 'none'}}
+    else:
+        args['reasoning_effort'] = 'none'
+    return args
+
+
+def openai_json_response_format(
+    profile: LLMProfile,
+    name: str,
+    schema: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Build the profile-compatible JSON response format.
+
+    >>> profile = LLMProfile.from_provider('LM Studio')
+    >>> openai_json_response_format(profile, 'demo', {'type': 'object'})['type']
+    'json_schema'
+    >>> profile.json_schema_response_format = False
+    >>> openai_json_response_format(profile, 'demo', {})
+    {'type': 'json_object'}
+    """
+    if not profile.json_schema_response_format:
+        return {'type': 'json_object'}
+    return {
+        'type': 'json_schema',
+        'json_schema': {
+            'name': name,
+            'strict': True,
+            'schema': schema,
+        },
+    }
+
+
+@dataclass(frozen=True)
+class LLMChatResult:
+    content: str
+    usage: Any = None
+    finish_reason: str = ''
+    prompt_cache_diagnostics: object = None
+
+
+class LLMChatRequestError(RuntimeError):
+    """A normalized provider status error from Chat Completions."""
+
+    def __init__(self, provider_error: Exception) -> None:
+        self.provider_error = provider_error
+        super().__init__(provider_error_message(provider_error))
+
+
+class LLMChatRequester:
+    """Issue one profile-backed API or Codex chat request.
+
+    Prompt construction and retries stay with the owning Translator or OCR
+    module; this boundary owns only transport and provider normalization.
+
+    >>> LLMChatRequester().client is None
+    True
+    """
+
+    dummy_api_key = 'dummy-key'
+
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.client: Any = None
+        self.client_cache_key: Optional[
+            Tuple[str, Optional[str], str]
+        ] = None
+        self.last_request_time = 0.0
+        self.request_count_minute = 0
+        self.minute_start_time = time.time()
+        self.stop_event: Optional[threading.Event] = None
+        self._codex_cache_keys: Dict[Tuple[str, str, int], str] = {}
+
+    def set_stop_event(
+        self,
+        stop_event: Optional[threading.Event],
+    ) -> None:
+        if stop_event is not self.stop_event:
+            self._codex_cache_keys.clear()
+        self.stop_event = stop_event
+
+    def _wait(self, seconds: float) -> None:
+        if seconds <= 0:
+            return
+        if self.stop_event is not None:
+            if self.stop_event.wait(seconds):
+                raise LLMRequestStopped()
+            return
+        time.sleep(seconds)
+
+    @staticmethod
+    def _openai_module() -> Any:
+        import openai  # type: ignore
+
+        return openai
+
+    def _http_client(self, proxy: str) -> Any:
+        import httpx  # type: ignore
+
+        if not proxy:
+            return httpx.Client()
+        try:
+            mounts = {
+                'http://': httpx.HTTPTransport(proxy=proxy),
+                'https://': httpx.HTTPTransport(proxy=proxy),
+            }
+            return httpx.Client(mounts=mounts)
+        except Exception as error:
+            self.logger.error(
+                f"Failed to initialize proxy '{proxy}': {error}. "
+                'Proceeding without proxy.'
+            )
+            return httpx.Client()
+
+    @staticmethod
+    def _api_key_for_profile(profile: LLMProfile) -> str:
+        api_key = resolve_api_key(profile).strip()
+        if profile.require_api_key and not api_key:
+            raise LLMApiKeyRequiredError(profile.id, profile.name)
+        return api_key
+
+    def _client_api_key_for_profile(self, profile: LLMProfile) -> str:
+        api_key = self._api_key_for_profile(profile)
+        if not api_key:
+            self.logger.debug(
+                f'LLM profile "{profile.name or profile.id}" does not require '
+                'an API key; using a dummy API key for OpenAI-compatible '
+                'client initialization.'
+            )
+            return self.dummy_api_key
+        return api_key
+
+    def _initialize_client(self, profile: LLMProfile) -> Any:
+        api_key = self._client_api_key_for_profile(profile)
+        configured_base_url = str(profile.base_url or '').strip()
+        base_url = _openai_sdk_base_url(configured_base_url) or None
+        proxy = str(self.get_param_value('proxy') or '')
+        cache_key = (api_key, base_url, proxy)
+        if self.client is not None and self.client_cache_key == cache_key:
+            return self.client
+
+        if configured_base_url and base_url != configured_base_url:
+            self.logger.warning(
+                f'LLM profile "{profile.name or profile.id}" Base URL ends '
+                f'with {_CHAT_COMPLETIONS_SUFFIX}; using its parent URL as '
+                'the OpenAI-compatible API base.'
+            )
+
+        openai = self._openai_module()
+        self.client = openai.OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            http_client=self._http_client(proxy),
+        )
+        self.client_cache_key = cache_key
+        return self.client
+
+    def _respect_delay(self) -> None:
+        current_time = time.time()
+        rpm = self.get_param_value('max requests per minute')
+        delay = self.get_param_value('delay')
+        if rpm > 0:
+            if current_time - self.minute_start_time >= 60:
+                self.request_count_minute = 0
+                self.minute_start_time = current_time
+            if self.request_count_minute >= rpm:
+                wait_time = 60.1 - (current_time - self.minute_start_time)
+                if wait_time > 0:
+                    self.logger.warning(
+                        f'Global RPM limit ({rpm}) reached. Waiting '
+                        f'{wait_time:.2f} seconds.'
+                    )
+                    self._wait(wait_time)
+                self.request_count_minute = 0
+                self.minute_start_time = time.time()
+
+        time_since_last_request = current_time - self.last_request_time
+        if time_since_last_request < delay:
+            self._wait(delay - time_since_last_request)
+
+        self.last_request_time = time.time()
+        self.request_count_minute += 1
+
+    def request_chat_completion(
+        self,
+        profile: LLMProfile,
+        api_args: Dict[str, Any],
+    ) -> LLMChatResult:
+        """Perform one request; feature owners decide whether to retry it."""
+        if profile.backend == 'codex':
+            from .codex import account, request_chat_completion
+            self._respect_delay()
+            identity = (profile.id, str(api_args['model']), account.generation)
+            if identity not in self._codex_cache_keys:
+                self._codex_cache_keys[identity] = str(uuid.uuid4())
+            return request_chat_completion(
+                profile, api_args, self.stop_event,
+                self._codex_cache_keys[identity], str(self.get_param_value('proxy') or ''),
+            )
+        if profile.backend != 'openai':
+            raise LLMUserActionRequiredError('This LLM profile backend is unavailable.')
+        openai = self._openai_module()
+        client = self._initialize_client(profile)
+        self._respect_delay()
+        try:
+            completion = client.chat.completions.create(**api_args)
+        except getattr(openai, 'AuthenticationError') as error:
+            raise LLMApiKeyRequiredError(
+                profile.id, profile.name
+            ) from error
+        except getattr(openai, 'APIStatusError') as error:
+            raise LLMChatRequestError(error) from error
+
+        choice = next(iter(getattr(completion, 'choices', ())), None)
+        message = getattr(choice, 'message', None)
+        content = getattr(message, 'content', None)
+        if content is None:
+            content = getattr(choice, 'text', '')
+        result = LLMChatResult(
+            content=str(content or ''),
+            usage=getattr(completion, 'usage', None),
+            finish_reason=str(
+                getattr(choice, 'finish_reason', '') or ''
+            ),
+            prompt_cache_diagnostics=getattr(completion, 'prompt_cache_diagnostics', None),
+        )
+        if result.finish_reason.strip().lower() == 'length':
+            usage = format_completion_token_usage(result)
+            model = str(api_args.get('model', '')).replace(
+                '\r', ' '
+            ).replace('\n', ' ')
+            details = ', '.join(
+                part for part in (
+                    f'profile_id={profile.id!r}',
+                    f'model={model!r}',
+                    usage,
+                    'finish_reason=length',
+                    f'chars={len(result.content)}',
+                    f'content={result.content!r}',
+                )
+                if part
+            )
+            self.logger.debug(f'LLM output-limited response: {details}')
+            raise LLMOutputLimitError(
+                profile.id,
+                profile.name,
+                profile.max_tokens,
+                str(profile.thinking_level or THINKING_AUTO),
+            )
+        return result

@@ -1,0 +1,3944 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-08",
+  "name": "BallonsTranslator",
+  "version": "1.5.17",
+  "license": "GPL-3.0-or-later",
+  "upstream_repository": "https://github.com/dmMaze/BallonsTranslator",
+  "release_url": "https://github.com/dmMaze/BallonsTranslator/releases/tag/v1.5.17",
+  "release_commit": "9c7863c1e10c5bd927312eca0a0860177b0e5539",
+  "baseline_asset_url": "https://github.com/dmMaze/BallonsTranslator/releases/download/v1.5.17/Ballonstranslator_win_minium.zip",
+  "baseline_asset_sha256": "fa8d0016860b8f89bc82f2854c94f0ac1657b742d2a74dfcb6399cb88e6ec401",
+  "baseline_asset_bytes": 33169559,
+  "provenance_method": "Byte comparison with the retained release archive whose SHA-256 matches the recorded official release asset digest. The local source tree has no Git metadata.",
+  "included_file_count": 559,
+  "included_bytes": 9908962,
+  "modified_files": [
+    "ballontranslator/modules/translators/trans_sakura.py"
+  ],
+  "omitted": [
+    "Python runtime and installed packages",
+    "data/models and all model weights",
+    "data/font_demo_cache.bin (optional font detection cache)",
+    "config and user font/style settings",
+    "logs, caches and __pycache__",
+    "local project data, artwork, translations and audits",
+    "upstream nested .gitignore (the release repository owns exclusion rules)",
+    "upstream nested .gitattributes (root -text preserves original archive bytes in Git)"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 9500,
+      "sha256": "1e944400aa16223aa78a6dd44f376c6e551e72c57f786d5832eef34782193492",
+      "upstream_sha256": "1e944400aa16223aa78a6dd44f376c6e551e72c57f786d5832eef34782193492",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/__init__.py",
+      "bytes": 13,
+      "sha256": "75ad4f4c2943325f88064ad2beae890b59674be2bf0404b30afc5584dc4de4bb",
+      "upstream_sha256": "75ad4f4c2943325f88064ad2beae890b59674be2bf0404b30afc5584dc4de4bb",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/__main__.py",
+      "bytes": 65,
+      "sha256": "62fa269e6ea044d89e9b3e2a5fb77cd5b9a382bbae4f0ba5ad6cb570b8377f9a",
+      "upstream_sha256": "62fa269e6ea044d89e9b3e2a5fb77cd5b9a382bbae4f0ba5ad6cb570b8377f9a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/assets/font_refresh/Abel-Regular.ttf",
+      "bytes": 35220,
+      "sha256": "8809dcad25318225052f88333e208c5aad4adcb7b2c934c135735ec19aa410b4",
+      "upstream_sha256": "8809dcad25318225052f88333e208c5aad4adcb7b2c934c135735ec19aa410b4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/assets/font_refresh/OFL.txt",
+      "bytes": 4417,
+      "sha256": "b62d29f5238d448aca03078eb0ca0f4607f6c679e6676b6a51ce4916022bb59d",
+      "upstream_sha256": "b62d29f5238d448aca03078eb0ca0f4607f6c679e6676b6a51ce4916022bb59d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/assets/font_refresh/README.md",
+      "bytes": 548,
+      "sha256": "e092f56d793de3f8b27fea52b984f6507a5442f7a067102259f5eacc844e168c",
+      "upstream_sha256": "e092f56d793de3f8b27fea52b984f6507a5442f7a067102259f5eacc844e168c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/launch.py",
+      "bytes": 14323,
+      "sha256": "0f3d19ae462d806d7df5db1d69c752417f4332d20ca0d44abb6b55ec01659385",
+      "upstream_sha256": "0f3d19ae462d806d7df5db1d69c752417f4332d20ca0d44abb6b55ec01659385",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/__init__.py",
+      "bytes": 874,
+      "sha256": "967039856cd1bcdbf4d782d44f831c3f5e0274ff7cb3dd0f6d47eea9525346d6",
+      "upstream_sha256": "967039856cd1bcdbf4d782d44f831c3f5e0274ff7cb3dd0f6d47eea9525346d6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/base.py",
+      "bytes": 18982,
+      "sha256": "444241f230c73352daa87231237c4551e4f0e874bc7fd70ff360e402c45048b7",
+      "upstream_sha256": "444241f230c73352daa87231237c4551e4f0e874bc7fd70ff360e402c45048b7",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/codex.py",
+      "bytes": 44412,
+      "sha256": "ed8c5ebc5dcc331aea2a1e425e5ccacba18de6ca393fd7d357090c1b96749a07",
+      "upstream_sha256": "ed8c5ebc5dcc331aea2a1e425e5ccacba18de6ca393fd7d357090c1b96749a07",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/__init__.py",
+      "bytes": 62,
+      "sha256": "3b02ac4056f411bead8c09384273f845ca32305669cf7d71f8f03a2231aebe35",
+      "upstream_sha256": "3b02ac4056f411bead8c09384273f845ca32305669cf7d71f8f03a2231aebe35",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/errors.py",
+      "bytes": 3387,
+      "sha256": "1fc901b643632b003be11a0fcdf6e88597f8fc279540cdf7ab1d4b31ab30a879",
+      "upstream_sha256": "1fc901b643632b003be11a0fcdf6e88597f8fc279540cdf7ab1d4b31ab30a879",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/glossary.py",
+      "bytes": 10832,
+      "sha256": "b6496c58b4f8e6951eb4ae1fc3be8dbea6509c61a5eed4d34f995864b7b44c03",
+      "upstream_sha256": "b6496c58b4f8e6951eb4ae1fc3be8dbea6509c61a5eed4d34f995864b7b44c03",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/history.py",
+      "bytes": 10797,
+      "sha256": "88c4d53b963141dfe057d8ed0efa4b2df96361afe450d8a670066f68c234d266",
+      "upstream_sha256": "88c4d53b963141dfe057d8ed0efa4b2df96361afe450d8a670066f68c234d266",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/token_usage.py",
+      "bytes": 6045,
+      "sha256": "6fed4c150b6cee950ba697cf36ca724a789cdb396297e6b062f3b14909129fdd",
+      "upstream_sha256": "6fed4c150b6cee950ba697cf36ca724a789cdb396297e6b062f3b14909129fdd",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/context/translation_context.py",
+      "bytes": 11557,
+      "sha256": "800030a8a9dfb8688a9dd06491e807017dbb486ccaf010e1ca1288e12066a024",
+      "upstream_sha256": "800030a8a9dfb8688a9dd06491e807017dbb486ccaf010e1ca1288e12066a024",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/exceptions.py",
+      "bytes": 6079,
+      "sha256": "2b51cd0653ac89dd44dc150f219dfef0cf924a5c36d9fb629731c3acc7807ab5",
+      "upstream_sha256": "2b51cd0653ac89dd44dc150f219dfef0cf924a5c36d9fb629731c3acc7807ab5",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/image_generation.py",
+      "bytes": 4466,
+      "sha256": "b5e6c47d2214dbc82a4ffa1b0f69434c4c0baf88bdd116de9666f958ea673a27",
+      "upstream_sha256": "b5e6c47d2214dbc82a4ffa1b0f69434c4c0baf88bdd116de9666f958ea673a27",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/__init__.py",
+      "bytes": 19,
+      "sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "upstream_sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/aot.py",
+      "bytes": 8722,
+      "sha256": "494ae4ac0e16fbdbbba20bc129f088d4ed9b0db5f93aab1a8b4a824ec190fb4e",
+      "upstream_sha256": "494ae4ac0e16fbdbbba20bc129f088d4ed9b0db5f93aab1a8b4a824ec190fb4e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/base.py",
+      "bytes": 9654,
+      "sha256": "6eab46ff25a0a344793ea9e535a89b2a0088f234ddb566a33dcffe6dc9b75320",
+      "upstream_sha256": "6eab46ff25a0a344793ea9e535a89b2a0088f234ddb566a33dcffe6dc9b75320",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/ffc.py",
+      "bytes": 12747,
+      "sha256": "6ef44fc4c237c764adef1fc77eb185e2a19178bb65002492d50f690903d69e7a",
+      "upstream_sha256": "6ef44fc4c237c764adef1fc77eb185e2a19178bb65002492d50f690903d69e7a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/flux_inpaint_pipeline.py",
+      "bytes": 42675,
+      "sha256": "3f51ab185a3210a97392c043068f41f7a344de3bd18172a8980c772d3c578b4c",
+      "upstream_sha256": "3f51ab185a3210a97392c043068f41f7a344de3bd18172a8980c772d3c578b4c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/inpaint_default.py",
+      "bytes": 20593,
+      "sha256": "f9c49812de1345e7e7b54b076c1f4c65e32129ab5c1ac04bf95d360802042d36",
+      "upstream_sha256": "f9c49812de1345e7e7b54b076c1f4c65e32129ab5c1ac04bf95d360802042d36",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/inpaint_llm.py",
+      "bytes": 5461,
+      "sha256": "37c1bca2a9aab66ff40c7091c7edc3083f728a4f243469a767d4f07f763e313e",
+      "upstream_sha256": "37c1bca2a9aab66ff40c7091c7edc3083f728a4f243469a767d4f07f763e313e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/lama.py",
+      "bytes": 16098,
+      "sha256": "4f850ab03bd476ee4f36ee3fe0f3a2d2058cf77c3285457c5de01a851143de42",
+      "upstream_sha256": "4f850ab03bd476ee4f36ee3fe0f3a2d2058cf77c3285457c5de01a851143de42",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/inpaint/patch_match.py",
+      "bytes": 6810,
+      "sha256": "503dae549b11ea83bf4662692008c28d910c7f823d967322d037739c56e61d48",
+      "upstream_sha256": "503dae549b11ea83bf4662692008c28d910c7f823d967322d037739c56e61d48",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/lazy_registry.py",
+      "bytes": 33186,
+      "sha256": "02d29883898b85c1cdb6f801966b068e8bdc2c1ee36a7ebd43bdb909434a09b6",
+      "upstream_sha256": "02d29883898b85c1cdb6f801966b068e8bdc2c1ee36a7ebd43bdb909434a09b6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/llm_chat.py",
+      "bytes": 13517,
+      "sha256": "a7b06185c135b8cf58b50a4053e29de036404f677f8f264f319dc0b1a36ff551",
+      "upstream_sha256": "a7b06185c135b8cf58b50a4053e29de036404f677f8f264f319dc0b1a36ff551",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/llm_image.py",
+      "bytes": 43589,
+      "sha256": "ab3c4744bbbf8b278ce7b1e237f8dcbc2e46d815bbbaf7c22ec0d621631527e6",
+      "upstream_sha256": "ab3c4744bbbf8b278ce7b1e237f8dcbc2e46d815bbbaf7c22ec0d621631527e6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/llm_vision.py",
+      "bytes": 1964,
+      "sha256": "dcc3d3e34606939b92495f36788f79ecdf687f7db0015a4873e37df678e79bee",
+      "upstream_sha256": "dcc3d3e34606939b92495f36788f79ecdf687f7db0015a4873e37df678e79bee",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/__init__.py",
+      "bytes": 144,
+      "sha256": "6cffc9d7ed7f2b72409d28857fcd12767c2a1de4a047a7d0b8a736149da4cf7e",
+      "upstream_sha256": "6cffc9d7ed7f2b72409d28857fcd12767c2a1de4a047a7d0b8a736149da4cf7e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/base.py",
+      "bytes": 5258,
+      "sha256": "13f94166424505c77eaa92f2bd961960db04d0b9d80ced350b8b37f981449775",
+      "upstream_sha256": "13f94166424505c77eaa92f2bd961960db04d0b9d80ced350b8b37f981449775",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/mit48px.py",
+      "bytes": 39035,
+      "sha256": "8aebccef1e29e22de910b6626f1df2315584909cc98eab54fde647b60a567173",
+      "upstream_sha256": "8aebccef1e29e22de910b6626f1df2315584909cc98eab54fde647b60a567173",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/mit48px_ctc.py",
+      "bytes": 21836,
+      "sha256": "3d05e2cbfaff6e397a418c408ed980d3ec434ab51009b7d071273dce94b7e1b9",
+      "upstream_sha256": "3d05e2cbfaff6e397a418c408ed980d3ec434ab51009b7d071273dce94b7e1b9",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_google_vision.py",
+      "bytes": 9467,
+      "sha256": "de33678fd6c70ecfe293c758ca4ce8b9f45e2c703e17d626ecf026b2e3e66527",
+      "upstream_sha256": "de33678fd6c70ecfe293c758ca4ce8b9f45e2c703e17d626ecf026b2e3e66527",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_hayai.py",
+      "bytes": 4283,
+      "sha256": "aab0e9034d652adec462b1eab187fb920cd83edf1831a7c128475b448b4e3dfe",
+      "upstream_sha256": "aab0e9034d652adec462b1eab187fb920cd83edf1831a7c128475b448b4e3dfe",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_lens_proto.py",
+      "bytes": 20732,
+      "sha256": "5e9d8a3d3622de66c9c69d68059b9a8fd52c649a913534d60e026bac791ca180",
+      "upstream_sha256": "5e9d8a3d3622de66c9c69d68059b9a8fd52c649a913534d60e026bac791ca180",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_llm.py",
+      "bytes": 17171,
+      "sha256": "58dcf78fb48696d65ab3e32c07f3be88820621404a4f64d8ec11383724f98aa3",
+      "upstream_sha256": "58dcf78fb48696d65ab3e32c07f3be88820621404a4f64d8ec11383724f98aa3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_macos.py",
+      "bytes": 5437,
+      "sha256": "1bdc26a37ce60494b9aab0819c1c8291de00a733375048f3fcb3337eeb042766",
+      "upstream_sha256": "1bdc26a37ce60494b9aab0819c1c8291de00a733375048f3fcb3337eeb042766",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_manga.py",
+      "bytes": 2816,
+      "sha256": "bdbd27f41cdbc820f58e18768a11b8d920a30387941d95602917b51c456fa27a",
+      "upstream_sha256": "bdbd27f41cdbc820f58e18768a11b8d920a30387941d95602917b51c456fa27a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_mit.py",
+      "bytes": 3144,
+      "sha256": "28f584985eb25d1ece7b4f64b7f5b560af49ab1889e359d93e3c7e287a4ef2c0",
+      "upstream_sha256": "28f584985eb25d1ece7b4f64b7f5b560af49ab1889e359d93e3c7e287a4ef2c0",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_paddle_VL.py",
+      "bytes": 8047,
+      "sha256": "dd27ac96f420555bded43d31b1927235b33d35443d959339eab27f03f4a74680",
+      "upstream_sha256": "dd27ac96f420555bded43d31b1927235b33d35443d959339eab27f03f4a74680",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_paddleVL_manga.py",
+      "bytes": 5805,
+      "sha256": "4303ed07370fe6b4b8a444758826c95348d4756e85ab78672f637ac70eacb83d",
+      "upstream_sha256": "4303ed07370fe6b4b8a444758826c95348d4756e85ab78672f637ac70eacb83d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_ppv6_onnx.py",
+      "bytes": 18336,
+      "sha256": "038cf51c04c4beb5b0bd75c19bf3b49c2a94804628462715c2c437565b28e304",
+      "upstream_sha256": "038cf51c04c4beb5b0bd75c19bf3b49c2a94804628462715c2c437565b28e304",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_screen_ai.py",
+      "bytes": 15854,
+      "sha256": "f7669fe0b32fb559558bb92bcc09b2635ffb63361723f95bb406cd7a723e5a18",
+      "upstream_sha256": "f7669fe0b32fb559558bb92bcc09b2635ffb63361723f95bb406cd7a723e5a18",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_stariver.py",
+      "bytes": 7247,
+      "sha256": "264bd33e06221a8d8ebcbda83760dbc175a08752be93272d5147ec4d36730e04",
+      "upstream_sha256": "264bd33e06221a8d8ebcbda83760dbc175a08752be93272d5147ec4d36730e04",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/ocr_windows.py",
+      "bytes": 3335,
+      "sha256": "110f4fa1d31282a5ffbee6d63e8bf990f924ab9959ded67c7984d3d530e0247c",
+      "upstream_sha256": "110f4fa1d31282a5ffbee6d63e8bf990f924ab9959ded67c7984d3d530e0247c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/utils/lens_betterproto.py",
+      "bytes": 39126,
+      "sha256": "80f4c3e7e89a0b06ab277e97a7659b48a2da62d73378c6877c7ef9de560355b7",
+      "upstream_sha256": "80f4c3e7e89a0b06ab277e97a7659b48a2da62d73378c6877c7ef9de560355b7",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/utils/onnxocr.py",
+      "bytes": 17777,
+      "sha256": "182cda769d8c506f0fee089f147e5d0043388f788c432cb4393e7816fbfa82a2",
+      "upstream_sha256": "182cda769d8c506f0fee089f147e5d0043388f788c432cb4393e7816fbfa82a2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/utils/screen_ai_protos/__init__.py",
+      "bytes": 50,
+      "sha256": "7b7872db4e16e406b77ec614d979ea6cb308b562cb1cf3e48dedc1b2a90a2f06",
+      "upstream_sha256": "7b7872db4e16e406b77ec614d979ea6cb308b562cb1cf3e48dedc1b2a90a2f06",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/utils/screen_ai_protos/chrome_screen_ai_pb2.py",
+      "bytes": 5239,
+      "sha256": "2ca493a1008fc643456dbac456ee93fbc31bfb043937a29daa2205b8837e547c",
+      "upstream_sha256": "2ca493a1008fc643456dbac456ee93fbc31bfb043937a29daa2205b8837e547c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/ocr/utils/screen_ai_protos/view_hierarchy_pb2.py",
+      "bytes": 4376,
+      "sha256": "064b48cf51dae834138e647f0d8c872b36866dfd076374bc53d9a98e8b5e70f2",
+      "upstream_sha256": "064b48cf51dae834138e647f0d8c872b36866dfd076374bc53d9a98e8b5e70f2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/package_import_names.py",
+      "bytes": 770,
+      "sha256": "92fcad6300b493fbda481c4c616569bcc4da5f6a3a26e9500571d025e96ab0cc",
+      "upstream_sha256": "92fcad6300b493fbda481c4c616569bcc4da5f6a3a26e9500571d025e96ab0cc",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/prepare_local_files.py",
+      "bytes": 6198,
+      "sha256": "a34913290d1be283a68849469d013ef1c643238f8ce54abd1193c8e1b3494ffe",
+      "upstream_sha256": "a34913290d1be283a68849469d013ef1c643238f8ce54abd1193c8e1b3494ffe",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/__init__.py",
+      "bytes": 19,
+      "sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "upstream_sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/base.py",
+      "bytes": 1808,
+      "sha256": "136bbaddf0b34a8e6eae31ac61bdb80c0747f01b17ebe061688c4d249257400e",
+      "upstream_sha256": "136bbaddf0b34a8e6eae31ac61bdb80c0747f01b17ebe061688c4d249257400e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/ctd/__init__.py",
+      "bytes": 47,
+      "sha256": "ee6d7ecc419b3fb8456f7889c83f25830fcc7d9bf2323d4a5dcff41d0849729d",
+      "upstream_sha256": "ee6d7ecc419b3fb8456f7889c83f25830fcc7d9bf2323d4a5dcff41d0849729d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/ctd/basemodel.py",
+      "bytes": 10029,
+      "sha256": "459815d9b1cec8f6b3a2f19475ab0cbef5fcf913a7d2b8ff2d8fb483baee02c8",
+      "upstream_sha256": "459815d9b1cec8f6b3a2f19475ab0cbef5fcf913a7d2b8ff2d8fb483baee02c8",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/ctd/inference.py",
+      "bytes": 14270,
+      "sha256": "e851e2f3a61b38a1aaccdcb306ce8d6466259840dd73b4f31d91d6521655d575",
+      "upstream_sha256": "e851e2f3a61b38a1aaccdcb306ce8d6466259840dd73b4f31d91d6521655d575",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/ctd/textmask.py",
+      "bytes": 13397,
+      "sha256": "d69f03e35f5f86301e5b54165af928e35869bc0923746c96eebdf1aec07db532",
+      "upstream_sha256": "d69f03e35f5f86301e5b54165af928e35869bc0923746c96eebdf1aec07db532",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/db_utils.py",
+      "bytes": 27916,
+      "sha256": "1e06d56c7ef7c67f7c7e262d0bba1e9a3decffa894564998003527a68d8834fe",
+      "upstream_sha256": "1e06d56c7ef7c67f7c7e262d0bba1e9a3decffa894564998003527a68d8834fe",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/detector_ctbd.py",
+      "bytes": 31128,
+      "sha256": "965536ca5f8768873121fa4d2eddda425463fb212a6e57f5b20ae1594951503b",
+      "upstream_sha256": "965536ca5f8768873121fa4d2eddda425463fb212a6e57f5b20ae1594951503b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/detector_ctd.py",
+      "bytes": 3667,
+      "sha256": "2c7ee3ae608ff362e0359635e958c7c7f2cccdc7f7c0a0bf1ea917f485b593e6",
+      "upstream_sha256": "2c7ee3ae608ff362e0359635e958c7c7f2cccdc7f7c0a0bf1ea917f485b593e6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/detector_stariver.py",
+      "bytes": 14951,
+      "sha256": "cf5f6c242bd7e4a805272478835e5910387ea0945d963d3e655d18baf19e9c4c",
+      "upstream_sha256": "cf5f6c242bd7e4a805272478835e5910387ea0945d963d3e655d18baf19e9c4c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/detector_ysg.py",
+      "bytes": 8925,
+      "sha256": "8c812f616e43ffd723083c5ddc6f5c7588d4525ce423e1cd1163207dbd54bec5",
+      "upstream_sha256": "8c812f616e43ffd723083c5ddc6f5c7588d4525ce423e1cd1163207dbd54bec5",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/panel_finder.py",
+      "bytes": 13392,
+      "sha256": "b3664e120993db87128fc3d24e9c5423e23a5a0d0522413dc21c922f67a0962e",
+      "upstream_sha256": "b3664e120993db87128fc3d24e9c5423e23a5a0d0522413dc21c922f67a0962e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/yolov5/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/yolov5/common.py",
+      "bytes": 10760,
+      "sha256": "52e5b70e0f900068f670907f37012f38382af88722e6440f69c36a7c938cbf43",
+      "upstream_sha256": "52e5b70e0f900068f670907f37012f38382af88722e6440f69c36a7c938cbf43",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/yolov5/yolo.py",
+      "bytes": 14410,
+      "sha256": "e30a61dfbb373d4f3d09729919ed79c38516044be9c238944529d05f51f396f6",
+      "upstream_sha256": "e30a61dfbb373d4f3d09729919ed79c38516044be9c238944529d05f51f396f6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/textdetector/yolov5/yolov5_utils.py",
+      "bytes": 9716,
+      "sha256": "c5b45eb2473b6623e9aad026998193a92f84c68a63544d8fec3f7adc6dd404b1",
+      "upstream_sha256": "c5b45eb2473b6623e9aad026998193a92f84c68a63544d8fec3f7adc6dd404b1",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/__init__.py",
+      "bytes": 19,
+      "sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "upstream_sha256": "18b74c1ac9b9fc29c04f2875f40b76d0799bd4cb1766f3f136f83bd1b1d80a19",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/base.py",
+      "bytes": 12927,
+      "sha256": "749a6dffd551d0d64b446c46163a3720f425cfc99b1d5a7fe2711837bc536ae2",
+      "upstream_sha256": "749a6dffd551d0d64b446c46163a3720f425cfc99b1d5a7fe2711837bc536ae2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/constants.py",
+      "bytes": 14198,
+      "sha256": "b075f5b7e7146ce8242fa4d30b27db876e508f486f2c13e837b997af6800da86",
+      "upstream_sha256": "b075f5b7e7146ce8242fa4d30b27db876e508f486f2c13e837b997af6800da86",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/exceptions.py",
+      "bytes": 4581,
+      "sha256": "2859f02778e2d80fed339adf66b8e09ce1de3a2b8c6f8304da94dded476514e7",
+      "upstream_sha256": "2859f02778e2d80fed339adf66b8e09ce1de3a2b8c6f8304da94dded476514e7",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/llm_translation_contract.py",
+      "bytes": 18599,
+      "sha256": "11e2ecb1b864cb119b156942f2c211005116aa267756a6797045db09702b5136",
+      "upstream_sha256": "11e2ecb1b864cb119b156942f2c211005116aa267756a6797045db09702b5136",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/module_eztrans32.py",
+      "bytes": 2741,
+      "sha256": "6e33a3dc2516e079e4624c9181922dba73212ad8aee503502cb62a613fa171b0",
+      "upstream_sha256": "6e33a3dc2516e079e4624c9181922dba73212ad8aee503502cb62a613fa171b0",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_baidu.py",
+      "bytes": 2534,
+      "sha256": "130ebbb2b8a132d29f2874148ef74db867131b091fe9b1646395717b357dab14",
+      "upstream_sha256": "130ebbb2b8a132d29f2874148ef74db867131b091fe9b1646395717b357dab14",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_caiyun.py",
+      "bytes": 1254,
+      "sha256": "2da67606966701758566c14be4e65275c78b0764b46159cec225031791abf204",
+      "upstream_sha256": "2da67606966701758566c14be4e65275c78b0764b46159cec225031791abf204",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_deepl.py",
+      "bytes": 3676,
+      "sha256": "5c5f8f8af80b3116e29109fb8ebbdbbc0f3a9a11bf762823f4dff9de73c54d30",
+      "upstream_sha256": "5c5f8f8af80b3116e29109fb8ebbdbbc0f3a9a11bf762823f4dff9de73c54d30",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_deeplx_api.py",
+      "bytes": 1991,
+      "sha256": "8fa82bd8e352b66fc4ef9ba05bc05575c0ecec64c4bd8e03d069670d4f6cdd4d",
+      "upstream_sha256": "8fa82bd8e352b66fc4ef9ba05bc05575c0ecec64c4bd8e03d069670d4f6cdd4d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_eztrans.py",
+      "bytes": 3726,
+      "sha256": "bee9cc9a8030b887575b8898321c1acd7fab1b87befc4513c3762b89f145037a",
+      "upstream_sha256": "bee9cc9a8030b887575b8898321c1acd7fab1b87befc4513c3762b89f145037a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_google.py",
+      "bytes": 7411,
+      "sha256": "79a2d2e4b8f952d8b87b863ca681c8d67fb41171f2043de4fdf3b218bfc8374a",
+      "upstream_sha256": "79a2d2e4b8f952d8b87b863ca681c8d67fb41171f2043de4fdf3b218bfc8374a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_llm.py",
+      "bytes": 52524,
+      "sha256": "6382aa5383e6c6ee955d2284fa4a860d5ca039edd6516853f82ec967218f17af",
+      "upstream_sha256": "6382aa5383e6c6ee955d2284fa4a860d5ca039edd6516853f82ec967218f17af",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_m2m100.py",
+      "bytes": 9493,
+      "sha256": "ff3e164e3a348c071edd0d41d758a0389ee749715e9abf4e78ae1f28f5a9f1ec",
+      "upstream_sha256": "ff3e164e3a348c071edd0d41d758a0389ee749715e9abf4e78ae1f28f5a9f1ec",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_papago.py",
+      "bytes": 1904,
+      "sha256": "bac936639f913f1ba240c90336b24e617cdfe023dac7d3ee61ca67df9d7b418b",
+      "upstream_sha256": "bac936639f913f1ba240c90336b24e617cdfe023dac7d3ee61ca67df9d7b418b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_sakura.py",
+      "bytes": 34362,
+      "sha256": "5dac4316794220e7d4447f36dbe180f9c6fa86b1468094cd35c72f18191a8282",
+      "upstream_sha256": "87aefc3b7fb08ce20c7520e7e6f5e8c64cba5df1831f4c31b26ad912c4f02ca2",
+      "modified": true
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_sugoi.py",
+      "bytes": 1806,
+      "sha256": "12db96261df6add0bb15337e9f5f7260a41a51c7162113ea9447943268bcb594",
+      "upstream_sha256": "12db96261df6add0bb15337e9f5f7260a41a51c7162113ea9447943268bcb594",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_yandex.py",
+      "bytes": 3002,
+      "sha256": "6449477787c7641248144f28b3c43e4a636c0b4b6c5f97a91b05b0e5afbaffab",
+      "upstream_sha256": "6449477787c7641248144f28b3c43e4a636c0b4b6c5f97a91b05b0e5afbaffab",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/modules/translators/trans_yandex_foswly.py",
+      "bytes": 13170,
+      "sha256": "77f96bfb691d0dc5ee641bcac5c3cc6c017b957d8c379aa663e2c7076e85cafa",
+      "upstream_sha256": "77f96bfb691d0dc5ee641bcac5c3cc6c017b957d8c379aa663e2c7076e85cafa",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "upstream_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/_generated/__init__.py",
+      "bytes": 51,
+      "sha256": "d0be2e240563b217e4c40de62395a49eab4414f166c5d2e1f4ab04ceaf5c40cc",
+      "upstream_sha256": "d0be2e240563b217e4c40de62395a49eab4414f166c5d2e1f4ab04ceaf5c40cc",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/_generated/module_param_dialog_i18n_catalog.py",
+      "bytes": 49774,
+      "sha256": "6c2e8fc002b0143299d09131d71f7ddc5db49a6d2c334157d4ee092528ae6f4d",
+      "upstream_sha256": "6c2e8fc002b0143299d09131d71f7ddc5db49a6d2c334157d4ee092528ae6f4d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/adaptive_wrap_layout.py",
+      "bytes": 7371,
+      "sha256": "6d7508da71268ee5e101e02e2c42cf5e1948e1c9923dd0d3b44c89ea77e86013",
+      "upstream_sha256": "6d7508da71268ee5e101e02e2c42cf5e1948e1c9923dd0d3b44c89ea77e86013",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/bulk_page_summary_editor.py",
+      "bytes": 15462,
+      "sha256": "adfe23ca4a84f283f1635195dc5cd18ca11c61e1845b64f33bfbf97a221f3308",
+      "upstream_sha256": "adfe23ca4a84f283f1635195dc5cd18ca11c61e1845b64f33bfbf97a221f3308",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/canvas.py",
+      "bytes": 77373,
+      "sha256": "4a3acb896c034853dd8f54e2c8c85b31a805d7d80d7e22baae622575f522b160",
+      "upstream_sha256": "4a3acb896c034853dd8f54e2c8c85b31a805d7d80d7e22baae622575f522b160",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/codex_account.py",
+      "bytes": 7415,
+      "sha256": "32a8ae087385ef236ef278bd4a1197b35a548df6a345a871f3ac7966bfabe2ea",
+      "upstream_sha256": "32a8ae087385ef236ef278bd4a1197b35a548df6a345a871f3ac7966bfabe2ea",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/codex_settings.py",
+      "bytes": 18174,
+      "sha256": "f54cd7b49f120bfdac5c7796b4b4ba3d586d58e36702ab2f4947c47b12b69c66",
+      "upstream_sha256": "f54cd7b49f120bfdac5c7796b4b4ba3d586d58e36702ab2f4947c47b12b69c66",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/codex_sign_in.py",
+      "bytes": 3898,
+      "sha256": "e992c8968ccc78c2000fafab8fcc0471de6dc48dac7eef0ff4de76b04c868aef",
+      "upstream_sha256": "e992c8968ccc78c2000fafab8fcc0471de6dc48dac7eef0ff4de76b04c868aef",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/configpanel.py",
+      "bytes": 82936,
+      "sha256": "722289804fdf9d4b6cc722ab99a8bf42826a5f0d2d708ff64136160a87b87320",
+      "upstream_sha256": "722289804fdf9d4b6cc722ab99a8bf42826a5f0d2d708ff64136160a87b87320",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/cursor.py",
+      "bytes": 4123,
+      "sha256": "09d6df85f62ae7a2e34425b34cfc85d59445899bd9cc3ab756e8dd9cd2ee7de3",
+      "upstream_sha256": "09d6df85f62ae7a2e34425b34cfc85d59445899bd9cc3ab756e8dd9cd2ee7de3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/__init__.py",
+      "bytes": 1668,
+      "sha256": "247070b8c11fc0036648c6bd54111b2f4757d3f455c2275aec36480b20e87ee9",
+      "upstream_sha256": "247070b8c11fc0036648c6bd54111b2f4757d3f455c2275aec36480b20e87ee9",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/checkbox.py",
+      "bytes": 661,
+      "sha256": "56b66f94579cc332c4c8440cc9ce5059617d23aae9050055daa72bd872c3644e",
+      "upstream_sha256": "56b66f94579cc332c4c8440cc9ce5059617d23aae9050055daa72bd872c3644e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/combobox.py",
+      "bytes": 8716,
+      "sha256": "8ea276b79e58523705e83849041301026ec3d91df46132da29e4eea89436279d",
+      "upstream_sha256": "8ea276b79e58523705e83849041301026ec3d91df46132da29e4eea89436279d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/flow_layout.py",
+      "bytes": 10690,
+      "sha256": "b241619e0dbcb84efd095cc70d3370c8fb169305ae8ced6a2f0b679b3657ebad",
+      "upstream_sha256": "b241619e0dbcb84efd095cc70d3370c8fb169305ae8ced6a2f0b679b3657ebad",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/helper.py",
+      "bytes": 358,
+      "sha256": "b5c10509c2aa070462287a538bbac0e904826049c4b504b18cf9f8ff5c202b42",
+      "upstream_sha256": "b5c10509c2aa070462287a538bbac0e904826049c4b504b18cf9f8ff5c202b42",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/label.py",
+      "bytes": 12020,
+      "sha256": "3acd4a07ef9ca3e61646ecf2c4748d75ca42eb247d674579a6ee3d8731f6be6b",
+      "upstream_sha256": "3acd4a07ef9ca3e61646ecf2c4748d75ca42eb247d674579a6ee3d8731f6be6b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/message.py",
+      "bytes": 10020,
+      "sha256": "f0332a1faeb85bd2d95b8630b4bf44239d5694b854bf5d6a0dab838af54a7e3c",
+      "upstream_sha256": "f0332a1faeb85bd2d95b8630b4bf44239d5694b854bf5d6a0dab838af54a7e3c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/push_button.py",
+      "bytes": 2883,
+      "sha256": "12c3dfe6c82fd2a12de676e8c3ea5c55f209a314811a883aec6637289cc3f7ef",
+      "upstream_sha256": "12c3dfe6c82fd2a12de676e8c3ea5c55f209a314811a883aec6637289cc3f7ef",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/scrollbar.py",
+      "bytes": 14086,
+      "sha256": "e789315701bed3f18f9dea222afce0496961c5f68ff03f60d39ce1290d223221",
+      "upstream_sha256": "e789315701bed3f18f9dea222afce0496961c5f68ff03f60d39ce1290d223221",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/slider.py",
+      "bytes": 8352,
+      "sha256": "4764b564500e23d15fd201c73f77a9f7b0e2ef420aef8af560860c7e85abfd56",
+      "upstream_sha256": "4764b564500e23d15fd201c73f77a9f7b0e2ef420aef8af560860c7e85abfd56",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/view_panel.py",
+      "bytes": 10208,
+      "sha256": "cc81819b464634b16c739b0edb76d235a9bc5644df75bcf102559da2a53aaeb0",
+      "upstream_sha256": "cc81819b464634b16c739b0edb76d235a9bc5644df75bcf102559da2a53aaeb0",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/custom_widget/widget.py",
+      "bytes": 428,
+      "sha256": "db251da287f96b11ec318a82e08df33ce524c8cb2f549f19d0f47ab28a088edf",
+      "upstream_sha256": "db251da287f96b11ec318a82e08df33ce524c8cb2f549f19d0f47ab28a088edf",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/drawing_commands.py",
+      "bytes": 8241,
+      "sha256": "1b3fa430a507f66a04d696fc8cd3262ebd315422a73c3160858094289b540bb3",
+      "upstream_sha256": "1b3fa430a507f66a04d696fc8cd3262ebd315422a73c3160858094289b540bb3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/drawingpanel.py",
+      "bytes": 70275,
+      "sha256": "7da353439f2751d1fd4c66799f77794056c7137c0b94ab0e1916e618ac8b1161",
+      "upstream_sha256": "7da353439f2751d1fd4c66799f77794056c7137c0b94ab0e1916e618ac8b1161",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/font_change_detection.py",
+      "bytes": 1929,
+      "sha256": "f28dd122b3b0f3e5e0461755c166d886278d64ecffebc137a6c5070b049e2884",
+      "upstream_sha256": "f28dd122b3b0f3e5e0461755c166d886278d64ecffebc137a6c5070b049e2884",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/font_refresh.py",
+      "bytes": 11706,
+      "sha256": "7f3d46e8e779368ad72559a32856a69cbfc055fcc28b306a80077c9fd159e0f1",
+      "upstream_sha256": "7f3d46e8e779368ad72559a32856a69cbfc055fcc28b306a80077c9fd159e0f1",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/__init__.py",
+      "bytes": 5718,
+      "sha256": "879d7133144429ed9dc22456d668c26f0eb4cd9e0a70c576bfeb1d7988193b08",
+      "upstream_sha256": "879d7133144429ed9dc22456d668c26f0eb4cd9e0a70c576bfeb1d7988193b08",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt5/__init__.py",
+      "bytes": 640,
+      "sha256": "09d22ff674cab47a4bbe6faa55119c8f49a05d50747f11185e69dda989ec667d",
+      "upstream_sha256": "09d22ff674cab47a4bbe6faa55119c8f49a05d50747f11185e69dda989ec667d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt5/linux/__init__.py",
+      "bytes": 3237,
+      "sha256": "9b8a45b3969d87d8923cff7912775f44dba92ef127ec8d2a909ea51dcb4fa9b4",
+      "upstream_sha256": "9b8a45b3969d87d8923cff7912775f44dba92ef127ec8d2a909ea51dcb4fa9b4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt5/linux/window_effect.py",
+      "bytes": 2565,
+      "sha256": "347cdeb88c3300c49b9034e479a5bef93288ec77abc99c984a76e9e8e731a1ca",
+      "upstream_sha256": "347cdeb88c3300c49b9034e479a5bef93288ec77abc99c984a76e9e8e731a1ca",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt5/utils/linux_utils.py",
+      "bytes": 5400,
+      "sha256": "89d79a7237d742eca265a539c431a06d6b89cd888e9bbe76e107fec1b6f58584",
+      "upstream_sha256": "89d79a7237d742eca265a539c431a06d6b89cd888e9bbe76e107fec1b6f58584",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt5/win_frameless_window.py",
+      "bytes": 9125,
+      "sha256": "0de9e54b56dcc2b765b4e24203781737881c4768071171d201a01eac7d28c0b3",
+      "upstream_sha256": "0de9e54b56dcc2b765b4e24203781737881c4768071171d201a01eac7d28c0b3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt6/__init__.py",
+      "bytes": 860,
+      "sha256": "dbd5f9a10a5a1bd743d2cd9d849c99eada8f74f117700b7c36aad9cf21f57d62",
+      "upstream_sha256": "dbd5f9a10a5a1bd743d2cd9d849c99eada8f74f117700b7c36aad9cf21f57d62",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt6/linux_frameless_window.py",
+      "bytes": 4795,
+      "sha256": "c5fa4ce8f05ae031c1728c8aa1f1af1dd4f6cceadd0c2e8fdb441013e8ab3c07",
+      "upstream_sha256": "c5fa4ce8f05ae031c1728c8aa1f1af1dd4f6cceadd0c2e8fdb441013e8ab3c07",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt6/mac_frameless_window.py",
+      "bytes": 6773,
+      "sha256": "f3458e25a139fa1cc133d7205abc3972a4602316b9dffb370f9fdfefbaa16aff",
+      "upstream_sha256": "f3458e25a139fa1cc133d7205abc3972a4602316b9dffb370f9fdfefbaa16aff",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/fw_qt6/win_frameless_window.py",
+      "bytes": 8712,
+      "sha256": "2add289176b06d81ab370aca75b905640da87248861f77d8a8b4113ab3db8844",
+      "upstream_sha256": "2add289176b06d81ab370aca75b905640da87248861f77d8a8b4113ab3db8844",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/linux_utils.py",
+      "bytes": 1768,
+      "sha256": "3b2ff8ba02e523f7ace5c616ce0d2f862070bb201389772ef2ccd5db27082eaa",
+      "upstream_sha256": "3b2ff8ba02e523f7ace5c616ce0d2f862070bb201389772ef2ccd5db27082eaa",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/linux_window_effect.py",
+      "bytes": 3719,
+      "sha256": "d0ee975f0a172f2ede5478d0196898e5262ba88ccb9b6a9efdc5095eb0d68d0e",
+      "upstream_sha256": "d0ee975f0a172f2ede5478d0196898e5262ba88ccb9b6a9efdc5095eb0d68d0e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/mac_utils.py",
+      "bytes": 4022,
+      "sha256": "03c1ee664ab65fde9f199601c394e28a400b6f6f0016873cfc081784eb953fd2",
+      "upstream_sha256": "03c1ee664ab65fde9f199601c394e28a400b6f6f0016873cfc081784eb953fd2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/mac_window_effect.py",
+      "bytes": 5076,
+      "sha256": "1f236170477e484d5fc9e7205943c88ce54b4ee11c5873be8b39c1043cc400cc",
+      "upstream_sha256": "1f236170477e484d5fc9e7205943c88ce54b4ee11c5873be8b39c1043cc400cc",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/win32_utils.py",
+      "bytes": 12592,
+      "sha256": "c7595ee0e13f31832b737450d54695a31d065d363e7987355e9a220bbf8d2203",
+      "upstream_sha256": "c7595ee0e13f31832b737450d54695a31d065d363e7987355e9a220bbf8d2203",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/win_c_structures.py",
+      "bytes": 4144,
+      "sha256": "efec5a07ed1d489e06c72449cbc952c179077078c0277161e7c26a05d086904a",
+      "upstream_sha256": "efec5a07ed1d489e06c72449cbc952c179077078c0277161e7c26a05d086904a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/framelesswindow/win_window_effect.py",
+      "bytes": 10594,
+      "sha256": "205fdb6e88a6a4cac8da1661ecc069716e72421aac1261dc48446b730bb7980a",
+      "upstream_sha256": "205fdb6e88a6a4cac8da1661ecc069716e72421aac1261dc48446b730bb7980a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/funcmaps.py",
+      "bytes": 408,
+      "sha256": "9ddf13bbd17ceb7b735e59b54388e0876e11f2b0c4f163ad917ec22053bf5e62",
+      "upstream_sha256": "9ddf13bbd17ceb7b735e59b54388e0876e11f2b0c4f163ad917ec22053bf5e62",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/global_search_widget.py",
+      "bytes": 23949,
+      "sha256": "32346b25d91179454314787a2427bb4090a9ecda7946399d32578111dc63003a",
+      "upstream_sha256": "32346b25d91179454314787a2427bb4090a9ecda7946399d32578111dc63003a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/icon_rendering.py",
+      "bytes": 1558,
+      "sha256": "ac0b171a029206dbf36962cddb165ccae7946731b8215d1b3b74ee47435b8e68",
+      "upstream_sha256": "ac0b171a029206dbf36962cddb165ccae7946731b8215d1b3b74ee47435b8e68",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/image_edit.py",
+      "bytes": 9229,
+      "sha256": "28a3c9905ef879fabaa5f7f2eb0d3d66b11cedb28ee8e4539f8f5044ea6f9de7",
+      "upstream_sha256": "28a3c9905ef879fabaa5f7f2eb0d3d66b11cedb28ee8e4539f8f5044ea6f9de7",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/io_thread.py",
+      "bytes": 11335,
+      "sha256": "889e49e8adeb2d366b76c285727628b986dd54b200b6e49292f589645d66a1c1",
+      "upstream_sha256": "889e49e8adeb2d366b76c285727628b986dd54b200b6e49292f589645d66a1c1",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/keywordsubwidget.py",
+      "bytes": 4034,
+      "sha256": "36691ab52a57c52fbeaf068e60ea332ca7ae1aa36df88ce2939677a384c4dec7",
+      "upstream_sha256": "36691ab52a57c52fbeaf068e60ea332ca7ae1aa36df88ce2939677a384c4dec7",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/llm_context_editor.py",
+      "bytes": 12899,
+      "sha256": "598476fb4ee1cc7e749a2c0793568db7212296192569f874b5ffd3657da1285f",
+      "upstream_sha256": "598476fb4ee1cc7e749a2c0793568db7212296192569f874b5ffd3657da1285f",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/llm_modality.py",
+      "bytes": 639,
+      "sha256": "0589f74d2a9c121f327395d80c86f3429f6612cfc3d62c521c62a352e54241aa",
+      "upstream_sha256": "0589f74d2a9c121f327395d80c86f3429f6612cfc3d62c521c62a352e54241aa",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/llm_profile_widgets.py",
+      "bytes": 85635,
+      "sha256": "ecf01083122bba255a0383ab82ba2e8b4b91dc5bd42e4989c48616483ca9614a",
+      "upstream_sha256": "ecf01083122bba255a0383ab82ba2e8b4b91dc5bd42e4989c48616483ca9614a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/mainwindow.py",
+      "bytes": 120767,
+      "sha256": "0fb7edcda03626eaf2d2eaca29f5649df56616736f200ede982079605830e363",
+      "upstream_sha256": "0fb7edcda03626eaf2d2eaca29f5649df56616736f200ede982079605830e363",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/mainwindowbars.py",
+      "bytes": 27203,
+      "sha256": "605346a2850618370aa42f3660db3db014071a81e5c505943090a9d8bd30acbe",
+      "upstream_sha256": "605346a2850618370aa42f3660db3db014071a81e5c505943090a9d8bd30acbe",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/menu_style.py",
+      "bytes": 10394,
+      "sha256": "34633850498c6ba4a43650c2d6029adc9ec6e24255c64ee747b171cf66603cae",
+      "upstream_sha256": "34633850498c6ba4a43650c2d6029adc9ec6e24255c64ee747b171cf66603cae",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/merge_dialog.py",
+      "bytes": 12359,
+      "sha256": "7fb1698cd52162522454051bce86ee9d4c179bc6265c2cc22e18a70ca828c904",
+      "upstream_sha256": "7fb1698cd52162522454051bce86ee9d4c179bc6265c2cc22e18a70ca828c904",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/misc.py",
+      "bytes": 9257,
+      "sha256": "4b519301bc78b1caf1e5ff6bb42640bd5343c3171ae1ff3015370d7d1c0c73fa",
+      "upstream_sha256": "4b519301bc78b1caf1e5ff6bb42640bd5343c3171ae1ff3015370d7d1c0c73fa",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/module_manager.py",
+      "bytes": 108631,
+      "sha256": "d0d2c0ab9b008aad18fac2626a3d3576cac5e8389620b106d5449af11cd36a6f",
+      "upstream_sha256": "d0d2c0ab9b008aad18fac2626a3d3576cac5e8389620b106d5449af11cd36a6f",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/module_param_i18n.py",
+      "bytes": 2967,
+      "sha256": "1dc51ae7572026a647d00a92e7f96319ab4a6fda7f4968383388a0434caf9d5b",
+      "upstream_sha256": "1dc51ae7572026a647d00a92e7f96319ab4a6fda7f4968383388a0434caf9d5b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/module_parse_widgets.py",
+      "bytes": 25544,
+      "sha256": "30e12d51ebea32afd1a29c7e3e8798f6bd92932dc5f5105c9ef13ad6900e5dad",
+      "upstream_sha256": "30e12d51ebea32afd1a29c7e3e8798f6bd92932dc5f5105c9ef13ad6900e5dad",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/module_tool_button.py",
+      "bytes": 23246,
+      "sha256": "9f056bb731002388f5e90e9b990799afafe4473de239b18083b25135bf8bf8c4",
+      "upstream_sha256": "9f056bb731002388f5e90e9b990799afafe4473de239b18083b25135bf8bf8c4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/package_manager.py",
+      "bytes": 838,
+      "sha256": "7c2b0fd081fd69db38a29704530d5f5f6a4a22a26a7cf32351457f710b2cf2bc",
+      "upstream_sha256": "7c2b0fd081fd69db38a29704530d5f5f6a4a22a26a7cf32351457f710b2cf2bc",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/packageinstall_thread.py",
+      "bytes": 1906,
+      "sha256": "fe055e609e60eb9395222fbe693e0dddd4cdfdb0ba4e41a3db61b10baa5f20ec",
+      "upstream_sha256": "fe055e609e60eb9395222fbe693e0dddd4cdfdb0ba4e41a3db61b10baa5f20ec",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/page_range_progress.py",
+      "bytes": 19508,
+      "sha256": "c1a787b5e9341de9619674edc66bc3f686b26b6d6b03fe9615f60ec7ade30e9a",
+      "upstream_sha256": "c1a787b5e9341de9619674edc66bc3f686b26b6d6b03fe9615f60ec7ade30e9a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/page_search_widget.py",
+      "bytes": 28692,
+      "sha256": "c001f9bbdb33901fa36aef96ed2038bf034d2370653e9171a08e82f7c4a45753",
+      "upstream_sha256": "c001f9bbdb33901fa36aef96ed2038bf034d2370653e9171a08e82f7c4a45753",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/ps_bridge_dialog.py",
+      "bytes": 29577,
+      "sha256": "a2ce40f4890955ac6671d0eefe6a81428bacedcc485ff6eb585ef3dd1ceaab73",
+      "upstream_sha256": "a2ce40f4890955ac6671d0eefe6a81428bacedcc485ff6eb585ef3dd1ceaab73",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/run_pipeline_dialog.py",
+      "bytes": 62825,
+      "sha256": "d123ce336d1064061753644acce7fe963daf6d60a33dbc5b66d6ce88c0234c1e",
+      "upstream_sha256": "d123ce336d1064061753644acce7fe963daf6d60a33dbc5b66d6ce88c0234c1e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/shared_widget.py",
+      "bytes": 67,
+      "sha256": "e54e3987e0605458e73d8b2ad37e97c1a1920716464443e516bec98e286e9c25",
+      "upstream_sha256": "e54e3987e0605458e73d8b2ad37e97c1a1920716464443e516bec98e286e9c25",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/spellcheck.py",
+      "bytes": 32123,
+      "sha256": "e62148e6482f3c784f39af8c94dc9e48a4a8760a9e73eef1331b9a0ef6e49740",
+      "upstream_sha256": "e62148e6482f3c784f39af8c94dc9e48a4a8760a9e73eef1331b9a0ef6e49740",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/__init__.py",
+      "bytes": 67,
+      "sha256": "427695957785d4d80b500000dba6cb0c7f487a4b5903c38059231f84240fe181",
+      "upstream_sha256": "427695957785d4d80b500000dba6cb0c7f487a4b5903c38059231f84240fe181",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/annotations.py",
+      "bytes": 101623,
+      "sha256": "bf445e67bdd92a34bb13167a4eadf2831a22d2d769892f3d3642bd804ecb44b8",
+      "upstream_sha256": "bf445e67bdd92a34bb13167a4eadf2831a22d2d769892f3d3642bd804ecb44b8",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/cache.py",
+      "bytes": 2069,
+      "sha256": "6335e3720ff81989fed8220fdd0dc838bf9d0a9ad933c04ca71c16d3204899de",
+      "upstream_sha256": "6335e3720ff81989fed8220fdd0dc838bf9d0a9ad933c04ca71c16d3204899de",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/__init__.py",
+      "bytes": 62,
+      "sha256": "0e18d3e90f3399528f07462cdac9ce2a4684b54ffbfd22f0424430749763972d",
+      "upstream_sha256": "0e18d3e90f3399528f07462cdac9ce2a4684b54ffbfd22f0424430749763972d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/commands.py",
+      "bytes": 32076,
+      "sha256": "c341ab2d41413e440c3c45d8190ce79b776b07d8d3bd8e963f25378bc48b4eed",
+      "upstream_sha256": "c341ab2d41413e440c3c45d8190ce79b776b07d8d3bd8e963f25378bc48b4eed",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/context_menu.py",
+      "bytes": 2573,
+      "sha256": "d51ff148eb7cf7fd5e82fb543ff10d61e6e3245eb00f69b51ea8d77d59db5a78",
+      "upstream_sha256": "d51ff148eb7cf7fd5e82fb543ff10d61e6e3245eb00f69b51ea8d77d59db5a78",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/manager.py",
+      "bytes": 56111,
+      "sha256": "13e65569e8d6e74b648eb11ccba9c58d7834763290419f5cacb06d15e5956d75",
+      "upstream_sha256": "13e65569e8d6e74b648eb11ccba9c58d7834763290419f5cacb06d15e5956d75",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/move_session.py",
+      "bytes": 7424,
+      "sha256": "4473a4cfcd30448496d92bd6387d2f920e1ac9c8494da709e22908bbba59942a",
+      "upstream_sha256": "4473a4cfcd30448496d92bd6387d2f920e1ac9c8494da709e22908bbba59942a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/editing/widgets.py",
+      "bytes": 42654,
+      "sha256": "74c16fdcaa6e2ca6411b99f67e0d2ae93de43536d9fd571f43430883442d4ea6",
+      "upstream_sha256": "74c16fdcaa6e2ca6411b99f67e0d2ae93de43536d9fd571f43430883442d4ea6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/__init__.py",
+      "bytes": 69,
+      "sha256": "5ce0fc70d588a68c165434ee577d1407181b0f7be9dd45f6bd89eb652ffa2462",
+      "upstream_sha256": "5ce0fc70d588a68c165434ee577d1407181b0f7be9dd45f6bd89eb652ffa2462",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/alpha_mask.py",
+      "bytes": 4318,
+      "sha256": "7d7804ecdcb4cf68d5043d4fd289cad38a572ba80bfa49d54a8ac1a491e320b3",
+      "upstream_sha256": "7d7804ecdcb4cf68d5043d4fd289cad38a572ba80bfa49d54a8ac1a491e320b3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/alpha_mask_edit_session.py",
+      "bytes": 17336,
+      "sha256": "8c09548db51179545a1f3567578454b823105afa0dbb8442bfbe237368a65b87",
+      "upstream_sha256": "8c09548db51179545a1f3567578454b823105afa0dbb8442bfbe237368a65b87",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/blend.py",
+      "bytes": 4401,
+      "sha256": "ae1a9128495680e2be7d6c79cdbec1819d3a33effbe33e36b0b8dd72b2dd29d4",
+      "upstream_sha256": "ae1a9128495680e2be7d6c79cdbec1819d3a33effbe33e36b0b8dd72b2dd29d4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/cards.py",
+      "bytes": 121181,
+      "sha256": "5a00ae2a965a6ccf634e56b209f9191ec4c2df83685f837b52abaaf4bf7917f8",
+      "upstream_sha256": "5a00ae2a965a6ccf634e56b209f9191ec4c2df83685f837b52abaaf4bf7917f8",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/edit_session.py",
+      "bytes": 44665,
+      "sha256": "809f1352a8005900ca0980c1fdab5982c3524e557b60504f538e29eaecec4b1e",
+      "upstream_sha256": "809f1352a8005900ca0980c1fdab5982c3524e557b60504f538e29eaecec4b1e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/__init__.py",
+      "bytes": 468,
+      "sha256": "8f3d6d392c0bcec9b4ea96e7888183825462131964ebf2a4acb7cc0f07bd204d",
+      "upstream_sha256": "8f3d6d392c0bcec9b4ea96e7888183825462131964ebf2a4acb7cc0f07bd204d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/_gaussian.py",
+      "bytes": 1951,
+      "sha256": "7d849bf91ca7d91a84cda97e11c6d39f05b0bd6438831bec41781b053cf6f6ae",
+      "upstream_sha256": "7d849bf91ca7d91a84cda97e11c6d39f05b0bd6438831bec41781b053cf6f6ae",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/_procedural.py",
+      "bytes": 2264,
+      "sha256": "4da5965199390e30fa9647e80bfcb539e5494f87c6084e3184c34fd365a02b56",
+      "upstream_sha256": "4da5965199390e30fa9647e80bfcb539e5494f87c6084e3184c34fd365a02b56",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/filter_bloom.py",
+      "bytes": 3167,
+      "sha256": "552bb827a4c16c58a96f2ad5e8e2ff473c45a26c0ded242007a158cd34a99c29",
+      "upstream_sha256": "552bb827a4c16c58a96f2ad5e8e2ff473c45a26c0ded242007a158cd34a99c29",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/filter_gaussian_blur.py",
+      "bytes": 1320,
+      "sha256": "ef98b3a65f9a363ae0f85514809ff6a27690a70e0d5621d0802f96f2ae2315e9",
+      "upstream_sha256": "ef98b3a65f9a363ae0f85514809ff6a27690a70e0d5621d0802f96f2ae2315e9",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/filter_glitch.py",
+      "bytes": 5660,
+      "sha256": "d84d39ac1ef5ec03f5a945085cfd948d6f3439f3f80b7c544b7a7db07a9c9afb",
+      "upstream_sha256": "d84d39ac1ef5ec03f5a945085cfd948d6f3439f3f80b7c544b7a7db07a9c9afb",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/filter_grain.py",
+      "bytes": 2364,
+      "sha256": "53aee47c7256e1951f54f8b95db93d7a377534d5436149f7ea638b5223c5329f",
+      "upstream_sha256": "53aee47c7256e1951f54f8b95db93d7a377534d5436149f7ea638b5223c5329f",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/filter_noise.py",
+      "bytes": 2570,
+      "sha256": "3db93e8967adf8a10993bd8cff913158154cfd34d0aa1360f85e0d90279f2556",
+      "upstream_sha256": "3db93e8967adf8a10993bd8cff913158154cfd34d0aa1360f85e0d90279f2556",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/filters/registry.py",
+      "bytes": 21328,
+      "sha256": "a2b6c6386a20fa2790e76719a4051528d4e43bf0f5327eec2db49e9250c2dbf3",
+      "upstream_sha256": "a2b6c6386a20fa2790e76719a4051528d4e43bf0f5327eec2db49e9250c2dbf3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/gradient_editor.py",
+      "bytes": 35724,
+      "sha256": "10761a2e48cdd81c87a57611c1ab26fab66f684577264805210bb425eb416867",
+      "upstream_sha256": "10761a2e48cdd81c87a57611c1ab26fab66f684577264805210bb425eb416867",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/image_generation.py",
+      "bytes": 14815,
+      "sha256": "dff32cb419c301c19e5e679aa42e80fc6ed6eb897fa3c6afff67fb86e26993eb",
+      "upstream_sha256": "dff32cb419c301c19e5e679aa42e80fc6ed6eb897fa3c6afff67fb86e26993eb",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/paint.py",
+      "bytes": 15655,
+      "sha256": "c2337fccf55097688f105ce43a5e292397931a2d8f8b4e4cf01dccde379f7d39",
+      "upstream_sha256": "c2337fccf55097688f105ce43a5e292397931a2d8f8b4e4cf01dccde379f7d39",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/paint_numba.py",
+      "bytes": 5075,
+      "sha256": "2bb39c5c6c61c1a5cf9757edb9c9afc5f95dd98fac049ac83b0d9f2917a9834e",
+      "upstream_sha256": "2bb39c5c6c61c1a5cf9757edb9c9afc5f95dd98fac049ac83b0d9f2917a9834e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/panel.py",
+      "bytes": 37331,
+      "sha256": "2f5e9392206fd2cb618ee02279c9dfecb8930673d473790cf48ef02687349aae",
+      "upstream_sha256": "2f5e9392206fd2cb618ee02279c9dfecb8930673d473790cf48ef02687349aae",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/renderer.py",
+      "bytes": 192181,
+      "sha256": "3be74e773e2c8d76a8335c86c8c8b5c1e7cdb3f5b4b193d73a7f7120305b2966",
+      "upstream_sha256": "3be74e773e2c8d76a8335c86c8c8b5c1e7cdb3f5b4b193d73a7f7120305b2966",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/effects/shadow.py",
+      "bytes": 5085,
+      "sha256": "67e30843c6be615ec79449d08617bd5338afeaa82c5d2a4d62b69f9ec2bbef74",
+      "upstream_sha256": "67e30843c6be615ec79449d08617bd5338afeaa82c5d2a4d62b69f9ec2bbef74",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/font_family.py",
+      "bytes": 9243,
+      "sha256": "88760529663140153b9c5ddfe4f7c1e88685878358f22104ea0f6c40257d8cd8",
+      "upstream_sha256": "88760529663140153b9c5ddfe4f7c1e88685878358f22104ea0f6c40257d8cd8",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/__init__.py",
+      "bytes": 54,
+      "sha256": "b89f09c2d66e3c1f0ac99a44ece198d320675619954c9fb2c17a45f1809552a4",
+      "upstream_sha256": "b89f09c2d66e3c1f0ac99a44ece198d320675619954c9fb2c17a45f1809552a4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/advanced.py",
+      "bytes": 20683,
+      "sha256": "6c5eafa95086a5e90d0c97358992daaa240c12fb8de0cef90465d742dc8a5def",
+      "upstream_sha256": "6c5eafa95086a5e90d0c97358992daaa240c12fb8de0cef90465d742dc8a5def",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/commands.py",
+      "bytes": 9105,
+      "sha256": "fac6e2b63db6a8a8c8682d37b83cbce4e5da66720556ed01889c02ff4d16e93c",
+      "upstream_sha256": "fac6e2b63db6a8a8c8682d37b83cbce4e5da66720556ed01889c02ff4d16e93c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/panel.py",
+      "bytes": 65279,
+      "sha256": "c59f4c1b5cc5aba5c8fb0113d7862799c9369f3e1b67b70e89be1aded18bdeb9",
+      "upstream_sha256": "c59f4c1b5cc5aba5c8fb0113d7862799c9369f3e1b67b70e89be1aded18bdeb9",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/presets.py",
+      "bytes": 20884,
+      "sha256": "3fdf25f753af01b74229a635f260771bbc19168bb807c3074114eff06a131af3",
+      "upstream_sha256": "3fdf25f753af01b74229a635f260771bbc19168bb807c3074114eff06a131af3",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/formatting/size_edit_session.py",
+      "bytes": 10886,
+      "sha256": "f0d4ffce24e89837df1dfa4ed9d22db3a92cf16c84fb5661c1910629ffe49467",
+      "upstream_sha256": "f0d4ffce24e89837df1dfa4ed9d22db3a92cf16c84fb5661c1910629ffe49467",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/geometry.py",
+      "bytes": 55047,
+      "sha256": "25cc11ed1f8a1481fb1c6f2bc9aa3f26c971e21da29fbc1d36279efa597c0801",
+      "upstream_sha256": "25cc11ed1f8a1481fb1c6f2bc9aa3f26c971e21da29fbc1d36279efa597c0801",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/horizontal_layout.py",
+      "bytes": 54429,
+      "sha256": "2d4f8b3f5ef84516e112f11f0e925113b3d7824b1de401c4ac6a4f2a24020a41",
+      "upstream_sha256": "2d4f8b3f5ef84516e112f11f0e925113b3d7824b1de401c4ac6a4f2a24020a41",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/item.py",
+      "bytes": 87449,
+      "sha256": "643692f1e600d61b84087f4471f115d05433930c9fb7b86097f663b208a1c04c",
+      "upstream_sha256": "643692f1e600d61b84087f4471f115d05433930c9fb7b86097f663b208a1c04c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/layout.py",
+      "bytes": 19852,
+      "sha256": "b8b0e580a125f56134b359322aaa519f41b680b409ddef5b82a322711fde5ccf",
+      "upstream_sha256": "b8b0e580a125f56134b359322aaa519f41b680b409ddef5b82a322711fde5ccf",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/pipeline_formatting.py",
+      "bytes": 6123,
+      "sha256": "8f8079c2450d769b1df577d36b456bbfe5d4e52f4c1ba1e88754abaa8b108e2c",
+      "upstream_sha256": "8f8079c2450d769b1df577d36b456bbfe5d4e52f4c1ba1e88754abaa8b108e2c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/__init__.py",
+      "bytes": 59,
+      "sha256": "5c13ba82ae852a6609c7c416cb2a88a227f29cde6cbec5048df167bd3a8bf568",
+      "upstream_sha256": "5c13ba82ae852a6609c7c416cb2a88a227f29cde6cbec5048df167bd3a8bf568",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/emphasis.py",
+      "bytes": 11811,
+      "sha256": "de3b9ba1ab38ac1bad20b2385f48b07e32823d9a0fcba68aca60107a3a50c86a",
+      "upstream_sha256": "de3b9ba1ab38ac1bad20b2385f48b07e32823d9a0fcba68aca60107a3a50c86a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/glyph.py",
+      "bytes": 52797,
+      "sha256": "bfb6d32df92028435a756eb72e12dffb6119e761e2734a35b1232457240ddc69",
+      "upstream_sha256": "bfb6d32df92028435a756eb72e12dffb6119e761e2734a35b1232457240ddc69",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/glyph_slant.py",
+      "bytes": 24212,
+      "sha256": "60f5f9618d138ed085c4cbc50db30c2c2e7b1009fd419b7790a8d287b22a302a",
+      "upstream_sha256": "60f5f9618d138ed085c4cbc50db30c2c2e7b1009fd419b7790a8d287b22a302a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/indexing.py",
+      "bytes": 2432,
+      "sha256": "9e7b74439827663cbb800b600137702cb3f87c7022d389f0d8a75893127c623f",
+      "upstream_sha256": "9e7b74439827663cbb800b600137702cb3f87c7022d389f0d8a75893127c623f",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/morphology.py",
+      "bytes": 7157,
+      "sha256": "d0c451a6ae6c102d3d342477fe8ae4739f21b7ce060a997ebb7920804e4aac73",
+      "upstream_sha256": "d0c451a6ae6c102d3d342477fe8ae4739f21b7ce060a997ebb7920804e4aac73",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/native_document.py",
+      "bytes": 3865,
+      "sha256": "9d5d745f68a29567c68ade2e26129be4da139263a46c3de7de73dc310869024d",
+      "upstream_sha256": "9d5d745f68a29567c68ade2e26129be4da139263a46c3de7de73dc310869024d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/native_paint.py",
+      "bytes": 17711,
+      "sha256": "4bf04d6c73815ff9671cdfdf2fe95b7ad8755db38b26d2d5009ea87ad3323115",
+      "upstream_sha256": "4bf04d6c73815ff9671cdfdf2fe95b7ad8755db38b26d2d5009ea87ad3323115",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/raster.py",
+      "bytes": 3135,
+      "sha256": "8ca77ef8a6f503c028923ae0c9a9ff51b007b71a824df57ebd23d7aa2b158368",
+      "upstream_sha256": "8ca77ef8a6f503c028923ae0c9a9ff51b007b71a824df57ebd23d7aa2b158368",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/ruby.py",
+      "bytes": 32639,
+      "sha256": "86c45dc786c6edb011ab70e05595750279b9ded40d7cacd250b3ea92f19e4133",
+      "upstream_sha256": "86c45dc786c6edb011ab70e05595750279b9ded40d7cacd250b3ea92f19e4133",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/surface.py",
+      "bytes": 8624,
+      "sha256": "7c8b7a54930c5ec9a5dbfcf7baae80d83c67594206c79716ec0d20015ceab7f2",
+      "upstream_sha256": "7c8b7a54930c5ec9a5dbfcf7baae80d83c67594206c79716ec0d20015ceab7f2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/rendering/tate_chu_yoko.py",
+      "bytes": 5057,
+      "sha256": "5d7f64bc5be7fd9b5e79d984af28e2375d9d4e57b593e0903e1f8aeefd6d6ee5",
+      "upstream_sha256": "5d7f64bc5be7fd9b5e79d984af28e2375d9d4e57b593e0903e1f8aeefd6d6ee5",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/shape_control.py",
+      "bytes": 36514,
+      "sha256": "a920ca917db93ddc5817d9cd263b4f07ad723a08d0584a9c8f607c17ab16fd4a",
+      "upstream_sha256": "a920ca917db93ddc5817d9cd263b4f07ad723a08d0584a9c8f607c17ab16fd4a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/__init__.py",
+      "bytes": 71,
+      "sha256": "c1999f9166eae38a83968289a285bc0f0722544998d618666fa65734f0564e4c",
+      "upstream_sha256": "c1999f9166eae38a83968289a285bc0f0722544998d618666fa65734f0564e4c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/bend.py",
+      "bytes": 13832,
+      "sha256": "781492812379d3cf6a88bebe9077cb6c380e36a110d577c6963b17a6bc9c2782",
+      "upstream_sha256": "781492812379d3cf6a88bebe9077cb6c380e36a110d577c6963b17a6bc9c2782",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/controls.py",
+      "bytes": 29147,
+      "sha256": "68661b5911f387949be51e944128fba38699b96f9c04d55afdeaaa846cb7fcee",
+      "upstream_sha256": "68661b5911f387949be51e944128fba38699b96f9c04d55afdeaaa846cb7fcee",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/edit_session.py",
+      "bytes": 22352,
+      "sha256": "51914a631ee42243e71012d0ebb5bfbf352ac3a0ea57c09d0eae27a1ba3f9d61",
+      "upstream_sha256": "51914a631ee42243e71012d0ebb5bfbf352ac3a0ea57c09d0eae27a1ba3f9d61",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/grid.py",
+      "bytes": 26504,
+      "sha256": "cbad8619cb19793649c717f1ca93285531ae1f6318b89d1b1636244736a8d600",
+      "upstream_sha256": "cbad8619cb19793649c717f1ca93285531ae1f6318b89d1b1636244736a8d600",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/grid_control.py",
+      "bytes": 27639,
+      "sha256": "8f5839c4058883e0504db2353a885d02ffcbf13f8098e6eb9053d7afea1fdd04",
+      "upstream_sha256": "8f5839c4058883e0504db2353a885d02ffcbf13f8098e6eb9053d7afea1fdd04",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/grid_numba.py",
+      "bytes": 16499,
+      "sha256": "48fdedbccc331e3d5be75c22d47981019bd7c604770eb41b0dba300ca9f04fb2",
+      "upstream_sha256": "48fdedbccc331e3d5be75c22d47981019bd7c604770eb41b0dba300ca9f04fb2",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/mapping.py",
+      "bytes": 23091,
+      "sha256": "942fc1cb97873299e0f0d34e2dd8f8d8be38d9cbfa39435081fd0305fdc4eec6",
+      "upstream_sha256": "942fc1cb97873299e0f0d34e2dd8f8d8be38d9cbfa39435081fd0305fdc4eec6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/modal.py",
+      "bytes": 7024,
+      "sha256": "5beb42546f0bcf462cef197c3ee86dde131ea8059ec413ed5fa24478606148df",
+      "upstream_sha256": "5beb42546f0bcf462cef197c3ee86dde131ea8059ec413ed5fa24478606148df",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/panel.py",
+      "bytes": 12671,
+      "sha256": "b790522b8d7e8fc2da71fc79d591134d9db3f1653c8107fd60b1511d6399fa7d",
+      "upstream_sha256": "b790522b8d7e8fc2da71fc79d591134d9db3f1653c8107fd60b1511d6399fa7d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/projective_control.py",
+      "bytes": 21681,
+      "sha256": "c13c58872f0f682352ff81de0c851b1683900cc60014e763de0db8b205ca4edd",
+      "upstream_sha256": "c13c58872f0f682352ff81de0c851b1683900cc60014e763de0db8b205ca4edd",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/registry.py",
+      "bytes": 19280,
+      "sha256": "0f1b76327650b61b69da141889c3c3bb92362fdd59c2f68816ddd0ee6872f050",
+      "upstream_sha256": "0f1b76327650b61b69da141889c3c3bb92362fdd59c2f68816ddd0ee6872f050",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/transforms/sine.py",
+      "bytes": 6999,
+      "sha256": "4afbd22f7a6bd81100695fb8cfde6adcea95c61be067b4654e48fa16824a26b5",
+      "upstream_sha256": "4afbd22f7a6bd81100695fb8cfde6adcea95c61be067b4654e48fa16824a26b5",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/text_engine/vertical_layout.py",
+      "bytes": 109484,
+      "sha256": "23d767aa1e02f971b34858b4a85ddba9df6eafed0c041bb46aebd1be87954ce0",
+      "upstream_sha256": "23d767aa1e02f971b34858b4a85ddba9df6eafed0c041bb46aebd1be87954ce0",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/torch_install_dialog.py",
+      "bytes": 7155,
+      "sha256": "79591b3c5b08a1eb679829d71901b0c931dd8407d7a2df0b6af26f4d0a93e277",
+      "upstream_sha256": "79591b3c5b08a1eb679829d71901b0c931dd8407d7a2df0b6af26f4d0a93e277",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/update_dialog.py",
+      "bytes": 11519,
+      "sha256": "6e89fdc7c44f8ac62a1a5b78deb350eb4fdfd852504ae288a3da3a778131b353",
+      "upstream_sha256": "6e89fdc7c44f8ac62a1a5b78deb350eb4fdfd852504ae288a3da3a778131b353",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/ui/update_thread.py",
+      "bytes": 1927,
+      "sha256": "05c3293ca94185862f529bcc0228e561943ac6cfce3fa4abe8ca1cd7de79121d",
+      "upstream_sha256": "05c3293ca94185862f529bcc0228e561943ac6cfce3fa4abe8ca1cd7de79121d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/config.py",
+      "bytes": 26997,
+      "sha256": "98b19d26fcab6c90501b5322d494a40e97bf09b29de94fe58686eaf82cb02420",
+      "upstream_sha256": "98b19d26fcab6c90501b5322d494a40e97bf09b29de94fe58686eaf82cb02420",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/core_requirements.py",
+      "bytes": 8624,
+      "sha256": "57de431383cc28656c724423cb500d086ea74341fdf29efd0a2cac952d592b21",
+      "upstream_sha256": "57de431383cc28656c724423cb500d086ea74341fdf29efd0a2cac952d592b21",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/download_util.py",
+      "bytes": 19869,
+      "sha256": "da62a37268e030939fd6d723e824f7eb5942c925345046b6e82a96e255e02754",
+      "upstream_sha256": "da62a37268e030939fd6d723e824f7eb5942c925345046b6e82a96e255e02754",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/font_detect.py",
+      "bytes": 12469,
+      "sha256": "e52541d5412d0a192f693092a4296290eb85bcec9a9b5e35c4fa1e5b27c5c351",
+      "upstream_sha256": "e52541d5412d0a192f693092a4296290eb85bcec9a9b5e35c4fa1e5b27c5c351",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/font_refresh.py",
+      "bytes": 9673,
+      "sha256": "d27a3c51625b0e710df2fadb77969a64946614c0e35c62f0f52c85266ffe035a",
+      "upstream_sha256": "d27a3c51625b0e710df2fadb77969a64946614c0e35c62f0f52c85266ffe035a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/font_registry.py",
+      "bytes": 47594,
+      "sha256": "e64368b12890724ba854d9ce9f77e795485a0680a34b6649f8014c07a033512c",
+      "upstream_sha256": "e64368b12890724ba854d9ce9f77e795485a0680a34b6649f8014c07a033512c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/fontformat.py",
+      "bytes": 32651,
+      "sha256": "061323932169f52ff02320eb0b181a2db474b144631b63242e930c78f3f3ba31",
+      "upstream_sha256": "061323932169f52ff02320eb0b181a2db474b144631b63242e930c78f3f3ba31",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/global_callbacks.py",
+      "bytes": 455,
+      "sha256": "657edb5a36d78b5ae7746656e55eab2f34d140273dbd85d008f34bd99ddc0a4b",
+      "upstream_sha256": "657edb5a36d78b5ae7746656e55eab2f34d140273dbd85d008f34bd99ddc0a4b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/imgproc_utils.py",
+      "bytes": 19983,
+      "sha256": "9ed907d050d6eb52c8580632845d1c90bc6811e7ae09f4c5513d70968d998bb4",
+      "upstream_sha256": "9ed907d050d6eb52c8580632845d1c90bc6811e7ae09f4c5513d70968d998bb4",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/io_utils.py",
+      "bytes": 10525,
+      "sha256": "ee15750d87a2e49514aec8ae30b7d22a15cf8ad1e8524fe3f508062a1d1f2eb1",
+      "upstream_sha256": "ee15750d87a2e49514aec8ae30b7d22a15cf8ad1e8524fe3f508062a1d1f2eb1",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/llm_profiles.py",
+      "bytes": 30593,
+      "sha256": "b96831ae98461b7ad517d5e810f46bbb09930fc0af485dadf7f7c92f334d6b14",
+      "upstream_sha256": "b96831ae98461b7ad517d5e810f46bbb09930fc0af485dadf7f7c92f334d6b14",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/lock.py",
+      "bytes": 285,
+      "sha256": "0a4b9854fdd356dad2d1cd38b026c9d0539ced7f2ba7c2bd4eeb66ece6f4e611",
+      "upstream_sha256": "0a4b9854fdd356dad2d1cd38b026c9d0539ced7f2ba7c2bd4eeb66ece6f4e611",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/logger.py",
+      "bytes": 4183,
+      "sha256": "2b1c547721660e77a6c841a3716b32cf096817fae802ab9986d230adb613057b",
+      "upstream_sha256": "2b1c547721660e77a6c841a3716b32cf096817fae802ab9986d230adb613057b",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/merger.py",
+      "bytes": 19974,
+      "sha256": "5c0e90838c5024647dc6155f2b6d25b6f30e7c05944fd7c457fc8bf22a72f960",
+      "upstream_sha256": "5c0e90838c5024647dc6155f2b6d25b6f30e7c05944fd7c457fc8bf22a72f960",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/message.py",
+      "bytes": 2390,
+      "sha256": "455fe4d5bc7e0002342012597abb68910a5331afb1764cadb504c8746c1629c6",
+      "upstream_sha256": "455fe4d5bc7e0002342012597abb68910a5331afb1764cadb504c8746c1629c6",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/network_mirrors.py",
+      "bytes": 12359,
+      "sha256": "c91d3a0a4138be8f7f87eedb94e35d0b35bfa252341ef8a43d4cd1d8363bea6c",
+      "upstream_sha256": "c91d3a0a4138be8f7f87eedb94e35d0b35bfa252341ef8a43d4cd1d8363bea6c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/package_installer.py",
+      "bytes": 18567,
+      "sha256": "461f87c6d982b64a15ac0d0acb912bc8cf27ab02bae7755df8580314609d5c84",
+      "upstream_sha256": "461f87c6d982b64a15ac0d0acb912bc8cf27ab02bae7755df8580314609d5c84",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/proj_imgtrans.py",
+      "bytes": 51770,
+      "sha256": "dab8a88a587ed90f0d343ba929f2aeee7651c49c8a070122e5bc66c28d29f481",
+      "upstream_sha256": "dab8a88a587ed90f0d343ba929f2aeee7651c49c8a070122e5bc66c28d29f481",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/py_package_manager.py",
+      "bytes": 25206,
+      "sha256": "f2fe991fb9df5352b5de79868f37281aa66dafae2efa3e45ef6a8827dddb886d",
+      "upstream_sha256": "f2fe991fb9df5352b5de79868f37281aa66dafae2efa3e45ef6a8827dddb886d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/raster_assets.py",
+      "bytes": 3465,
+      "sha256": "d6a83edc36fd08336cd5d5f78a56404e8cc1ba00d604c0abc151280acb59516e",
+      "upstream_sha256": "d6a83edc36fd08336cd5d5f78a56404e8cc1ba00d604c0abc151280acb59516e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/registry.py",
+      "bytes": 14526,
+      "sha256": "be01490774003541ac92dbe1efb1f67b79e9032ba59bf87b8db3c5dbb374cc3d",
+      "upstream_sha256": "be01490774003541ac92dbe1efb1f67b79e9032ba59bf87b8db3c5dbb374cc3d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/rgba.py",
+      "bytes": 1492,
+      "sha256": "2b8073893dc4bc541f7159b129b9ac7a40e49949d76cdd4af7523f00aaf97414",
+      "upstream_sha256": "2b8073893dc4bc541f7159b129b9ac7a40e49949d76cdd4af7523f00aaf97414",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/secret_store.py",
+      "bytes": 4781,
+      "sha256": "09e2ac50e6189a2b87d3380eb16a6f3a70f05129cbbed0cf2c9f6cbbf32b7e16",
+      "upstream_sha256": "09e2ac50e6189a2b87d3380eb16a6f3a70f05129cbbed0cf2c9f6cbbf32b7e16",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/shared.py",
+      "bytes": 6599,
+      "sha256": "b09510ff2b4bf9803da8bb9a678da55c71350b2b4dfbd77e28d8db0140e5e12f",
+      "upstream_sha256": "b09510ff2b4bf9803da8bb9a678da55c71350b2b4dfbd77e28d8db0140e5e12f",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/split_text_region.py",
+      "bytes": 13289,
+      "sha256": "d124393e689bd6e39a89eb3385bb953494d0fb1361f54af5677c3fb9b8eab4e1",
+      "upstream_sha256": "d124393e689bd6e39a89eb3385bb953494d0fb1361f54af5677c3fb9b8eab4e1",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/stroke_width_calculator.py",
+      "bytes": 4849,
+      "sha256": "3f003a76c26b2a59b5f316ff68ce09f523103f23206e9808007bb3b642bb75ea",
+      "upstream_sha256": "3f003a76c26b2a59b5f316ff68ce09f523103f23206e9808007bb3b642bb75ea",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/structures.py",
+      "bytes": 3050,
+      "sha256": "c819bf21452f83de1a780ad2da6254528c0760bd9afc1d27f04c9b014124ac3e",
+      "upstream_sha256": "c819bf21452f83de1a780ad2da6254528c0760bd9afc1d27f04c9b014124ac3e",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/text_alpha_mask.py",
+      "bytes": 9959,
+      "sha256": "34c5ba94286067575494f42c32a14f6a2d71be25cfcefba9ed430de400e16bee",
+      "upstream_sha256": "34c5ba94286067575494f42c32a14f6a2d71be25cfcefba9ed430de400e16bee",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/text_effects.py",
+      "bytes": 49980,
+      "sha256": "8653e2f654a5db2022f5417ada62144e2e321ed01961b57852d45e92c9f27a1d",
+      "upstream_sha256": "8653e2f654a5db2022f5417ada62144e2e321ed01961b57852d45e92c9f27a1d",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/text_layout.py",
+      "bytes": 17940,
+      "sha256": "ef12f9ed4e4056df61e10804d6140b71dd989e4d3a0097658dd88b2cb7c80478",
+      "upstream_sha256": "ef12f9ed4e4056df61e10804d6140b71dd989e4d3a0097658dd88b2cb7c80478",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/text_processing.py",
+      "bytes": 11451,
+      "sha256": "c927d95168603074b995743ac570901b42470d7fe946abf5c9f203a8363db2fc",
+      "upstream_sha256": "c927d95168603074b995743ac570901b42470d7fe946abf5c9f203a8363db2fc",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/textblock.py",
+      "bytes": 42825,
+      "sha256": "ab421e736db547c0a6b8bdc692340465f9b5597b1bfe987e988b97ba782d6f85",
+      "upstream_sha256": "ab421e736db547c0a6b8bdc692340465f9b5597b1bfe987e988b97ba782d6f85",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/textblock_mask.py",
+      "bytes": 17573,
+      "sha256": "3372c155bfc0b2ba674b1a3fbdc477016b8ebc20d354afdc6aa6fd4c4fe5c54a",
+      "upstream_sha256": "3372c155bfc0b2ba674b1a3fbdc477016b8ebc20d354afdc6aa6fd4c4fe5c54a",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/textlines_merge.py",
+      "bytes": 22579,
+      "sha256": "1d4399ae6ff8fffaa5200c72a67fda2323d9cc4f62a9f1b704a7f9ad9a2e12a5",
+      "upstream_sha256": "1d4399ae6ff8fffaa5200c72a67fda2323d9cc4f62a9f1b704a7f9ad9a2e12a5",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/torch_install_helper.py",
+      "bytes": 19387,
+      "sha256": "a26343c57fbd8fe73a3a10f7fefde20ba184c17953600835951e1379cfbb4c2c",
+      "upstream_sha256": "a26343c57fbd8fe73a3a10f7fefde20ba184c17953600835951e1379cfbb4c2c",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/updater.py",
+      "bytes": 19456,
+      "sha256": "b5a9029294fe10f7410fb8dc79f012dcdd1bdf2632aea19e1d25d559b43059a9",
+      "upstream_sha256": "b5a9029294fe10f7410fb8dc79f012dcdd1bdf2632aea19e1d25d559b43059a9",
+      "modified": false
+    },
+    {
+      "path": "ballontranslator/utils/version.py",
+      "bytes": 1958,
+      "sha256": "7b9c2b3473be2315b5a2dc5ac547a296a545cfbaffedc9810131e4ec08970ba0",
+      "upstream_sha256": "7b9c2b3473be2315b5a2dc5ac547a296a545cfbaffedc9810131e4ec08970ba0",
+      "modified": false
+    },
+    {
+      "path": "custom_modules/put your custom modules here.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "data/alphabet-all-v5.txt",
+      "bytes": 76733,
+      "sha256": "d4746307d2e912787cf7ccf017dd2b1fbc18563f9babad5c3b87f44253925624",
+      "upstream_sha256": "d4746307d2e912787cf7ccf017dd2b1fbc18563f9babad5c3b87f44253925624",
+      "modified": false
+    },
+    {
+      "path": "data/pkusegscores.json",
+      "bytes": 11184,
+      "sha256": "ca6b8c6b8ba70d4370b0f2de6bd128ebb0f5f64ff06f01ba6358e49a776b0c3f",
+      "upstream_sha256": "ca6b8c6b8ba70d4370b0f2de6bd128ebb0f5f64ff06f01ba6358e49a776b0c3f",
+      "modified": false
+    },
+    {
+      "path": "doc/add_translator_ru.md",
+      "bytes": 4089,
+      "sha256": "94478073277149e1535df6939e3a30e6608ce4ee810bd607fa1bfbaeaa4047d5",
+      "upstream_sha256": "94478073277149e1535df6939e3a30e6608ce4ee810bd607fa1bfbaeaa4047d5",
+      "modified": false
+    },
+    {
+      "path": "doc/CHANGELOG.md",
+      "bytes": 5651,
+      "sha256": "c49ba40698a733021bc962a227d58532200af49019b64bd54563889f4849bb36",
+      "upstream_sha256": "c49ba40698a733021bc962a227d58532200af49019b64bd54563889f4849bb36",
+      "modified": false
+    },
+    {
+      "path": "doc/CHANGELOG_EN.md",
+      "bytes": 5733,
+      "sha256": "2b0dc964bdf44069f4312afad5ef8c4a59e016163270cd815745ad6fa23ed34e",
+      "upstream_sha256": "2b0dc964bdf44069f4312afad5ef8c4a59e016163270cd815745ad6fa23ed34e",
+      "modified": false
+    },
+    {
+      "path": "doc/how_to_add_new_translator.md",
+      "bytes": 3689,
+      "sha256": "39df97da8ecc6ce32443ab01edbd26863105d2a665f6c481bbfb212b6d48da2d",
+      "upstream_sha256": "39df97da8ecc6ce32443ab01edbd26863105d2a665f6c481bbfb212b6d48da2d",
+      "modified": false
+    },
+    {
+      "path": "doc/localization.md",
+      "bytes": 3321,
+      "sha256": "8d8c2fe9caa23b17bc2f8d4af38174c9cd245ebc2ab7dcff1f76c7fa1125a03b",
+      "upstream_sha256": "8d8c2fe9caa23b17bc2f8d4af38174c9cd245ebc2ab7dcff1f76c7fa1125a03b",
+      "modified": false
+    },
+    {
+      "path": "doc/modules/llm_translator.md",
+      "bytes": 12425,
+      "sha256": "eee04323558dfb46720ca96e77173348511e8ddff7cf961cc0c2939b56e1bf3a",
+      "upstream_sha256": "eee04323558dfb46720ca96e77173348511e8ddff7cf961cc0c2939b56e1bf3a",
+      "modified": false
+    },
+    {
+      "path": "doc/README_ES.md",
+      "bytes": 23274,
+      "sha256": "90d3a4047c047b5782b80c83f56a480bbed0303c8ced62081930846f16f80df3",
+      "upstream_sha256": "90d3a4047c047b5782b80c83f56a480bbed0303c8ced62081930846f16f80df3",
+      "modified": false
+    },
+    {
+      "path": "doc/README_FR.md",
+      "bytes": 19150,
+      "sha256": "868c6b9a448aaba3401f76bdfd7ab443e1fc3c896f7a1671d87cd9caf5ab529e",
+      "upstream_sha256": "868c6b9a448aaba3401f76bdfd7ab443e1fc3c896f7a1671d87cd9caf5ab529e",
+      "modified": false
+    },
+    {
+      "path": "doc/README_ID.md",
+      "bytes": 13738,
+      "sha256": "1ca572e3dcaf399970a974bd3b3ba1c8134a7eae45c28ba64c06a1247998fccd",
+      "upstream_sha256": "1ca572e3dcaf399970a974bd3b3ba1c8134a7eae45c28ba64c06a1247998fccd",
+      "modified": false
+    },
+    {
+      "path": "doc/README_JA.md",
+      "bytes": 15053,
+      "sha256": "4414063901c35b37280fda95c0e2f44dbca649adbf9cb93ba724a14693ebf3f9",
+      "upstream_sha256": "4414063901c35b37280fda95c0e2f44dbca649adbf9cb93ba724a14693ebf3f9",
+      "modified": false
+    },
+    {
+      "path": "doc/README_KO.md",
+      "bytes": 20471,
+      "sha256": "3c02a193cf9e8ac674ccecdf8061117628745fa9e7c0b1e946c843e4dd398ecf",
+      "upstream_sha256": "3c02a193cf9e8ac674ccecdf8061117628745fa9e7c0b1e946c843e4dd398ecf",
+      "modified": false
+    },
+    {
+      "path": "doc/README_PT-BR.md",
+      "bytes": 17070,
+      "sha256": "44e57a46271e0347fc758d19fab1e61d98024add32807f66e1c6b9d52c527530",
+      "upstream_sha256": "44e57a46271e0347fc758d19fab1e61d98024add32807f66e1c6b9d52c527530",
+      "modified": false
+    },
+    {
+      "path": "doc/README_RU.md",
+      "bytes": 28639,
+      "sha256": "43f511a8b2ec7ffca52315c2377b96b5e108527c6913e8021eaf0d39dca42b4f",
+      "upstream_sha256": "43f511a8b2ec7ffca52315c2377b96b5e108527c6913e8021eaf0d39dca42b4f",
+      "modified": false
+    },
+    {
+      "path": "doc/README_VI.md",
+      "bytes": 18989,
+      "sha256": "deb9da17900a2e82f4e15f75440eeea05aa737f79fd1514a38d6420b204f74b8",
+      "upstream_sha256": "deb9da17900a2e82f4e15f75440eeea05aa737f79fd1514a38d6420b204f74b8",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/draw_panel.md",
+      "bytes": 6124,
+      "sha256": "7f4182f5145ddac27e80eaa4ad44d2f833583458b39e632625f21466837bc325",
+      "upstream_sha256": "7f4182f5145ddac27e80eaa4ad44d2f833583458b39e632625f21466837bc325",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/font_refresh.md",
+      "bytes": 4005,
+      "sha256": "39e1b24868f0e562b9faee25575b00da4ab42c1fa4f15edef8e80a0dc1eb6b55",
+      "upstream_sha256": "39e1b24868f0e562b9faee25575b00da4ab42c1fa4f15edef8e80a0dc1eb6b55",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/text_effects.md",
+      "bytes": 15811,
+      "sha256": "da1da6ef73ee87956551baf1487b9a6dc0bb1ddb5ed7f13ce25d5eb3c6792000",
+      "upstream_sha256": "da1da6ef73ee87956551baf1487b9a6dc0bb1ddb5ed7f13ce25d5eb3c6792000",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/text_engine.md",
+      "bytes": 9030,
+      "sha256": "88d0ad9f4d93cba139ada86e0a35628271553fd24842bc1aaaed954589dcf468",
+      "upstream_sha256": "88d0ad9f4d93cba139ada86e0a35628271553fd24842bc1aaaed954589dcf468",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/text_filters.md",
+      "bytes": 8419,
+      "sha256": "22d8f665f9a1d7792c955664a75587ffb8e26d6ff8bf5cc4a6f5397419cd0493",
+      "upstream_sha256": "22d8f665f9a1d7792c955664a75587ffb8e26d6ff8bf5cc4a6f5397419cd0493",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/text_layout.md",
+      "bytes": 8590,
+      "sha256": "7e953d68f518c30871da741a015033ddb7eaa2a4412e1b426009ecb3599a04c8",
+      "upstream_sha256": "7e953d68f518c30871da741a015033ddb7eaa2a4412e1b426009ecb3599a04c8",
+      "modified": false
+    },
+    {
+      "path": "doc/ui/text_transforms.md",
+      "bytes": 14061,
+      "sha256": "b1e74a43114c6bf274b8e6e076d0f6fa03bb892f47493f120cb715001fe0ed82",
+      "upstream_sha256": "b1e74a43114c6bf274b8e6e076d0f6fa03bb892f47493f120cb715001fe0ed82",
+      "modified": false
+    },
+    {
+      "path": "doc/加别的翻译器.md",
+      "bytes": 2242,
+      "sha256": "72a7fa2c2e121eb4e5838946cb2823573493281025328149d6f8a90e2cea75ea",
+      "upstream_sha256": "72a7fa2c2e121eb4e5838946cb2823573493281025328149d6f8a90e2cea75ea",
+      "modified": false
+    },
+    {
+      "path": "doc/团子OCR说明.md",
+      "bytes": 908,
+      "sha256": "2422ffdb6886c06f3ce99216d3ab4958897138e4b92902e59288d8a58dcfd009",
+      "upstream_sha256": "2422ffdb6886c06f3ce99216d3ab4958897138e4b92902e59288d8a58dcfd009",
+      "modified": false
+    },
+    {
+      "path": "fonts/put fonts here.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "launch.sh",
+      "bytes": 1233,
+      "sha256": "087f3627cd5e56d9d031e737a16d6a0ee1160b63b76c858d1f78fe921b5cb627",
+      "upstream_sha256": "087f3627cd5e56d9d031e737a16d6a0ee1160b63b76c858d1f78fe921b5cb627",
+      "modified": false
+    },
+    {
+      "path": "launch_win.bat",
+      "bytes": 1499,
+      "sha256": "7a3f57ff1d18cfe11e107adcf67166d23b3a69ed97625eab2a357ccac7227481",
+      "upstream_sha256": "7a3f57ff1d18cfe11e107adcf67166d23b3a69ed97625eab2a357ccac7227481",
+      "modified": false
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "upstream_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "modified": false
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 564,
+      "sha256": "bcdeb6bc8bf6af31290ef134cdb58a9794c45bca20e63055b8e1eab4485ec10e",
+      "upstream_sha256": "bcdeb6bc8bf6af31290ef134cdb58a9794c45bca20e63055b8e1eab4485ec10e",
+      "modified": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 17696,
+      "sha256": "e0b7a854d18c1cdba551fe8d731a55336f9c1517d53050bdbc917ef38ad3685a",
+      "upstream_sha256": "e0b7a854d18c1cdba551fe8d731a55336f9c1517d53050bdbc917ef38ad3685a",
+      "modified": false
+    },
+    {
+      "path": "README_EN.md",
+      "bytes": 17088,
+      "sha256": "49be0d0b41a4ea31b41bd8b107382524713c1e5a3bcbdf66119a6e4e64e42396",
+      "upstream_sha256": "49be0d0b41a4ea31b41bd8b107382524713c1e5a3bcbdf66119a6e4e64e42396",
+      "modified": false
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 883,
+      "sha256": "f0f844d44d1867dbb3d46a0dbd8734c87a27ac6a14e1b836c9ed8df3d4a2cafc",
+      "upstream_sha256": "f0f844d44d1867dbb3d46a0dbd8734c87a27ac6a14e1b836c9ed8df3d4a2cafc",
+      "modified": false
+    },
+    {
+      "path": "resources/font_registry_overrides.json",
+      "bytes": 2708,
+      "sha256": "d8e4cb30607ba0dca8d37110d106df95bc074754dd02ce3e5d56131a723abad0",
+      "upstream_sha256": "d8e4cb30607ba0dca8d37110d106df95bc074754dd02ce3e5d56131a723abad0",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/add.svg",
+      "bytes": 203,
+      "sha256": "3908b7035165f6033a26a99c53d23b1c4d86fb0786b106d6fef0846be81a3fe0",
+      "upstream_sha256": "3908b7035165f6033a26a99c53d23b1c4d86fb0786b106d6fef0846be81a3fe0",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-down.svg",
+      "bytes": 336,
+      "sha256": "4523da0c33d6b014f08af2242e225a297619a3e81850b0b1bdb7190120ab8cec",
+      "upstream_sha256": "4523da0c33d6b014f08af2242e225a297619a3e81850b0b1bdb7190120ab8cec",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-left.svg",
+      "bytes": 315,
+      "sha256": "0343821c6c3a0508c74d49cbf89fb4dc60997a2c26ea4fa8cca558a6a3679cb9",
+      "upstream_sha256": "0343821c6c3a0508c74d49cbf89fb4dc60997a2c26ea4fa8cca558a6a3679cb9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-right.svg",
+      "bytes": 320,
+      "sha256": "9b54abb70d395ff16bf5913471913b29fa990c2c755b23f3b199914362dd66fa",
+      "upstream_sha256": "9b54abb70d395ff16bf5913471913b29fa990c2c755b23f3b199914362dd66fa",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-small-down.svg",
+      "bytes": 247,
+      "sha256": "3389e093da2a6fe487becf874a6477a0f8c948a317dd3409d28dea8cef6f1cdd",
+      "upstream_sha256": "3389e093da2a6fe487becf874a6477a0f8c948a317dd3409d28dea8cef6f1cdd",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-small-left.svg",
+      "bytes": 263,
+      "sha256": "6d67ff8bf24ec05451f9de93a06320f59be3d37a9905f1c8ad3ad315c15cdf16",
+      "upstream_sha256": "6d67ff8bf24ec05451f9de93a06320f59be3d37a9905f1c8ad3ad315c15cdf16",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-small-right.svg",
+      "bytes": 268,
+      "sha256": "db9b80b68dd5c2a566f2d6f1eca97ceb8fa4fe6c520d74e4e4f81aff1a4537f8",
+      "upstream_sha256": "db9b80b68dd5c2a566f2d6f1eca97ceb8fa4fe6c520d74e4e4f81aff1a4537f8",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-small-up.svg",
+      "bytes": 301,
+      "sha256": "d21b5eb7c920339ca14b71dda934aeebb2d27d1fcd542468aefbee4d9cd98f1b",
+      "upstream_sha256": "d21b5eb7c920339ca14b71dda934aeebb2d27d1fcd542468aefbee4d9cd98f1b",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-up-right.svg",
+      "bytes": 227,
+      "sha256": "3347ec050c328c43f77b3a27aea6d45d1e1ddf830f81dc90e1fb36a270e88ad2",
+      "upstream_sha256": "3347ec050c328c43f77b3a27aea6d45d1e1ddf830f81dc90e1fb36a270e88ad2",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/arrow-up.svg",
+      "bytes": 303,
+      "sha256": "369adcd54021d0c7936a2e1d94e94a004616f2dd8d01cceb935aebffd97f8027",
+      "upstream_sha256": "369adcd54021d0c7936a2e1d94e94a004616f2dd8d01cceb935aebffd97f8027",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_ocr.svg",
+      "bytes": 3526,
+      "sha256": "ad510fbec7e6d7c96bad68a33752cd622e458dead416e4aa07b0bf306c13e163",
+      "upstream_sha256": "ad510fbec7e6d7c96bad68a33752cd622e458dead416e4aa07b0bf306c13e163",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_ocr_activate.svg",
+      "bytes": 3526,
+      "sha256": "a8b3f9e7f157f12ab8cad00ef392d7e3ebf2c5a763ad09f28d506dda2b584459",
+      "upstream_sha256": "a8b3f9e7f157f12ab8cad00ef392d7e3ebf2c5a763ad09f28d506dda2b584459",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_paintmode.svg",
+      "bytes": 3685,
+      "sha256": "25415f1f1a0833cebdc1969174bde2ae881160c89904b7be38c0a5c6c467a241",
+      "upstream_sha256": "25415f1f1a0833cebdc1969174bde2ae881160c89904b7be38c0a5c6c467a241",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_paintmode_activate.svg",
+      "bytes": 3685,
+      "sha256": "6fbe6d32abe5afffd5c1d64c5a094dce1728032b5b5fb351b85564fbb756b816",
+      "upstream_sha256": "6fbe6d32abe5afffd5c1d64c5a094dce1728032b5b5fb351b85564fbb756b816",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_textblock.svg",
+      "bytes": 953,
+      "sha256": "ff236319aefb6664381fe325c340e685112ea1e62b581415351f5348ee0ac933",
+      "upstream_sha256": "ff236319aefb6664381fe325c340e685112ea1e62b581415351f5348ee0ac933",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_textblock_activate.svg",
+      "bytes": 953,
+      "sha256": "2d995bfd796bf49086dba4729cd496703b3eba29ccf1322bfb808227c8683f96",
+      "upstream_sha256": "2d995bfd796bf49086dba4729cd496703b3eba29ccf1322bfb808227c8683f96",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_textedit.svg",
+      "bytes": 1264,
+      "sha256": "d22dc96500e45cbdc80a66b66e4ffadda135e9c96cc6e8dc5449d1c13fa825ff",
+      "upstream_sha256": "d22dc96500e45cbdc80a66b66e4ffadda135e9c96cc6e8dc5449d1c13fa825ff",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_textedit_activate.svg",
+      "bytes": 1264,
+      "sha256": "b0a5db15583d876cc330b9be6671c0daba294228b0c4e4ae47e242da33de7691",
+      "upstream_sha256": "b0a5db15583d876cc330b9be6671c0daba294228b0c4e4ae47e242da33de7691",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_translate.svg",
+      "bytes": 2337,
+      "sha256": "e3844a91880bf6a451d29e9b1490756d53f42aa94ebc2e77c675b66c80ccd2c6",
+      "upstream_sha256": "e3844a91880bf6a451d29e9b1490756d53f42aa94ebc2e77c675b66c80ccd2c6",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/bottombar_translate_activate.svg",
+      "bytes": 2337,
+      "sha256": "d023b75f587e14d4e2dbf43c8aef9453b779908de60c85ba18e51301f4d16be7",
+      "upstream_sha256": "d023b75f587e14d4e2dbf43c8aef9453b779908de60c85ba18e51301f4d16be7",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/case-sensitive.svg",
+      "bytes": 2001,
+      "sha256": "7f20201629f8d3a4d1a74a68e4e1d6b2dee415ac70e115136aea2223d6134dd4",
+      "upstream_sha256": "7f20201629f8d3a4d1a74a68e4e1d6b2dee415ac70e115136aea2223d6134dd4",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/case-sensitive_activated.svg",
+      "bytes": 2001,
+      "sha256": "f67767dbc2450269783c728d9b584214fe4947ded9a08d65540c827bca7495ea",
+      "upstream_sha256": "f67767dbc2450269783c728d9b584214fe4947ded9a08d65540c827bca7495ea",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/checkbox_checked.svg",
+      "bytes": 220,
+      "sha256": "dd7cbe169ab0a0558175d593c8edfa032c15f82d20475bde2503213c038c02d7",
+      "upstream_sha256": "dd7cbe169ab0a0558175d593c8edfa032c15f82d20475bde2503213c038c02d7",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/chevron-down-white.svg",
+      "bytes": 300,
+      "sha256": "786cc02396ff5ea790f5a9e6746d5ac3da99ca9fdba77982e7afb94d177ec4b0",
+      "upstream_sha256": "786cc02396ff5ea790f5a9e6746d5ac3da99ca9fdba77982e7afb94d177ec4b0",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/chevron-down.svg",
+      "bytes": 300,
+      "sha256": "553ed825cc2c6d6c7cdfb0c9223219272312e634da54cc397a8cedb132fddbd9",
+      "upstream_sha256": "553ed825cc2c6d6c7cdfb0c9223219272312e634da54cc397a8cedb132fddbd9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/chevron-right.svg",
+      "bytes": 299,
+      "sha256": "2e49aba9d6425db76110dd376fb34720fc7de1559616f5f907dab32df43cc4c4",
+      "upstream_sha256": "2e49aba9d6425db76110dd376fb34720fc7de1559616f5f907dab32df43cc4c4",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/chevron-up.svg",
+      "bytes": 311,
+      "sha256": "919ea590e72be517106dc2cd2b1010a56b76ba3e2e417736de66ba2339e2bce5",
+      "upstream_sha256": "919ea590e72be517106dc2cd2b1010a56b76ba3e2e417736de66ba2339e2bce5",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/chrome-close.svg",
+      "bytes": 378,
+      "sha256": "1a0d04b0bc2d36a619a4bbd121b1e264cef2412238efd1a3d0a2f2129fd3f211",
+      "upstream_sha256": "1a0d04b0bc2d36a619a4bbd121b1e264cef2412238efd1a3d0a2f2129fd3f211",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/combobox_arrow.svg",
+      "bytes": 707,
+      "sha256": "53b1fe53823e4f2738fd46cd73fbf76248cf4e71c99114c72d5ad8131dfe8329",
+      "upstream_sha256": "53b1fe53823e4f2738fd46cd73fbf76248cf4e71c99114c72d5ad8131dfe8329",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/cursor_rotate_0.png",
+      "bytes": 16102,
+      "sha256": "eac64905f6e098d17434cfabe236b457f56d4d69c9bc38aa749c053ade1f0d57",
+      "upstream_sha256": "eac64905f6e098d17434cfabe236b457f56d4d69c9bc38aa749c053ade1f0d57",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/cursor_rotate_1.png",
+      "bytes": 16514,
+      "sha256": "38a89c8a1a4ad05025a47f37bddab4a2ad2077a2f3d094af69397fd304fb67a7",
+      "upstream_sha256": "38a89c8a1a4ad05025a47f37bddab4a2ad2077a2f3d094af69397fd304fb67a7",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/cursor_rotate_2.png",
+      "bytes": 16325,
+      "sha256": "5f22a5254fe3e98c4dab9b09fa58a4e76d8a850527713b1d9496a651f4cfadfe",
+      "upstream_sha256": "5f22a5254fe3e98c4dab9b09fa58a4e76d8a850527713b1d9496a651f4cfadfe",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/cursor_rotate_3.png",
+      "bytes": 16513,
+      "sha256": "213a054b8ebd704956056ffff6e38958fb87364240cec422ebfc777a8856f130",
+      "upstream_sha256": "213a054b8ebd704956056ffff6e38958fb87364240cec422ebfc777a8856f130",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_hand.svg",
+      "bytes": 1419,
+      "sha256": "5ca7b81bdbdf3808a8389b41b0c28390487203c8ebf34a9f6f3143f0fa11f31f",
+      "upstream_sha256": "5ca7b81bdbdf3808a8389b41b0c28390487203c8ebf34a9f6f3143f0fa11f31f",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_hand_activate.svg",
+      "bytes": 1419,
+      "sha256": "7030b31f483bf2b00c547b46afe3fcd20119735061e4e840a42ef3def96fc3b9",
+      "upstream_sha256": "7030b31f483bf2b00c547b46afe3fcd20119735061e4e840a42ef3def96fc3b9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_inpaint.svg",
+      "bytes": 3232,
+      "sha256": "bb90c756c407bcda1c015c9a33f3e4d1cd528beb78c76aa45bc25e87c0b22d33",
+      "upstream_sha256": "bb90c756c407bcda1c015c9a33f3e4d1cd528beb78c76aa45bc25e87c0b22d33",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_inpaint_activate.svg",
+      "bytes": 3232,
+      "sha256": "d06f54ece03f44898e6cbbc9fe47fa9fa633bbed3aef47b8436968ecd70748ec",
+      "upstream_sha256": "d06f54ece03f44898e6cbbc9fe47fa9fa633bbed3aef47b8436968ecd70748ec",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_pen.svg",
+      "bytes": 1324,
+      "sha256": "a80d9c2e89fd84e3d9d79abb489563f82c5cb8bd288ab001f6d19d6005f3bf0a",
+      "upstream_sha256": "a80d9c2e89fd84e3d9d79abb489563f82c5cb8bd288ab001f6d19d6005f3bf0a",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_pen_activate.svg",
+      "bytes": 1324,
+      "sha256": "d14f5543260cf49a50ea0aa87369302698ff3b8c58277ee5ff80a7f17e5e3f49",
+      "upstream_sha256": "d14f5543260cf49a50ea0aa87369302698ff3b8c58277ee5ff80a7f17e5e3f49",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_shape.svg",
+      "bytes": 254,
+      "sha256": "70fc03d4fdf3ebf7f6ffac054f6e0c6c3897b1c0af487acb5ac586f54ebd530b",
+      "upstream_sha256": "70fc03d4fdf3ebf7f6ffac054f6e0c6c3897b1c0af487acb5ac586f54ebd530b",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/drawingtools_shape_activate.svg",
+      "bytes": 254,
+      "sha256": "2ca0cb1dc2f4aeb20e74cab9cbbc18371fe94e38a77e22142dbda245f83debce",
+      "upstream_sha256": "2ca0cb1dc2f4aeb20e74cab9cbbc18371fe94e38a77e22142dbda245f83debce",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/edit.svg",
+      "bytes": 1126,
+      "sha256": "c67a0bf772ebdb2e3f53bc558119cef318fcf4cfb819f68318dcf2d4386d543e",
+      "upstream_sha256": "c67a0bf772ebdb2e3f53bc558119cef318fcf4cfb819f68318dcf2d4386d543e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/edit_activate.svg",
+      "bytes": 1126,
+      "sha256": "46ca1979b417a7340659fd4543b82ed511b10937d4fc1aa0283e2c2cf1fc4a95",
+      "upstream_sha256": "46ca1979b417a7340659fd4543b82ed511b10937d4fc1aa0283e2c2cf1fc4a95",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/eye.svg",
+      "bytes": 994,
+      "sha256": "5c414cf72afbbd701ee33a8a5b1de108cdb94bdeffc9ffc15f4fd400e5878324",
+      "upstream_sha256": "5c414cf72afbbd701ee33a8a5b1de108cdb94bdeffc9ffc15f4fd400e5878324",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/eye_disabled.svg",
+      "bytes": 994,
+      "sha256": "52667acb49b64cf08deddc1061592f9305f8f5ad26996040fdd8fc8beeddf4f5",
+      "upstream_sha256": "52667acb49b64cf08deddc1061592f9305f8f5ad26996040fdd8fc8beeddf4f5",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/files.svg",
+      "bytes": 336,
+      "sha256": "12bab8f5afb580fc86bbbaed8e157deea442624b62c701e3c42665b84f2d9e34",
+      "upstream_sha256": "12bab8f5afb580fc86bbbaed8e157deea442624b62c701e3c42665b84f2d9e34",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignc.svg",
+      "bytes": 1272,
+      "sha256": "21618e5ecf997662707d5502f576826a821594dce60644780d8742510d7654e1",
+      "upstream_sha256": "21618e5ecf997662707d5502f576826a821594dce60644780d8742510d7654e1",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignc_activate.svg",
+      "bytes": 1272,
+      "sha256": "f9b23456268c97d56fe5b363bcdcc32e7cadc9cdbd96dcd9530b85386a7341eb",
+      "upstream_sha256": "f9b23456268c97d56fe5b363bcdcc32e7cadc9cdbd96dcd9530b85386a7341eb",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignl.svg",
+      "bytes": 1110,
+      "sha256": "ec02f99149cf89910efaf26c24289094a64772d59ca271795ae5ce9f908acb96",
+      "upstream_sha256": "ec02f99149cf89910efaf26c24289094a64772d59ca271795ae5ce9f908acb96",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignl_activate.svg",
+      "bytes": 1110,
+      "sha256": "261fc3d91457527721f521a81c5b8b44702a9d1b47152cadfddead80ae16b62d",
+      "upstream_sha256": "261fc3d91457527721f521a81c5b8b44702a9d1b47152cadfddead80ae16b62d",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignr.svg",
+      "bytes": 1142,
+      "sha256": "605ef2d19f679228bd31f23ed591e6fc037b753d448023392fe9190712fc4352",
+      "upstream_sha256": "605ef2d19f679228bd31f23ed591e6fc037b753d448023392fe9190712fc4352",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_alignr_activate.svg",
+      "bytes": 1142,
+      "sha256": "907cd10ad92ad3b3d238c2edad4cd9a9d1f7b2bebb958941437d8928194e2f4e",
+      "upstream_sha256": "907cd10ad92ad3b3d238c2edad4cd9a9d1f7b2bebb958941437d8928194e2f4e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_bold.svg",
+      "bytes": 2086,
+      "sha256": "ee46ce8e4c3c5c0372c221c8b7227ad04dee2f3e7da6562807f3766907c3cde5",
+      "upstream_sha256": "ee46ce8e4c3c5c0372c221c8b7227ad04dee2f3e7da6562807f3766907c3cde5",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_bold_activate.svg",
+      "bytes": 2086,
+      "sha256": "911b5fa794affb3b77d6c0dc9cfecab55507f589e1fb6bc8cb7e41b30e7850d9",
+      "upstream_sha256": "911b5fa794affb3b77d6c0dc9cfecab55507f589e1fb6bc8cb7e41b30e7850d9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_italic.svg",
+      "bytes": 1508,
+      "sha256": "bfeb9227d17d1745a72f08156ec45aa695a145398825b3f584025ee5e290f913",
+      "upstream_sha256": "bfeb9227d17d1745a72f08156ec45aa695a145398825b3f584025ee5e290f913",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_italic_activate.svg",
+      "bytes": 1508,
+      "sha256": "63a57f97326ed5459230198c1c399e288f9ac3daa9129a162e395a9a799808f3",
+      "upstream_sha256": "63a57f97326ed5459230198c1c399e288f9ac3daa9129a162e395a9a799808f3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_letterspacing.svg",
+      "bytes": 689,
+      "sha256": "8209ab72d983b9c515581ca3ac2dc96e774eebd09073981fc90f7d21a630d852",
+      "upstream_sha256": "8209ab72d983b9c515581ca3ac2dc96e774eebd09073981fc90f7d21a630d852",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_linespacing.svg",
+      "bytes": 1797,
+      "sha256": "3b2a664f6dcaa910c74765764ebe53181316032ec4b8ff104759c275bd422081",
+      "upstream_sha256": "3b2a664f6dcaa910c74765764ebe53181316032ec4b8ff104759c275bd422081",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_reload.svg",
+      "bytes": 2470,
+      "sha256": "a119f0511a55957641d472df31880f4105b010174e967d1e3fb9d6b667967aa7",
+      "upstream_sha256": "a119f0511a55957641d472df31880f4105b010174e967d1e3fb9d6b667967aa7",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_reload_activate.svg",
+      "bytes": 2470,
+      "sha256": "f6e1c9fe4b57e875d6b3711ec4b557ec791cac572956ae1fbc0efe9217287ed9",
+      "upstream_sha256": "f6e1c9fe4b57e875d6b3711ec4b557ec791cac572956ae1fbc0efe9217287ed9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_roman_alignment.svg",
+      "bytes": 499,
+      "sha256": "ba72b3c4a20c51ec23eb937f41b984395efa2788e7f59583634fa7f31bf71b04",
+      "upstream_sha256": "ba72b3c4a20c51ec23eb937f41b984395efa2788e7f59583634fa7f31bf71b04",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_roman_alignment_activate.svg",
+      "bytes": 499,
+      "sha256": "0f52735f42b7169026970392503b2f87edd6f26b18f9c0509e30ae0b38915da1",
+      "upstream_sha256": "0f52735f42b7169026970392503b2f87edd6f26b18f9c0509e30ae0b38915da1",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_size.svg",
+      "bytes": 199,
+      "sha256": "9fda0ff831fb5dc572f77486537fb9e9d203328349255748158e5e60a0bb3587",
+      "upstream_sha256": "9fda0ff831fb5dc572f77486537fb9e9d203328349255748158e5e60a0bb3587",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_tate_chu_yoko.svg",
+      "bytes": 603,
+      "sha256": "0d5ef1106c0aa001729781e098baa090b06f08708a686f47a4935ca7b6caf6d5",
+      "upstream_sha256": "0d5ef1106c0aa001729781e098baa090b06f08708a686f47a4935ca7b6caf6d5",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_tate_chu_yoko_activate.svg",
+      "bytes": 603,
+      "sha256": "a83a2a73542a00edfff31f33eb72332b3bacf6138a7aed126574beb660da210b",
+      "upstream_sha256": "a83a2a73542a00edfff31f33eb72332b3bacf6138a7aed126574beb660da210b",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_underline.svg",
+      "bytes": 2325,
+      "sha256": "eb9d2e1fb3a12660c6ecbd2c216b7787f3a0af1c5183a21e0a117fa56ac9bc4d",
+      "upstream_sha256": "eb9d2e1fb3a12660c6ecbd2c216b7787f3a0af1c5183a21e0a117fa56ac9bc4d",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_underline_activate.svg",
+      "bytes": 2325,
+      "sha256": "682f709861da698d221604be249f5c61fc529349f289147acf1a86f8c3c4198c",
+      "upstream_sha256": "682f709861da698d221604be249f5c61fc529349f289147acf1a86f8c3c4198c",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_vertical.svg",
+      "bytes": 627,
+      "sha256": "d6a93819c60c22fe0de258394a339fdf8d0223b5a3fbd942143f3c048df8a93d",
+      "upstream_sha256": "d6a93819c60c22fe0de258394a339fdf8d0223b5a3fbd942143f3c048df8a93d",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/fontfmt_vertical_activate.svg",
+      "bytes": 627,
+      "sha256": "e8cf0dd8996047416e2a894b62bac4b6d25d2f0d46fa1783022caee7a8038016",
+      "upstream_sha256": "e8cf0dd8996047416e2a894b62bac4b6d25d2f0d46fa1783022caee7a8038016",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/heart.svg",
+      "bytes": 2056,
+      "sha256": "503bec74df3b66907055bb9a0566c76991cca0ef8b978253618263e282a09f1f",
+      "upstream_sha256": "503bec74df3b66907055bb9a0566c76991cca0ef8b978253618263e282a09f1f",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/icon-design-35.svg",
+      "bytes": 1244,
+      "sha256": "03f766f9267b0bdc2d2d68b5846c87cb0c23c2a6216d362d6835ab7374b9f94c",
+      "upstream_sha256": "03f766f9267b0bdc2d2d68b5846c87cb0c23c2a6216d362d6835ab7374b9f94c",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/image.svg",
+      "bytes": 3232,
+      "sha256": "cb2858904df207be55f56472c34cb6d2070b052cc63b9df9798af6cbf2cc2b00",
+      "upstream_sha256": "cb2858904df207be55f56472c34cb6d2070b052cc63b9df9798af6cbf2cc2b00",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/image_disabled.svg",
+      "bytes": 3232,
+      "sha256": "ecb4f9f428a5161c25ddba7c4c170074a4fa2d66cf1f483c2380298db53cf543",
+      "upstream_sha256": "ecb4f9f428a5161c25ddba7c4c170074a4fa2d66cf1f483c2380298db53cf543",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/incre_down.svg",
+      "bytes": 707,
+      "sha256": "53b1fe53823e4f2738fd46cd73fbf76248cf4e71c99114c72d5ad8131dfe8329",
+      "upstream_sha256": "53b1fe53823e4f2738fd46cd73fbf76248cf4e71c99114c72d5ad8131dfe8329",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/incre_up.svg",
+      "bytes": 711,
+      "sha256": "1a9941ee5e0ce31b5a726701626443b852fbc4070f35ba2ec2d5ded9143ac534",
+      "upstream_sha256": "1a9941ee5e0ce31b5a726701626443b852fbc4070f35ba2ec2d5ded9143ac534",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/leftbar_config.svg",
+      "bytes": 1880,
+      "sha256": "be099a8766b0f0a8cc6b23617f3355a259579a260a22f5a345572d9006b22bbe",
+      "upstream_sha256": "be099a8766b0f0a8cc6b23617f3355a259579a260a22f5a345572d9006b22bbe",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/leftbar_config_activate.svg",
+      "bytes": 1880,
+      "sha256": "c11bb95dd6a7a05aed661ecd6ddfd7889f2686828169d0a74a836cf7960a9624",
+      "upstream_sha256": "c11bb95dd6a7a05aed661ecd6ddfd7889f2686828169d0a74a836cf7960a9624",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/leftbar_imgtrans.svg",
+      "bytes": 1113,
+      "sha256": "97b21a9bdadfe43ef64f1446ce19606c1720f7585ce9ec19d7756d0fcfc56b05",
+      "upstream_sha256": "97b21a9bdadfe43ef64f1446ce19606c1720f7585ce9ec19d7756d0fcfc56b05",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/leftbar_imgtrans_activate.svg",
+      "bytes": 1113,
+      "sha256": "a6190f994ae0d88290963f463ff008621cea2a5999ba7368202141d327ae5e04",
+      "upstream_sha256": "a6190f994ae0d88290963f463ff008621cea2a5999ba7368202141d327ae5e04",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/llm_context.svg",
+      "bytes": 718,
+      "sha256": "b61cc4ae6f103d9c56d1d5f4af97bce87c63ec07077c626ec2bf876480f933fb",
+      "upstream_sha256": "b61cc4ae6f103d9c56d1d5f4af97bce87c63ec07077c626ec2bf876480f933fb",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/llm_context_activate.svg",
+      "bytes": 718,
+      "sha256": "50980e5db547d19160c38d2c222f4cf42c1bd60bc1000ae1bdca8bdb41bb8d36",
+      "upstream_sha256": "50980e5db547d19160c38d2c222f4cf42c1bd60bc1000ae1bdca8bdb41bb8d36",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/llm_key_missing.svg",
+      "bytes": 238,
+      "sha256": "6791e2f3e5110daedb991156bc011cf6c5f82429e64e1b451ed11d64830c4575",
+      "upstream_sha256": "6791e2f3e5110daedb991156bc011cf6c5f82429e64e1b451ed11d64830c4575",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/llm_key_ok.svg",
+      "bytes": 227,
+      "sha256": "59a574e7deac24b77908f4f88fa4137d547edc4c4f18195905cfce4a00d0eb57",
+      "upstream_sha256": "59a574e7deac24b77908f4f88fa4137d547edc4c4f18195905cfce4a00d0eb57",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/logo.svg",
+      "bytes": 17749,
+      "sha256": "38905b97ab02dbc24a867c48451be7958684b2f9a16b10ec419b3ed3c4d54528",
+      "upstream_sha256": "38905b97ab02dbc24a867c48451be7958684b2f9a16b10ec419b3ed3c4d54528",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/offset_x.svg",
+      "bytes": 480,
+      "sha256": "8ed89fd1c461ca9d3fb3f0a27c7edb2c5cc7388460bdd2d91b182e7637e7c876",
+      "upstream_sha256": "8ed89fd1c461ca9d3fb3f0a27c7edb2c5cc7388460bdd2d91b182e7637e7c876",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/offset_y.svg",
+      "bytes": 473,
+      "sha256": "f603021736f65fc8f4fb9744d445e193ff5844e0090697320e94042aa03d893d",
+      "upstream_sha256": "f603021736f65fc8f4fb9744d445e193ff5844e0090697320e94042aa03d893d",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/openbtn.svg",
+      "bytes": 986,
+      "sha256": "52df109a38b31862a27ee2d659e300812866e1f4e2dfcc269611b9c68287e6e3",
+      "upstream_sha256": "52df109a38b31862a27ee2d659e300812866e1f4e2dfcc269611b9c68287e6e3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/openbtn_activate.svg",
+      "bytes": 986,
+      "sha256": "b944fd4124fc425a805fa52697a485c39e05209626eadfbf78a91fe297e41346",
+      "upstream_sha256": "b944fd4124fc425a805fa52697a485c39e05209626eadfbf78a91fe297e41346",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/regex.svg",
+      "bytes": 332,
+      "sha256": "4b6bd53f4c25c9d2a92486fbc748597454f8d1a21ce77ffa2ab08d98207f9719",
+      "upstream_sha256": "4b6bd53f4c25c9d2a92486fbc748597454f8d1a21ce77ffa2ab08d98207f9719",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/regex_activate.svg",
+      "bytes": 332,
+      "sha256": "42ef1b9b90e09b63e1021ca6c00d2265d2845e10d93c8b193c79a7ee77a8b6a6",
+      "upstream_sha256": "42ef1b9b90e09b63e1021ca6c00d2265d2845e10d93c8b193c79a7ee77a8b6a6",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/replace-all.svg",
+      "bytes": 3564,
+      "sha256": "9b3860c94531cd0d76e1596280498e6747eeac4753eb7bb99cac67714e41fcaf",
+      "upstream_sha256": "9b3860c94531cd0d76e1596280498e6747eeac4753eb7bb99cac67714e41fcaf",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/replace.svg",
+      "bytes": 2057,
+      "sha256": "115d718f13c7aeebc51bda09208420d543365e52712c0bbd7535b6d42f3f7ad3",
+      "upstream_sha256": "115d718f13c7aeebc51bda09208420d543365e52712c0bbd7535b6d42f3f7ad3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor0.png",
+      "bytes": 578,
+      "sha256": "a7ea84c2fd8c723b0e698a9121fe05672712c96c48f3e2f07f29c263164f540e",
+      "upstream_sha256": "a7ea84c2fd8c723b0e698a9121fe05672712c96c48f3e2f07f29c263164f540e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor1.png",
+      "bytes": 577,
+      "sha256": "eb535f3bf69fb43633f16879375670c69db2c3378c47d32e819a836a0132608c",
+      "upstream_sha256": "eb535f3bf69fb43633f16879375670c69db2c3378c47d32e819a836a0132608c",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor2.png",
+      "bytes": 584,
+      "sha256": "831f88e133392d85fe44ae0c21192a91bc6c67f5acb0a354db65f05c6b0b7ad9",
+      "upstream_sha256": "831f88e133392d85fe44ae0c21192a91bc6c67f5acb0a354db65f05c6b0b7ad9",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor3.png",
+      "bytes": 618,
+      "sha256": "6c62fe157e69c5cae4b3ed496ed0317d02d7266ec57fe256a78617fbe6f6e2b3",
+      "upstream_sha256": "6c62fe157e69c5cae4b3ed496ed0317d02d7266ec57fe256a78617fbe6f6e2b3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor4.png",
+      "bytes": 592,
+      "sha256": "54331f2b4052541208d4e369ff335e855a8cdf126beb80482a09ddaae48e7014",
+      "upstream_sha256": "54331f2b4052541208d4e369ff335e855a8cdf126beb80482a09ddaae48e7014",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor5.png",
+      "bytes": 602,
+      "sha256": "6e3e5608ca0fbbd49ecd565a85f22759dd45c69174e93169f765f47834e6a178",
+      "upstream_sha256": "6e3e5608ca0fbbd49ecd565a85f22759dd45c69174e93169f765f47834e6a178",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor6.png",
+      "bytes": 598,
+      "sha256": "aa6b528e2c06a54cee91c2218d45e1bab0a12ec413ebaa2dc15cd82285c1a0ad",
+      "upstream_sha256": "aa6b528e2c06a54cee91c2218d45e1bab0a12ec413ebaa2dc15cd82285c1a0ad",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotate_cursor7.png",
+      "bytes": 612,
+      "sha256": "dbdc9cc45b8baed3aff1e119a6ae6d36415e185d9a5b2801e2e9d8c443a919ba",
+      "upstream_sha256": "dbdc9cc45b8baed3aff1e119a6ae6d36415e185d9a5b2801e2e9d8c443a919ba",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/rotation.svg",
+      "bytes": 767,
+      "sha256": "017ecf6dc437420655e7048f5fef71c35055a2a1d854521da7cd66d524949911",
+      "upstream_sha256": "017ecf6dc437420655e7048f5fef71c35055a2a1d854521da7cd66d524949911",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/run.svg",
+      "bytes": 650,
+      "sha256": "73c52ce3a42d5f65d86fdde1b5b0205f3cd6119beb2ebb5e13b240e1e57a25d3",
+      "upstream_sha256": "73c52ce3a42d5f65d86fdde1b5b0205f3cd6119beb2ebb5e13b240e1e57a25d3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/save_activate.svg",
+      "bytes": 1018,
+      "sha256": "1aee661ced080b5bb813b9274ac5ded7eab1b22c8d1ff28f0fd5b5c02dec4366",
+      "upstream_sha256": "1aee661ced080b5bb813b9274ac5ded7eab1b22c8d1ff28f0fd5b5c02dec4366",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/search-stop.svg",
+      "bytes": 1970,
+      "sha256": "54d5b6cab633533746352c8a15d246bcdab4039b4edd7f5d5724337bb1868e8e",
+      "upstream_sha256": "54d5b6cab633533746352c8a15d246bcdab4039b4edd7f5d5724337bb1868e8e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/search.svg",
+      "bytes": 1251,
+      "sha256": "51deb39a637e6f21e95402e5efc755d1f4328d4f52505a96acf83d15e8ca65ec",
+      "upstream_sha256": "51deb39a637e6f21e95402e5efc755d1f4328d4f52505a96acf83d15e8ca65ec",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/search_activate.svg",
+      "bytes": 1251,
+      "sha256": "6ba4f07afd4b73a6fb58359439236f5bccd2a8e8f2d4aedadaed0feaa5374712",
+      "upstream_sha256": "6ba4f07afd4b73a6fb58359439236f5bccd2a8e8f2d4aedadaed0feaa5374712",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/small_ocr.svg",
+      "bytes": 994,
+      "sha256": "3be0b07ea3eeae81304484932d8e98e9ac64ca990bd45a4614e3e1f132eaf943",
+      "upstream_sha256": "3be0b07ea3eeae81304484932d8e98e9ac64ca990bd45a4614e3e1f132eaf943",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-alpha-mask.svg",
+      "bytes": 428,
+      "sha256": "04cfbf89dd8f2a5ccf44ac475bb2a294a5af83a6f5fd09b761c953c26bb63b8a",
+      "upstream_sha256": "04cfbf89dd8f2a5ccf44ac475bb2a294a5af83a6f5fd09b761c953c26bb63b8a",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-filter.svg",
+      "bytes": 411,
+      "sha256": "ac85d16ddfac8b66aa6b12e620de19414a1d6448b5ff72debdbb94f8e89130a2",
+      "upstream_sha256": "ac85d16ddfac8b66aa6b12e620de19414a1d6448b5ff72debdbb94f8e89130a2",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-glow.svg",
+      "bytes": 325,
+      "sha256": "097e1b72f4395dbe1a5305386f3b047986d049be64e94b91a18a7272d8b797dc",
+      "upstream_sha256": "097e1b72f4395dbe1a5305386f3b047986d049be64e94b91a18a7272d8b797dc",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-gradient.svg",
+      "bytes": 266,
+      "sha256": "fcc5ee58cb56813e7dadc430a4c475eb60de06eaef5c70b7a64292cb1abddb70",
+      "upstream_sha256": "fcc5ee58cb56813e7dadc430a4c475eb60de06eaef5c70b7a64292cb1abddb70",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-hollow.svg",
+      "bytes": 440,
+      "sha256": "d9dfed794eacd56c6be40b75218f7d35d611b32beccca811c26f16bbc38760f1",
+      "upstream_sha256": "d9dfed794eacd56c6be40b75218f7d35d611b32beccca811c26f16bbc38760f1",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-image.svg",
+      "bytes": 373,
+      "sha256": "6913dd14097539e7e9dce8ce3520023de8f6d026e8cabfd066e8ceccde1eb061",
+      "upstream_sha256": "6913dd14097539e7e9dce8ce3520023de8f6d026e8cabfd066e8ceccde1eb061",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-shadow.svg",
+      "bytes": 241,
+      "sha256": "affd9bbd21d77a4dc6f6916d572df6b1a35bf3ff8fe662b1787051934ef521af",
+      "upstream_sha256": "affd9bbd21d77a4dc6f6916d572df6b1a35bf3ff8fe662b1787051934ef521af",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-stroke.svg",
+      "bytes": 247,
+      "sha256": "e85780ed7addcc2069f55c3a510f47826aceb43aa5915b9b578d38772435b925",
+      "upstream_sha256": "e85780ed7addcc2069f55c3a510f47826aceb43aa5915b9b578d38772435b925",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-texture.svg",
+      "bytes": 273,
+      "sha256": "49c5a136641bb467f9ccc9ea6d53cdb04212760051d1e95e91157542db5374a3",
+      "upstream_sha256": "49c5a136641bb467f9ccc9ea6d53cdb04212760051d1e95e91157542db5374a3",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-visibility-closed.svg",
+      "bytes": 953,
+      "sha256": "fb2a51dfde09d1f26edaf5593e4effdf13e76af4c6ea08be5fa9958364bb847a",
+      "upstream_sha256": "fb2a51dfde09d1f26edaf5593e4effdf13e76af4c6ea08be5fa9958364bb847a",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text-effect-visibility-open.svg",
+      "bytes": 625,
+      "sha256": "0635598838f7852f93073b66666ed6d08de666dcd0f4f32e33b1f7508f6e7687",
+      "upstream_sha256": "0635598838f7852f93073b66666ed6d08de666dcd0f4f32e33b1f7508f6e7687",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text.svg",
+      "bytes": 2003,
+      "sha256": "f42d67fd50fa9b6b68c470db220006de975b608c4aaf186ef959d0804e3471a8",
+      "upstream_sha256": "f42d67fd50fa9b6b68c470db220006de975b608c4aaf186ef959d0804e3471a8",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_disabled.svg",
+      "bytes": 2003,
+      "sha256": "c92f10ab25a9934e7512302b79c8294943872674d2ddec85e277a14eff8eccc1",
+      "upstream_sha256": "c92f10ab25a9934e7512302b79c8294943872674d2ddec85e277a14eff8eccc1",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_rotate_up.svg",
+      "bytes": 1323,
+      "sha256": "585ea4985296b5cefe4e9310cd37fe44b72c1d827c1f576c29c9e66df9b6c8c8",
+      "upstream_sha256": "585ea4985296b5cefe4e9310cd37fe44b72c1d827c1f576c29c9e66df9b6c8c8",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_rotate_vertical.svg",
+      "bytes": 1300,
+      "sha256": "4ce1433bed7f26f53b630bec653e4ed3bbee0c2a133d92075b7eedc5e3fb9149",
+      "upstream_sha256": "4ce1433bed7f26f53b630bec653e4ed3bbee0c2a133d92075b7eedc5e3fb9149",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_transform_bend.svg",
+      "bytes": 217,
+      "sha256": "129cbb32b8f589a27e6897b42b32f4269d9e48c7d00a9f5b48918576fe89ae24",
+      "upstream_sha256": "129cbb32b8f589a27e6897b42b32f4269d9e48c7d00a9f5b48918576fe89ae24",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_transform_grid.svg",
+      "bytes": 399,
+      "sha256": "cef21eaf04676bc06e6dc1d59e9664cc81c5d41e990f0d9a37223095a6579ebd",
+      "upstream_sha256": "cef21eaf04676bc06e6dc1d59e9664cc81c5d41e990f0d9a37223095a6579ebd",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_transform_projective.svg",
+      "bytes": 438,
+      "sha256": "5a74359f561e09dcffc4f37fc5049021fe946764d9feb6cdf4b8e8bd979e0593",
+      "upstream_sha256": "5a74359f561e09dcffc4f37fc5049021fe946764d9feb6cdf4b8e8bd979e0593",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/text_transform_sine.svg",
+      "bytes": 271,
+      "sha256": "0a8f8c594aa8f3ec81b906a3a8b9a9f0568e48c4b46950363ad8aa93b078188e",
+      "upstream_sha256": "0a8f8c594aa8f3ec81b906a3a8b9a9f0568e48c4b46950363ad8aa93b078188e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/textdetect.svg",
+      "bytes": 850,
+      "sha256": "80610e44a4f5a4d5251ff18aa95d9abaab1c2d1f99b279a2faa78a8ba97ff52e",
+      "upstream_sha256": "80610e44a4f5a4d5251ff18aa95d9abaab1c2d1f99b279a2faa78a8ba97ff52e",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/textdetect_activate.svg",
+      "bytes": 850,
+      "sha256": "40195c8e4474397adcd39c6eaacc10ca20409a7960cfa367ef5c41a757bcf57c",
+      "upstream_sha256": "40195c8e4474397adcd39c6eaacc10ca20409a7960cfa367ef5c41a757bcf57c",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/titlebar_close.svg",
+      "bytes": 1310,
+      "sha256": "5307d620e4f43f8ef1aec6555df876d759a3f9036c31d042b976adb117e585e5",
+      "upstream_sha256": "5307d620e4f43f8ef1aec6555df876d759a3f9036c31d042b976adb117e585e5",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/titlebar_close_activate.svg",
+      "bytes": 1310,
+      "sha256": "0eda1427a605fb4fa6ddff3f1e05ce8d952655569aa856bbc42408f4c866b92f",
+      "upstream_sha256": "0eda1427a605fb4fa6ddff3f1e05ce8d952655569aa856bbc42408f4c866b92f",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/titlebar_max.svg",
+      "bytes": 1168,
+      "sha256": "1eaba48efd5f4e3808791bf16963f2570c77ef32057277168a1527a91850691c",
+      "upstream_sha256": "1eaba48efd5f4e3808791bf16963f2570c77ef32057277168a1527a91850691c",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/titlebar_min.svg",
+      "bytes": 561,
+      "sha256": "259cd583a5df30ecc68d0068333150305236292b765c2120bff1e2a6a2f0957d",
+      "upstream_sha256": "259cd583a5df30ecc68d0068333150305236292b765c2120bff1e2a6a2f0957d",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/titlebar_windowmode.svg",
+      "bytes": 2286,
+      "sha256": "bf632b6ebca6cb4ae963f1914e190ce13ebe03b283a0f76c86bb164266a0262f",
+      "upstream_sha256": "bf632b6ebca6cb4ae963f1914e190ce13ebe03b283a0f76c86bb164266a0262f",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/whole-word.svg",
+      "bytes": 1732,
+      "sha256": "f70110401dae22b610e823d1468265ab29399a2f54c9c1dbce40bf6f838eea90",
+      "upstream_sha256": "f70110401dae22b610e823d1468265ab29399a2f54c9c1dbce40bf6f838eea90",
+      "modified": false
+    },
+    {
+      "path": "resources/icons/whole-word_activate.svg",
+      "bytes": 1732,
+      "sha256": "54343142c97b8af11efb8e586eb394a50ee465ca6ad55767b98460a23e047ca0",
+      "upstream_sha256": "54343142c97b8af11efb8e586eb394a50ee465ca6ad55767b98460a23e047ca0",
+      "modified": false
+    },
+    {
+      "path": "resources/stylesheet.css",
+      "bytes": 72457,
+      "sha256": "63ab584957c7d1af4d632c1ddec55203922f77ab422091b3493b488d826d6264",
+      "upstream_sha256": "63ab584957c7d1af4d632c1ddec55203922f77ab422091b3493b488d826d6264",
+      "modified": false
+    },
+    {
+      "path": "resources/themes.json",
+      "bytes": 1311,
+      "sha256": "5cfce34f22c7fa5d7aaada9077104447238480c613f399bf2156f08bc8fabdd8",
+      "upstream_sha256": "5cfce34f22c7fa5d7aaada9077104447238480c613f399bf2156f08bc8fabdd8",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/en_US.ts",
+      "bytes": 70935,
+      "sha256": "fde3c586966dd84f3684a0b58acbea6a44a6d71284eed101803a1dd653129e2e",
+      "upstream_sha256": "fde3c586966dd84f3684a0b58acbea6a44a6d71284eed101803a1dd653129e2e",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/fr_FR.qm",
+      "bytes": 27550,
+      "sha256": "00e32755da296f13c19b52f8fadf5f4d59d586384a1b00e008b36c6eb9ce40f8",
+      "upstream_sha256": "00e32755da296f13c19b52f8fadf5f4d59d586384a1b00e008b36c6eb9ce40f8",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/fr_FR.ts",
+      "bytes": 51878,
+      "sha256": "215d64fd312ea4f1ba9dd430eb5dff6e43512f4e7e1018761b6fe96f0ac5a58f",
+      "upstream_sha256": "215d64fd312ea4f1ba9dd430eb5dff6e43512f4e7e1018761b6fe96f0ac5a58f",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/hu_HU.qm",
+      "bytes": 130255,
+      "sha256": "d2f1c4644e8a1d0bc1ca828386e59f74785d6c8c3ddd70aec1b135e154b802e8",
+      "upstream_sha256": "d2f1c4644e8a1d0bc1ca828386e59f74785d6c8c3ddd70aec1b135e154b802e8",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/hu_HU.ts",
+      "bytes": 297234,
+      "sha256": "4f68721910e467c28ca99ecf7579e02ec2b8a50c17ca1ba6318f40d736dd334e",
+      "upstream_sha256": "4f68721910e467c28ca99ecf7579e02ec2b8a50c17ca1ba6318f40d736dd334e",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/ko_KR.qm",
+      "bytes": 103569,
+      "sha256": "775c20dcc9324adcaaffa2a9e6ff5cfb1ec14631a0d63e04e780ba7f0a0a3b2a",
+      "upstream_sha256": "775c20dcc9324adcaaffa2a9e6ff5cfb1ec14631a0d63e04e780ba7f0a0a3b2a",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/ko_KR.ts",
+      "bytes": 303797,
+      "sha256": "93863f4030b6178a8d42585d9440b88bbf5817488a4d8d0415525386006a8a26",
+      "upstream_sha256": "93863f4030b6178a8d42585d9440b88bbf5817488a4d8d0415525386006a8a26",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/pt_BR.qm",
+      "bytes": 22505,
+      "sha256": "54fadb0d0f27d5bbe29ae0577a56e0686f57165b365ececd30590c32a2b9cde5",
+      "upstream_sha256": "54fadb0d0f27d5bbe29ae0577a56e0686f57165b365ececd30590c32a2b9cde5",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/pt_BR.ts",
+      "bytes": 43878,
+      "sha256": "057f09df9f8aa6b142aae31e4483cbd78cc8fe736290ac01acbac896d3302797",
+      "upstream_sha256": "057f09df9f8aa6b142aae31e4483cbd78cc8fe736290ac01acbac896d3302797",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/ru_RU.qm",
+      "bytes": 104214,
+      "sha256": "ce288c201f4a94368040334334a6627aea99c616e58b849c674ad27361698751",
+      "upstream_sha256": "ce288c201f4a94368040334334a6627aea99c616e58b849c674ad27361698751",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/ru_RU.ts",
+      "bytes": 245420,
+      "sha256": "c59e2d8396527dbecbbe5dba00adf5a450c7e080b66197355a91c401cfb800eb",
+      "upstream_sha256": "c59e2d8396527dbecbbe5dba00adf5a450c7e080b66197355a91c401cfb800eb",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/zh_CN.qm",
+      "bytes": 99122,
+      "sha256": "9ff4be6532e5a86786033f725fba8dee2818334ae2697934b225ba857e1d30fe",
+      "upstream_sha256": "9ff4be6532e5a86786033f725fba8dee2818334ae2697934b225ba857e1d30fe",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/zh_CN.ts",
+      "bytes": 332969,
+      "sha256": "f5be4499eade5d82564c8f6eb1b7bbb41e713a4f444b8d880e28a6d32e095651",
+      "upstream_sha256": "f5be4499eade5d82564c8f6eb1b7bbb41e713a4f444b8d880e28a6d32e095651",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/zh_TW.qm",
+      "bytes": 99019,
+      "sha256": "4c6b21b7ac1f3da3764a5f3fcbd7d4dcfad2b8af5584c2c80edbda59c9ede4eb",
+      "upstream_sha256": "4c6b21b7ac1f3da3764a5f3fcbd7d4dcfad2b8af5584c2c80edbda59c9ede4eb",
+      "modified": false
+    },
+    {
+      "path": "resources/translate/zh_TW.ts",
+      "bytes": 330922,
+      "sha256": "227673dea765ff8ce78800801ded478f09b64a61b84bcb796347e99ac971bbb9",
+      "upstream_sha256": "227673dea765ff8ce78800801ded478f09b64a61b84bcb796347e99ac971bbb9",
+      "modified": false
+    },
+    {
+      "path": "scripts/BTjson_to_LPtxt.pyw",
+      "bytes": 6671,
+      "sha256": "b651c7d5ca831f40073db686f450a5db684a742a74571d6c2fe9ca96eaae03cf",
+      "upstream_sha256": "b651c7d5ca831f40073db686f450a5db684a742a74571d6c2fe9ca96eaae03cf",
+      "modified": false
+    },
+    {
+      "path": "scripts/build_win_minimal.ps1",
+      "bytes": 6425,
+      "sha256": "c7c0795ff0b6f500e56defe1d68b8cc7a5ef181a04d880f498975ca18dd9c072",
+      "upstream_sha256": "c7c0795ff0b6f500e56defe1d68b8cc7a5ef181a04d880f498975ca18dd9c072",
+      "modified": false
+    },
+    {
+      "path": "scripts/export to photoshop/BallonTranslator_PS_Bridge.jsx",
+      "bytes": 53516,
+      "sha256": "56ad117edd6b489963db822279a167f4738afa79a137af303dad3cb33ec81f9d",
+      "upstream_sha256": "56ad117edd6b489963db822279a167f4738afa79a137af303dad3cb33ec81f9d",
+      "modified": false
+    },
+    {
+      "path": "scripts/export to photoshop/install_manual.md",
+      "bytes": 2748,
+      "sha256": "a39d079012cfa598c48e883260c85c3b008008986f06c4293084635df2f8b188",
+      "upstream_sha256": "a39d079012cfa598c48e883260c85c3b008008986f06c4293084635df2f8b188",
+      "modified": false
+    },
+    {
+      "path": "scripts/export to photoshop/readme.md",
+      "bytes": 8981,
+      "sha256": "96c3988f75ea6adef874171e2cc85fc94ab82abff744c7646600ffcdfd56b3b7",
+      "upstream_sha256": "96c3988f75ea6adef874171e2cc85fc94ab82abff744c7646600ffcdfd56b3b7",
+      "modified": false
+    },
+    {
+      "path": "scripts/install.bat",
+      "bytes": 149,
+      "sha256": "3d56afb4d4d4285502ef874fa6bfaef9e14555503257b35dff4b992ca52b8fed",
+      "upstream_sha256": "3d56afb4d4d4285502ef874fa6bfaef9e14555503257b35dff4b992ca52b8fed",
+      "modified": false
+    },
+    {
+      "path": "scripts/install.ps1",
+      "bytes": 5750,
+      "sha256": "c2c3bdf41fcad6d2d83250a90f6c746416a25646b65cc796a149a59150958c55",
+      "upstream_sha256": "c2c3bdf41fcad6d2d83250a90f6c746416a25646b65cc796a149a59150958c55",
+      "modified": false
+    },
+    {
+      "path": "scripts/install.sh",
+      "bytes": 3103,
+      "sha256": "87950c383eb0f06c90aa423cf5c19c5ef14226340de3caa7d01768e2748f9733",
+      "upstream_sha256": "87950c383eb0f06c90aa423cf5c19c5ef14226340de3caa7d01768e2748f9733",
+      "modified": false
+    },
+    {
+      "path": "scripts/merge_zh_translation.py",
+      "bytes": 6263,
+      "sha256": "33ef534249d00c553e59da65060a01ff9b703806dfc73bce2a1ef874a06c1736",
+      "upstream_sha256": "33ef534249d00c553e59da65060a01ff9b703806dfc73bce2a1ef874a06c1736",
+      "modified": false
+    },
+    {
+      "path": "scripts/run_module.py",
+      "bytes": 2511,
+      "sha256": "ffbe3b4e08fd85043d945c9150c769ebfe43f4e2751a2c5cd5cbd38efc195470",
+      "upstream_sha256": "ffbe3b4e08fd85043d945c9150c769ebfe43f4e2751a2c5cd5cbd38efc195470",
+      "modified": false
+    },
+    {
+      "path": "scripts/svgscript.py",
+      "bytes": 2064,
+      "sha256": "8fc235f48932220ab7608cda2e9a8f5d494c7506673d4a66f9e7f300b367ca7d",
+      "upstream_sha256": "8fc235f48932220ab7608cda2e9a8f5d494c7506673d4a66f9e7f300b367ca7d",
+      "modified": false
+    },
+    {
+      "path": "scripts/update_translation.py",
+      "bytes": 6390,
+      "sha256": "1732119c2b8628ebce7ecb975b816ec9f0e6a8d01f283fe4b3a084897618e5b6",
+      "upstream_sha256": "1732119c2b8628ebce7ecb975b816ec9f0e6a8d01f283fe4b3a084897618e5b6",
+      "modified": false
+    },
+    {
+      "path": "tests/_llm_translation_test_support.py",
+      "bytes": 6642,
+      "sha256": "3047662baea3fccd22e9c79d1b3f1adb951d720fd78cc65fc072b82a9895ff53",
+      "upstream_sha256": "3047662baea3fccd22e9c79d1b3f1adb951d720fd78cc65fc072b82a9895ff53",
+      "modified": false
+    },
+    {
+      "path": "tests/test_adaptive_wrap_layout.py",
+      "bytes": 1020,
+      "sha256": "6af2fd669724dc62cfba1189a7c5f2431a4992ce14b56d3f68f4b0db003e7c05",
+      "upstream_sha256": "6af2fd669724dc62cfba1189a7c5f2431a4992ce14b56d3f68f4b0db003e7c05",
+      "modified": false
+    },
+    {
+      "path": "tests/test_app_event_filters.py",
+      "bytes": 11027,
+      "sha256": "d79a07ff943a247fba0f20457aefa2f4d1f5caabb6f612fb36444e6267bc97b0",
+      "upstream_sha256": "d79a07ff943a247fba0f20457aefa2f4d1f5caabb6f612fb36444e6267bc97b0",
+      "modified": false
+    },
+    {
+      "path": "tests/test_brush_lines.py",
+      "bytes": 15757,
+      "sha256": "d18adc8fe5e622b310f3198f09b1e9e61c4ebcbdfb22060d426d3d62ec019443",
+      "upstream_sha256": "d18adc8fe5e622b310f3198f09b1e9e61c4ebcbdfb22060d426d3d62ec019443",
+      "modified": false
+    },
+    {
+      "path": "tests/test_canvas_cursor_lifecycle.py",
+      "bytes": 11507,
+      "sha256": "cdee968b7489cb341afef0ff190978bc05009d2e50939e286c401e2555e5f026",
+      "upstream_sha256": "cdee968b7489cb341afef0ff190978bc05009d2e50939e286c401e2555e5f026",
+      "modified": false
+    },
+    {
+      "path": "tests/test_canvas_inpaint_lifecycle.py",
+      "bytes": 28811,
+      "sha256": "d01483a3c4ed20754f20e023a98664a9a20b1b12c7cbd9269d29bdba7ef9ffe2",
+      "upstream_sha256": "d01483a3c4ed20754f20e023a98664a9a20b1b12c7cbd9269d29bdba7ef9ffe2",
+      "modified": false
+    },
+    {
+      "path": "tests/test_canvas_stroke_lifecycle.py",
+      "bytes": 2048,
+      "sha256": "95f5dac9fc25391ca1e4f8431b9b41113173a53537528c662972463c6501eea0",
+      "upstream_sha256": "95f5dac9fc25391ca1e4f8431b9b41113173a53537528c662972463c6501eea0",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex.py",
+      "bytes": 86769,
+      "sha256": "69a2686ee6348a198c68b9f4d19d761a44535813c2ef468680aa78b0f933c219",
+      "upstream_sha256": "69a2686ee6348a198c68b9f4d19d761a44535813c2ef468680aa78b0f933c219",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_auth.py",
+      "bytes": 20161,
+      "sha256": "dfbab8ce252ca9eea192bf21c49a2cf65d4e236b1444f19f5b7ff8b9e76a1e84",
+      "upstream_sha256": "dfbab8ce252ca9eea192bf21c49a2cf65d4e236b1444f19f5b7ff8b9e76a1e84",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_configpanel.py",
+      "bytes": 2815,
+      "sha256": "1927f69d7c1e2209f66b546716f5ab57c76f2bf7019ebf68472c8b2b226417f6",
+      "upstream_sha256": "1927f69d7c1e2209f66b546716f5ab57c76f2bf7019ebf68472c8b2b226417f6",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_runtime.py",
+      "bytes": 12508,
+      "sha256": "3497a58d2910649ae3c596e7bafa9b79e9d8178adb2fc31bf7cd90522596659b",
+      "upstream_sha256": "3497a58d2910649ae3c596e7bafa9b79e9d8178adb2fc31bf7cd90522596659b",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_settings.py",
+      "bytes": 25451,
+      "sha256": "468d2822da62d8290e902bda442220a188770abb28543769df0b422f5aa9cd2e",
+      "upstream_sha256": "468d2822da62d8290e902bda442220a188770abb28543769df0b422f5aa9cd2e",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_sign_in_dialog.py",
+      "bytes": 9033,
+      "sha256": "d4541e7e1e53f695722bbedff7e7ece6079e218370f479b34cef5920c9cbef00",
+      "upstream_sha256": "d4541e7e1e53f695722bbedff7e7ece6079e218370f479b34cef5920c9cbef00",
+      "modified": false
+    },
+    {
+      "path": "tests/test_codex_storage.py",
+      "bytes": 17432,
+      "sha256": "1b4a8f71f37f0b8e612fb09d8095207548c7bf33bd1137cea601f581af7fcfe3",
+      "upstream_sha256": "1b4a8f71f37f0b8e612fb09d8095207548c7bf33bd1137cea601f581af7fcfe3",
+      "modified": false
+    },
+    {
+      "path": "tests/test_core_requirements.py",
+      "bytes": 9571,
+      "sha256": "7c717bb0a099197a78659436ddfc79a2c7f3f820bbf357a6bcdecadbdbfd0b58",
+      "upstream_sha256": "7c717bb0a099197a78659436ddfc79a2c7f3f820bbf357a6bcdecadbdbfd0b58",
+      "modified": false
+    },
+    {
+      "path": "tests/test_custom_colors.py",
+      "bytes": 2444,
+      "sha256": "509f8acff8c09fb10a0cca9594dc69affba9591b139b9313c3e144eac34edb04",
+      "upstream_sha256": "509f8acff8c09fb10a0cca9594dc69affba9591b139b9313c3e144eac34edb04",
+      "modified": false
+    },
+    {
+      "path": "tests/test_drawing_inpainter.py",
+      "bytes": 16770,
+      "sha256": "08ab377e9b8d943da93854cb39adf8ca43e418923dbce6124c0be509dd34ef5d",
+      "upstream_sha256": "08ab377e9b8d943da93854cb39adf8ca43e418923dbce6124c0be509dd34ef5d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_drawpanel_config.py",
+      "bytes": 4376,
+      "sha256": "cda6ae32fbfc3098cc0302757a96e48ed75a6af64b8940d23ff0069995384cad",
+      "upstream_sha256": "cda6ae32fbfc3098cc0302757a96e48ed75a6af64b8940d23ff0069995384cad",
+      "modified": false
+    },
+    {
+      "path": "tests/test_editing_layer_opacity.py",
+      "bytes": 9101,
+      "sha256": "311babe43834e6defa05b194932c52189b25ec0fc867f490595d709807113495",
+      "upstream_sha256": "311babe43834e6defa05b194932c52189b25ec0fc867f490595d709807113495",
+      "modified": false
+    },
+    {
+      "path": "tests/test_effect_paint_numba.py",
+      "bytes": 12251,
+      "sha256": "63cd654c29d5ce5ed584849d565c48b799eba9692f8fb37e3e8934dd7477d089",
+      "upstream_sha256": "63cd654c29d5ce5ed584849d565c48b799eba9692f8fb37e3e8934dd7477d089",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_exclusion.py",
+      "bytes": 9978,
+      "sha256": "184a48cb675b073627a1efff10344d31a08145f6e40a68a65a43fdf78ba1263d",
+      "upstream_sha256": "184a48cb675b073627a1efff10344d31a08145f6e40a68a65a43fdf78ba1263d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_family_resolution.py",
+      "bytes": 26227,
+      "sha256": "e0371fc2f128e67da072a483193db983cd2e188e8b7d4659d8c333d425f56695",
+      "upstream_sha256": "e0371fc2f128e67da072a483193db983cd2e188e8b7d4659d8c333d425f56695",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_refresh.py",
+      "bytes": 25164,
+      "sha256": "17ff12eab0852018b55c7e1445a06132c609e696befee508bcb28b15917ce250",
+      "upstream_sha256": "17ff12eab0852018b55c7e1445a06132c609e696befee508bcb28b15917ce250",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_registry.py",
+      "bytes": 17041,
+      "sha256": "8a8b33b1b9f687ac84715d6e642c4800e5a990041e745092e12ca3c2015813f3",
+      "upstream_sha256": "8a8b33b1b9f687ac84715d6e642c4800e5a990041e745092e12ca3c2015813f3",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_size_editing.py",
+      "bytes": 15280,
+      "sha256": "fd32f6f55b888f12db77e8fa0e9fcfb7756a71c1506270c566df725a400613da",
+      "upstream_sha256": "fd32f6f55b888f12db77e8fa0e9fcfb7756a71c1506270c566df725a400613da",
+      "modified": false
+    },
+    {
+      "path": "tests/test_font_weight.py",
+      "bytes": 20614,
+      "sha256": "a652bf607d2ae17dc30166cb726f4f274715d207ed3f2627fccfe38fee05bead",
+      "upstream_sha256": "a652bf607d2ae17dc30166cb726f4f274715d207ed3f2627fccfe38fee05bead",
+      "modified": false
+    },
+    {
+      "path": "tests/test_grid_numba.py",
+      "bytes": 3218,
+      "sha256": "909d8448fb077eaa607f078bd72c64159882b230d89291158472e92c38d53ac6",
+      "upstream_sha256": "909d8448fb077eaa607f078bd72c64159882b230d89291158472e92c38d53ac6",
+      "modified": false
+    },
+    {
+      "path": "tests/test_horizontal_whitespace.py",
+      "bytes": 8507,
+      "sha256": "c954015312f6aa6bd33ffc890b4240aff6f7b812d47436fe5dfbdb671e3c70e8",
+      "upstream_sha256": "c954015312f6aa6bd33ffc890b4240aff6f7b812d47436fe5dfbdb671e3c70e8",
+      "modified": false
+    },
+    {
+      "path": "tests/test_image_effect.py",
+      "bytes": 31918,
+      "sha256": "fd62aa78f16b0c623d42b234383e0b62418bf1e2724686b582716b450e9fef1b",
+      "upstream_sha256": "fd62aa78f16b0c623d42b234383e0b62418bf1e2724686b582716b450e9fef1b",
+      "modified": false
+    },
+    {
+      "path": "tests/test_image_effect_rendering.py",
+      "bytes": 20781,
+      "sha256": "03b1aa33f4c0b83dd11372a079e0b56088e357131eb6e31e23a1d39f9decf9ce",
+      "upstream_sha256": "03b1aa33f4c0b83dd11372a079e0b56088e357131eb6e31e23a1d39f9decf9ce",
+      "modified": false
+    },
+    {
+      "path": "tests/test_image_generation.py",
+      "bytes": 15343,
+      "sha256": "edff002ff6bc298163b4878bb3c90c25b6ff810110a347927edf58bb3864d7cf",
+      "upstream_sha256": "edff002ff6bc298163b4878bb3c90c25b6ff810110a347927edf58bb3864d7cf",
+      "modified": false
+    },
+    {
+      "path": "tests/test_image_io.py",
+      "bytes": 1012,
+      "sha256": "af28b49abdd96ae9dd4ba17715b9d37011638abe2b9942155161a500a99dff2c",
+      "upstream_sha256": "af28b49abdd96ae9dd4ba17715b9d37011638abe2b9942155161a500a99dff2c",
+      "modified": false
+    },
+    {
+      "path": "tests/test_inpaint_magic_wand.py",
+      "bytes": 11625,
+      "sha256": "1cd8eb7535fb478d28ac31a4096d115f3c4615bdf92428e062f1aa2af7baf0ad",
+      "upstream_sha256": "1cd8eb7535fb478d28ac31a4096d115f3c4615bdf92428e062f1aa2af7baf0ad",
+      "modified": false
+    },
+    {
+      "path": "tests/test_launch_restart.py",
+      "bytes": 7851,
+      "sha256": "aca5fb7cfb09aea36ac5bf0fd6d0079abd0f71231e65b6d42b0e5b9f2272d21e",
+      "upstream_sha256": "aca5fb7cfb09aea36ac5bf0fd6d0079abd0f71231e65b6d42b0e5b9f2272d21e",
+      "modified": false
+    },
+    {
+      "path": "tests/test_lazy_metadata.py",
+      "bytes": 5376,
+      "sha256": "22aa929e0d0c77dd1605453783e4015d2f5bf153aa3bea6db0c415a1457a34f9",
+      "upstream_sha256": "22aa929e0d0c77dd1605453783e4015d2f5bf153aa3bea6db0c415a1457a34f9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_chat.py",
+      "bytes": 12654,
+      "sha256": "6a81cbead75b527a74e1654f9e6d8a73047ad76b14643140b479f08ab466fd76",
+      "upstream_sha256": "6a81cbead75b527a74e1654f9e6d8a73047ad76b14643140b479f08ab466fd76",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_context_editor.py",
+      "bytes": 8557,
+      "sha256": "e1f42f703570ee78ca05e194b1807f1d4d23f3f8d811b84d900fd421fa6477d5",
+      "upstream_sha256": "e1f42f703570ee78ca05e194b1807f1d4d23f3f8d811b84d900fd421fa6477d5",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_inpaint.py",
+      "bytes": 70756,
+      "sha256": "c2fcc4861f155017f863f4c9858d591d4b659a9e1afab6c0bba8bae91458b201",
+      "upstream_sha256": "c2fcc4861f155017f863f4c9858d591d4b659a9e1afab6c0bba8bae91458b201",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_key_dialog.py",
+      "bytes": 32668,
+      "sha256": "5f18a115a6d5e48490824e497672e667a3d6ab81e0ba51458aa312fea1bab86d",
+      "upstream_sha256": "5f18a115a6d5e48490824e497672e667a3d6ab81e0ba51458aa312fea1bab86d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_ocr.py",
+      "bytes": 10676,
+      "sha256": "cb38cd05b44fe1745a891ff2d7b87c544ea8d6c0adc359b48783ba86b5ae8ec9",
+      "upstream_sha256": "cb38cd05b44fe1745a891ff2d7b87c544ea8d6c0adc359b48783ba86b5ae8ec9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_profile_widgets.py",
+      "bytes": 17543,
+      "sha256": "df91750ebf690344fdf9c8e8655d89dbba4488d68fa7b255dba0b9a82441290a",
+      "upstream_sha256": "df91750ebf690344fdf9c8e8655d89dbba4488d68fa7b255dba0b9a82441290a",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_profiles.py",
+      "bytes": 39543,
+      "sha256": "e26d51f73af98f2e159670e08e17f1bd26dc9a8f04632db709e90e32acd7a487",
+      "upstream_sha256": "e26d51f73af98f2e159670e08e17f1bd26dc9a8f04632db709e90e32acd7a487",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translation_contract.py",
+      "bytes": 16361,
+      "sha256": "b5f8a7ef4d38d8d54b93e7928d1f8269656705dd6352a7c19aa114321e21511f",
+      "upstream_sha256": "b5f8a7ef4d38d8d54b93e7928d1f8269656705dd6352a7c19aa114321e21511f",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translation_history.py",
+      "bytes": 52111,
+      "sha256": "c86244fd8e20b74edf2541c932b65f4d4408a20ed10b0b3417414bc87822053a",
+      "upstream_sha256": "c86244fd8e20b74edf2541c932b65f4d4408a20ed10b0b3417414bc87822053a",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translation_integration.py",
+      "bytes": 5190,
+      "sha256": "cb220ef34eb693375bc7fe22259ae0f6ffab64475cfeb4a6a16f8eeaca7979a4",
+      "upstream_sha256": "cb220ef34eb693375bc7fe22259ae0f6ffab64475cfeb4a6a16f8eeaca7979a4",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translation_memory.py",
+      "bytes": 28075,
+      "sha256": "c7a93aab242965edc9af06c7e0e3d7a35902d4f6ccfb0148ecd546a0ece9b41c",
+      "upstream_sha256": "c7a93aab242965edc9af06c7e0e3d7a35902d4f6ccfb0148ecd546a0ece9b41c",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translation_summary.py",
+      "bytes": 28048,
+      "sha256": "127863d39d3afa55d967183c4c8bb0304bdf401f2be99746db7075d522a9f3b6",
+      "upstream_sha256": "127863d39d3afa55d967183c4c8bb0304bdf401f2be99746db7075d522a9f3b6",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_translator.py",
+      "bytes": 20102,
+      "sha256": "0191e04de378de0420bdef17179592b48d6bbc45c663fb7f283ad4addd24807d",
+      "upstream_sha256": "0191e04de378de0420bdef17179592b48d6bbc45c663fb7f283ad4addd24807d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_llm_vision.py",
+      "bytes": 2786,
+      "sha256": "90fa86ebe13523d3a9e6d22fbc3e98055e3d59a478c990c3e59b749b0a247de2",
+      "upstream_sha256": "90fa86ebe13523d3a9e6d22fbc3e98055e3d59a478c990c3e59b749b0a247de2",
+      "modified": false
+    },
+    {
+      "path": "tests/test_magic_wand_canvas.py",
+      "bytes": 9018,
+      "sha256": "a8a4ee2f29b028f842ef4cff8c841415db33776d21103670633f95753df4420d",
+      "upstream_sha256": "a8a4ee2f29b028f842ef4cff8c841415db33776d21103670633f95753df4420d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_module_run_errors.py",
+      "bytes": 5803,
+      "sha256": "ce1536eca552823d034a8f03c8443e2907ceb674a19e6c2aa0700f558c9df773",
+      "upstream_sha256": "ce1536eca552823d034a8f03c8443e2907ceb674a19e6c2aa0700f558c9df773",
+      "modified": false
+    },
+    {
+      "path": "tests/test_module_selection_menu.py",
+      "bytes": 15288,
+      "sha256": "5169419d5cf925d94495cb46ea9d22bbb82836f7638f217816b916d5d9b074f0",
+      "upstream_sha256": "5169419d5cf925d94495cb46ea9d22bbb82836f7638f217816b916d5d9b074f0",
+      "modified": false
+    },
+    {
+      "path": "tests/test_network_mirrors.py",
+      "bytes": 3255,
+      "sha256": "3d314229c648c0816523e1abd1babb6a0048750764458b16219ae8ad13646da7",
+      "upstream_sha256": "3d314229c648c0816523e1abd1babb6a0048750764458b16219ae8ad13646da7",
+      "modified": false
+    },
+    {
+      "path": "tests/test_pair_widget_interactions.py",
+      "bytes": 6443,
+      "sha256": "ea744330ccd3685ae62bc95481aec28015af3a96c6eeac2aad15b2f8e2d11012",
+      "upstream_sha256": "ea744330ccd3685ae62bc95481aec28015af3a96c6eeac2aad15b2f8e2d11012",
+      "modified": false
+    },
+    {
+      "path": "tests/test_path_reorder.py",
+      "bytes": 12351,
+      "sha256": "cb8ef0f20dcddf373ea41850a43ebd76455f05136637fb4321aa9fd34448bce1",
+      "upstream_sha256": "cb8ef0f20dcddf373ea41850a43ebd76455f05136637fb4321aa9fd34448bce1",
+      "modified": false
+    },
+    {
+      "path": "tests/test_photoshop_bridge.py",
+      "bytes": 9176,
+      "sha256": "9490a9890c56411ea397a4c6097f2ac99c355f739a26c407642b0eb746946a52",
+      "upstream_sha256": "9490a9890c56411ea397a4c6097f2ac99c355f739a26c407642b0eb746946a52",
+      "modified": false
+    },
+    {
+      "path": "tests/test_proj_imgtrans_translation_context.py",
+      "bytes": 15669,
+      "sha256": "ad6a4fe42b92b251aec0bcab9e646611ee829dc6d0e9beb078aa837f0002db84",
+      "upstream_sha256": "ad6a4fe42b92b251aec0bcab9e646611ee829dc6d0e9beb078aa837f0002db84",
+      "modified": false
+    },
+    {
+      "path": "tests/test_rich_text_annotations.py",
+      "bytes": 150123,
+      "sha256": "fa1f39879b9f654d626abb214a18376ad6014e115fdf06c4b189f1d77b13fc7d",
+      "upstream_sha256": "fa1f39879b9f654d626abb214a18376ad6014e115fdf06c4b189f1d77b13fc7d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_ruby_furigana.py",
+      "bytes": 83734,
+      "sha256": "74024833d122a88903a082b44a0e4980cb4a97d45db8fc953b8afbd62959e1c9",
+      "upstream_sha256": "74024833d122a88903a082b44a0e4980cb4a97d45db8fc953b8afbd62959e1c9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_run_pipeline_dialog.py",
+      "bytes": 78578,
+      "sha256": "101769ad4dfd0a7385ca5f273f8f47dab7fdf17a61b37c0ab3a6c1cf385e95c1",
+      "upstream_sha256": "101769ad4dfd0a7385ca5f273f8f47dab7fdf17a61b37c0ab3a6c1cf385e95c1",
+      "modified": false
+    },
+    {
+      "path": "tests/test_shape_fill.py",
+      "bytes": 22875,
+      "sha256": "587e39f54ca9b1b303e3e4fa3db241bbd4c6620667217634b08daa328f27a558",
+      "upstream_sha256": "587e39f54ca9b1b303e3e4fa3db241bbd4c6620667217634b08daa328f27a558",
+      "modified": false
+    },
+    {
+      "path": "tests/test_size_control_label.py",
+      "bytes": 1737,
+      "sha256": "d9ef1bd877cdb3066cc3186fe7c0f2cab61def8a60098d27ffc3be754785c252",
+      "upstream_sha256": "d9ef1bd877cdb3066cc3186fe7c0f2cab61def8a60098d27ffc3be754785c252",
+      "modified": false
+    },
+    {
+      "path": "tests/test_spellcheck.py",
+      "bytes": 6341,
+      "sha256": "dae3ad03dd1821ac9e910d9c32ce1d9c25da97f19d4833c2cdce56d9c03bc762",
+      "upstream_sha256": "dae3ad03dd1821ac9e910d9c32ce1d9c25da97f19d4833c2cdce56d9c03bc762",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_alpha_mask.py",
+      "bytes": 8346,
+      "sha256": "5878f5842394d8ae1648f396cc9ed3815a05656aafe6a788845ae0c0dd15e2b9",
+      "upstream_sha256": "5878f5842394d8ae1648f396cc9ed3815a05656aafe6a788845ae0c0dd15e2b9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_alpha_mask_edit_session.py",
+      "bytes": 22000,
+      "sha256": "f988530baf41e0db39c6c025daf60bcfd123dc1d66e0e24a65b4ba7f8cbf0e4e",
+      "upstream_sha256": "f988530baf41e0db39c6c025daf60bcfd123dc1d66e0e24a65b4ba7f8cbf0e4e",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_alpha_mask_renderer.py",
+      "bytes": 33798,
+      "sha256": "4c19fcf0102ec9bb1820f7c59bb24fa70eb142fbf177e207af0f8a875fd1ab9c",
+      "upstream_sha256": "4c19fcf0102ec9bb1820f7c59bb24fa70eb142fbf177e207af0f8a875fd1ab9c",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_effect_domain.py",
+      "bytes": 38789,
+      "sha256": "5bab7c3a484adf00946c8141c7b72284a50c657c76e34a49bbcd09691b0c54d6",
+      "upstream_sha256": "5bab7c3a484adf00946c8141c7b72284a50c657c76e34a49bbcd09691b0c54d6",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_effect_limits.py",
+      "bytes": 6486,
+      "sha256": "1b2c1bd6caabf961a055f565d9a037679ec2fdf4c274806aef2834101e1e8cfd",
+      "upstream_sha256": "1b2c1bd6caabf961a055f565d9a037679ec2fdf4c274806aef2834101e1e8cfd",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_effect_panel.py",
+      "bytes": 172904,
+      "sha256": "4f2752c13aa4415f86054fd00d6691f3dff25c404162394294a001029f9c67c0",
+      "upstream_sha256": "4f2752c13aa4415f86054fd00d6691f3dff25c404162394294a001029f9c67c0",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_effect_persistence.py",
+      "bytes": 39998,
+      "sha256": "b400fe193590e052c5a9ec826d286a35ed5b0668265e31494f202fffbd187351",
+      "upstream_sha256": "b400fe193590e052c5a9ec826d286a35ed5b0668265e31494f202fffbd187351",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_effect_preview.py",
+      "bytes": 40229,
+      "sha256": "6c0600a907c57c8b58150faeca6ac1ccca76c1c1b0e42c2abe21da39f835ad56",
+      "upstream_sha256": "6c0600a907c57c8b58150faeca6ac1ccca76c1c1b0e42c2abe21da39f835ad56",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_engine_cache.py",
+      "bytes": 1321,
+      "sha256": "3f9952c9d404b65e93f3439bf0d72620c2ca0ed32fedf46bc4f2a0c0604744c9",
+      "upstream_sha256": "3f9952c9d404b65e93f3439bf0d72620c2ca0ed32fedf46bc4f2a0c0604744c9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_filter_registry.py",
+      "bytes": 26250,
+      "sha256": "afc5a561c2cc71c63eda826cb6937432d10dd9be2ce01d9ca4b10228f68f8503",
+      "upstream_sha256": "afc5a561c2cc71c63eda826cb6937432d10dd9be2ce01d9ca4b10228f68f8503",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_filter_renderer.py",
+      "bytes": 46934,
+      "sha256": "19cdbef2f5c25a4f1cd7bd5d70b63eb8959470d1ed579e206d0484b8eded7d4d",
+      "upstream_sha256": "19cdbef2f5c25a4f1cd7bd5d70b63eb8959470d1ed579e206d0484b8eded7d4d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_style_preset_reordering.py",
+      "bytes": 4793,
+      "sha256": "4011dd3c451711546e3b2325fdc127f6f00737dd2969c6281875cec430d7aea9",
+      "upstream_sha256": "4011dd3c451711546e3b2325fdc127f6f00737dd2969c6281875cec430d7aea9",
+      "modified": false
+    },
+    {
+      "path": "tests/test_text_transform_undo.py",
+      "bytes": 255549,
+      "sha256": "13642732bcfa58fb746b06d18620f15ed1bbbb18f170c8b9a910605b5ba80c2d",
+      "upstream_sha256": "13642732bcfa58fb746b06d18620f15ed1bbbb18f170c8b9a910605b5ba80c2d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_torch_install_helper.py",
+      "bytes": 16764,
+      "sha256": "b71e1d74db5ec1a6e41151f1cc637b451b2f500607dcc4c1ea7ac8970a54bd4d",
+      "upstream_sha256": "b71e1d74db5ec1a6e41151f1cc637b451b2f500607dcc4c1ea7ac8970a54bd4d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_translator_glossary.py",
+      "bytes": 7602,
+      "sha256": "1335512d9ce0172e992e59cc349cb1b7274c22cb5c2c60b18e1d6a4199cbd117",
+      "upstream_sha256": "1335512d9ce0172e992e59cc349cb1b7274c22cb5c2c60b18e1d6a4199cbd117",
+      "modified": false
+    },
+    {
+      "path": "tests/test_typed_text_effect_renderer.py",
+      "bytes": 125167,
+      "sha256": "5b64a8fcb37ab8f06b78fc48a0e85e585657e2d2f9d802ce94861a0c9848f665",
+      "upstream_sha256": "5b64a8fcb37ab8f06b78fc48a0e85e585657e2d2f9d802ce94861a0c9848f665",
+      "modified": false
+    },
+    {
+      "path": "tests/test_update_dialog.py",
+      "bytes": 4315,
+      "sha256": "3616d3b98efc906e342e41ca3794e440892cecf7b54ab56dfe402215ed6bce55",
+      "upstream_sha256": "3616d3b98efc906e342e41ca3794e440892cecf7b54ab56dfe402215ed6bce55",
+      "modified": false
+    },
+    {
+      "path": "tests/test_updater.py",
+      "bytes": 15573,
+      "sha256": "f126bad3a809c8a314d1f9390ff6fac633462b9e32b844c14e04a4db89e4d341",
+      "upstream_sha256": "f126bad3a809c8a314d1f9390ff6fac633462b9e32b844c14e04a4db89e4d341",
+      "modified": false
+    },
+    {
+      "path": "tests/test_vertical_alignment.py",
+      "bytes": 20502,
+      "sha256": "b3c4a277f00ec4b03f4fd541ab5959e0921f3e833e9d8e4020ddbaf85bc2fc5d",
+      "upstream_sha256": "b3c4a277f00ec4b03f4fd541ab5959e0921f3e833e9d8e4020ddbaf85bc2fc5d",
+      "modified": false
+    },
+    {
+      "path": "tests/test_vertical_interaction.py",
+      "bytes": 21068,
+      "sha256": "03a59686c5ce55d6360d50198ca95863f722931daae2036093dd8054bdb4cf03",
+      "upstream_sha256": "03a59686c5ce55d6360d50198ca95863f722931daae2036093dd8054bdb4cf03",
+      "modified": false
+    },
+    {
+      "path": "tests/test_vertical_roman_alignment.py",
+      "bytes": 56901,
+      "sha256": "5c32623e8b41679dddf0074b22bfd99812863291da1663229a6c85e0d81dc256",
+      "upstream_sha256": "5c32623e8b41679dddf0074b22bfd99812863291da1663229a6c85e0d81dc256",
+      "modified": false
+    },
+    {
+      "path": "tests/ui/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "tests/ui/render_emphasis_native_fixture.py",
+      "bytes": 4906,
+      "sha256": "a037094bc17863b57269ed2c879dd6b841da4a00218495bf41b586b2900feae3",
+      "upstream_sha256": "a037094bc17863b57269ed2c879dd6b841da4a00218495bf41b586b2900feae3",
+      "modified": false
+    },
+    {
+      "path": "tests/ui/render_ruby_furigana_fixture.py",
+      "bytes": 4503,
+      "sha256": "2d132d0a4e6c5fa1a4cbb4ea15608af84cd88be693925dcb65b04cd2edd62b05",
+      "upstream_sha256": "2d132d0a4e6c5fa1a4cbb4ea15608af84cd88be693925dcb65b04cd2edd62b05",
+      "modified": false
+    },
+    {
+      "path": "tests/ui/render_vertical_roman_overflow_fixture.py",
+      "bytes": 3593,
+      "sha256": "cdf02c226366f51b51497bf3cd5593829f850c467f3f120c66ef78fb036b25c1",
+      "upstream_sha256": "cdf02c226366f51b51497bf3cd5593829f850c467f3f120c66ef78fb036b25c1",
+      "modified": false
+    },
+    {
+      "path": "tests/ui/text_rendering.py",
+      "bytes": 3210,
+      "sha256": "9c45c8677e3740c1dc3ec453b13b0af05144c3eff2e1fff18ef1c5fe44946d69",
+      "upstream_sha256": "9c45c8677e3740c1dc3ec453b13b0af05144c3eff2e1fff18ef1c5fe44946d69",
+      "modified": false
+    }
+  ]
+}

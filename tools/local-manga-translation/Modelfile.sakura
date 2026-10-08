@@ -1,0 +1,12 @@
+FROM ./sakura-14b-qwen2.5-v1.0-q6k.gguf
+TEMPLATE """{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+PARAMETER temperature 0.1
+PARAMETER top_p 0.3
+PARAMETER repeat_penalty 1
+PARAMETER num_ctx 4096
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"

@@ -1,0 +1,249 @@
+from typing import Callable, List, Optional
+
+from qtpy.QtWidgets import (
+    QComboBox,
+    QStyle,
+    QStyleOptionComboBox,
+    QStylePainter,
+    QWidget,
+)
+from qtpy.QtCore import QSize, Signal, Qt
+from qtpy.QtGui import QDoubleValidator, QPaintEvent, QPainter, QPalette
+
+from ballontranslator.utils.shared import CONFIG_COMBOBOX_LONG, CONFIG_COMBOBOX_MIDEAN, CONFIG_COMBOBOX_SHORT, CONFIG_COMBOBOX_HEIGHT
+from .push_button import NoBorderPushBtn
+from ..icon_rendering import render_svg_pixmap
+from ..misc import themed_icon_path
+
+
+class ComboBox(QComboBox):
+
+    # https://stackoverflow.com/questions/3241830/qt-how-to-disable-mouse-scrolling-of-qcombobox
+    def __init__(self, parent: QWidget = None, scrollWidget: QWidget = None, options: List[str] = None) -> None:
+        super().__init__(parent)
+        self.scrollWidget = scrollWidget
+        if options is not None:
+            self.addItems(options)
+
+    def setScrollWidget(self, scrollWidget: QWidget):
+        self.scrollWidget = scrollWidget
+
+    def wheelEvent(self, *args, **kwargs):
+        if self.scrollWidget is None or self.hasFocus():
+            return super().wheelEvent(*args, **kwargs)
+        else:
+            return self.scrollWidget.wheelEvent(*args, **kwargs)
+        
+
+class SmallComboBox(ComboBox):
+    pass
+
+
+class BottomBorderComboBox(QComboBox):
+    """Combo box with the app's compact bottom-border selector treatment.
+
+    >>> BottomBorderComboBox.__name__
+    'BottomBorderComboBox'
+    """
+
+    ARROW_SIZE = 12
+
+    def __init__(
+        self,
+        parent: QWidget = None,
+        *,
+        text_alignment: Optional[Qt.AlignmentFlag] = None,
+    ) -> None:
+        super().__init__(parent)
+        self._text_alignment = text_alignment
+        self._width_sample_text: Optional[str] = None
+        self.setProperty('bottomBorderSelector', True)
+
+    def setWidthSampleText(self, text: str) -> None:
+        """Prefer room for ``text`` while retaining normal shrink behavior."""
+        self._width_sample_text = text
+        self.updateGeometry()
+
+    def sizeHint(self) -> QSize:
+        size = super().sizeHint()
+        if not self._width_sample_text:
+            return size
+        option = QStyleOptionComboBox()
+        self.initStyleOption(option)
+        contents = QSize(
+            option.fontMetrics.horizontalAdvance(self._width_sample_text),
+            option.fontMetrics.height(),
+        )
+        reference = self.style().sizeFromContents(
+            QStyle.ContentsType.CT_ComboBox,
+            option,
+            contents,
+            self,
+        )
+        size.setWidth(max(size.width(), reference.width()))
+        return size
+
+    def paintEvent(self, event: QPaintEvent) -> None:
+        if self._text_alignment is None:
+            super().paintEvent(event)
+            painter = QPainter(self)
+        else:
+            option = QStyleOptionComboBox()
+            self.initStyleOption(option)
+            current_text = option.currentText
+            option.currentText = ''
+            painter = QStylePainter(self)
+            painter.drawComplexControl(
+                QStyle.ComplexControl.CC_ComboBox, option
+            )
+            painter.drawControl(
+                QStyle.ControlElement.CE_ComboBoxLabel, option
+            )
+            text_rect = self.style().subControlRect(
+                QStyle.ComplexControl.CC_ComboBox,
+                option,
+                QStyle.SubControl.SC_ComboBoxEditField,
+                self,
+            ).adjusted(2, 0, -2, 0)
+            color_group = (
+                QPalette.ColorGroup.Active
+                if self.isEnabled()
+                else QPalette.ColorGroup.Disabled
+            )
+            color_role = (
+                QPalette.ColorRole.PlaceholderText
+                if self.currentIndex() < 0
+                else QPalette.ColorRole.Text
+            )
+            painter.setPen(option.palette.color(color_group, color_role))
+            painter.drawText(
+                text_rect,
+                self._text_alignment | Qt.AlignmentFlag.AlignVCenter,
+                option.fontMetrics.elidedText(
+                    current_text,
+                    Qt.TextElideMode.ElideRight,
+                    max(0, text_rect.width()),
+                ),
+            )
+        pixmap = render_svg_pixmap(
+            themed_icon_path('chevron-down.svg'),
+            self.ARROW_SIZE,
+            self.ARROW_SIZE,
+            self.devicePixelRatioF(),
+        )
+        x = self.width() - self.ARROW_SIZE - 4
+        y = (self.height() - self.ARROW_SIZE) // 2
+        painter.drawPixmap(x, y, pixmap)
+        painter.end()
+
+
+class ConfigComboBox(ComboBox):
+
+    def __init__(self, fix_size=True, scrollWidget: QWidget = None, *args, **kwargs) -> None:
+        super().__init__(scrollWidget, *args, **kwargs)
+        self.fix_size = fix_size
+        self.adjustSize()
+        self.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+
+    def addItems(self, texts: List[str]) -> None:
+        super().addItems(texts)
+        self.adjustSize()
+
+    def adjustSize(self) -> None:
+        super().adjustSize()
+        width = self.minimumSizeHint().width()
+        if width < CONFIG_COMBOBOX_SHORT:
+            width = CONFIG_COMBOBOX_SHORT
+        elif width < CONFIG_COMBOBOX_MIDEAN:
+            width = CONFIG_COMBOBOX_MIDEAN
+        else:
+            width = CONFIG_COMBOBOX_LONG
+        if self.fix_size:
+            self.setFixedWidth(width)
+        else:
+            self.setMaximumWidth(width)
+
+
+class ParamComboBox(ComboBox):
+    paramwidget_edited = Signal(str, str)
+    flushbtn_clicked = Signal()
+    pathbtn_clicked = Signal()
+    def __init__(self, param_key: str, options: List[str], size=CONFIG_COMBOBOX_SHORT, scrollWidget: QWidget = None, flush_btn: bool = False, path_selector: bool = False, *args, **kwargs) -> None:
+        super().__init__(scrollWidget=scrollWidget, *args, **kwargs)
+        self.param_key = param_key
+        self.fit_popup_contents = False
+        self.setFixedWidth(size)
+        self.setFixedHeight(CONFIG_COMBOBOX_HEIGHT)
+        options = [str(opt) for opt in options]
+        self.addItems(options)
+        self.currentTextChanged.connect(self.on_select_changed)
+        
+        if flush_btn:
+            self.flush_btn = NoBorderPushBtn(self.tr('Flush'))
+            self.flush_btn.clicked.connect(self.flushbtn_clicked)
+        if path_selector:
+            self.path_select_btn = NoBorderPushBtn(self.tr('Select Path'))
+            self.path_select_btn.clicked.connect(self.pathbtn_clicked)
+
+    def on_select_changed(self):
+        self.paramwidget_edited.emit(self.param_key, self.currentText())
+
+    def showPopup(self) -> None:
+        if self.fit_popup_contents:
+            view = self.view()
+            width = view.sizeHintForColumn(0) + 2 * view.frameWidth() + view.verticalScrollBar().sizeHint().width()
+            view.setMinimumWidth(max(self.width(), width))
+        super().showPopup()
+
+
+class SizeComboBox(QComboBox):
+    
+    param_changed = Signal(str, float)
+    def __init__(self, val_range: List = None, param_name: str = '', parent=None, init_value=None, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self.param_name = param_name
+        self.editTextChanged.connect(self.on_text_changed)
+        self.activated.connect(self.on_current_index_changed)
+        self.setEditable(True)
+        self.min_val = val_range[0]
+        self.max_val = val_range[1]
+        validator = QDoubleValidator()
+        if val_range is not None:
+            validator.setTop(val_range[1])
+            validator.setBottom(val_range[0])
+        validator.setNotation(QDoubleValidator.Notation.StandardNotation)
+
+        self.setValidator(validator)
+        self._value = 0
+        if init_value is not None:
+            self.setValue(init_value)
+
+    def on_text_changed(self):
+        if self.hasFocus():
+            self.param_changed.emit(self.param_name, self.value())
+
+    def on_current_index_changed(self):
+        if self.hasFocus() or self.view().isVisible():
+            self.param_changed.emit(self.param_name, self.value())
+
+    def value(self) -> float:
+        txt = self.currentText()
+        try:
+            val = float(txt)
+            self._value = val
+            return val
+        except:
+            return self._value
+
+    def setValue(self, value: float):
+        value = min(self.max_val, max(self.min_val, value))
+        self.setCurrentText(str(round(value, 2)))
+
+    def changeByDelta(self, delta: float, multiplier = 0.01):
+        if isinstance(multiplier, Callable):
+            multiplier = multiplier()
+        self.setValue(self.value() + delta * multiplier)
+
+
+class SmallSizeComboBox(SizeComboBox):
+    pass

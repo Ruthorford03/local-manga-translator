@@ -1,0 +1,13 @@
+# CPU torch and torchvision are installed first from the official PyTorch CPU index.
+torch==2.14.0
+torchvision==0.29.0
+transformers==4.57.6
+einops==0.8.2
+shapely==2.1.2
+timm
+pulp
+scipy
+matplotlib
+networkx
+psutil
+requests
