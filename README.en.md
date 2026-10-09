@@ -121,6 +121,7 @@ Benchmarked on actual development hardware (re-verified 2026-10-08):
 | Engineering History & 20 Case Studies | [DEVELOPMENT_HISTORY.zh-TW.md](docs/DEVELOPMENT_HISTORY.zh-TW.md) |
 | Release Verification Scope & Offline Tests | [VALIDATION.zh-TW.md](docs/VALIDATION.zh-TW.md) |
 | Upstream Licenses, Versions & Modifications | [THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) |
+| Release Notes & Changelogs | [RELEASE_NOTES.md](docs/RELEASE_NOTES.md) |
 | Model Download URLs, Sizes & SHA-256 Checksums | [MODELS.json](docs/MODELS.json) |
 
 ---

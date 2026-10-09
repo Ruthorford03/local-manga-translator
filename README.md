@@ -94,6 +94,7 @@ Arc 顯示的「16GB」為共享 GPU 記憶體資訊，不能再加到系統 32 
 | 開發決策、自適應防壓框演算法、修正與驗證：20 個案例 | [DEVELOPMENT_HISTORY.zh-TW.md](docs/DEVELOPMENT_HISTORY.zh-TW.md) |
 | 這次公開版改了什麼、測過什麼、尚未測什麼 | [VALIDATION.zh-TW.md](docs/VALIDATION.zh-TW.md) |
 | 上游來源、授權、版本與本機修改 | [THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) |
+| 各版本更新摘要與發布紀錄 | [RELEASE_NOTES.md](docs/RELEASE_NOTES.md) |
 | 模型下載位置、檔案大小與 SHA-256 | [MODELS.json](docs/MODELS.json) |
 
 本專案注重工程嚴謹度與真實量測，詳細的效能邊界、歷史實測數據與架構設計取捨均記錄於[開發歷程](docs/DEVELOPMENT_HISTORY.zh-TW.md)，力求客觀呈現實際表現與限制，避免過度宣稱。
