@@ -1,5 +1,12 @@
 # 本機漫畫翻譯 · Local Manga Translator
 
+[繁體中文](README.md) | [English](README.en.md)
+
+[![Source and offline tests](https://github.com/Ruthorford03/local-manga-translator/actions/workflows/checks.yml/badge.svg)](https://github.com/Ruthorford03/local-manga-translator/actions/workflows/checks.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+![Platform: Windows](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
+![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+
 在 Windows 上，把日文漫畫圖片資料夾轉成繁體中文，並保留原圖、翻譯紀錄、續跑資料與人工審查入口。
 
 這是從實際使用環境整理出的 **2026-10-08 原始碼預覽版**。主要流程為 CTD 文字偵測 → Manga OCR → Magi 閱讀順序候選 → 本機 Sakura 翻譯 → OpenCC 繁體轉換 → 去字與自適應排版。專案深度整合自研的**自適應排版引擎（Adaptive Layout Engine）**與**字形墨跡級氣泡防壓框系統（Bubble Guard）**，解決常見機器翻譯排版中「字體呆板縮小」、「文字壓到氣泡邊線」、「長對話框腰斬留白」、「方形單字直橫排顛倒」等美觀與閱讀體驗痛點。模型與 Python 套件準備好後，預設翻譯使用本機 CPU／GPU；首次安裝和下載需要網路。
