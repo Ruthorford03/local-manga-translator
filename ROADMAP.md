@@ -40,6 +40,10 @@
 ---
 
 ### 4. ⚙️ 工程細節與架構精進 (Architecture & Performance)
+- [x] **全域術語與角色名稱一致性對齊器 (Global Terminology & Entity Harmonizer)**
+  - [x] 實作 `terminology_harmonizer.py`，支援自訂 `glossary.json` 動態注入 Sakura Prompt。
+  - [x] 整本翻譯完畢後自動進行片假名/命名實體審計，產出 `terminology-audit.json`，統計全書出現頻率與衝突分析。
+  - [x] 支援全域譯名一鍵批次對齊替換與多檔帳冊同步更新。
 - [ ] **單頁視覺精修雙向原子同步**
   - [ ] 現狀：按 `Ctrl+S` 儲存 overrides 與 PNG 時，未同步寫入 `翻譯對照.csv` 與批次 `translations.json`。
   - [ ] 目標：實作原子寫入同步函式，在覆寫精修成品時，一併更新對應的 CSV 與 JSON 帳冊，達成資料全流程一致性。

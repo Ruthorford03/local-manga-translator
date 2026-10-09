@@ -54,6 +54,10 @@ This project integrates a purpose-built **Adaptive Layout Engine** and an **Ink-
 ### 6. 🔍 Adaptive OCR Crop Expansion (`ocr_crop_review.py`)
 - For OCR boxes that truncate glyph strokes at the border, the system expands the box based on connected ink analysis across dual thresholds. Source text is only updated if dual passes (unpadded vs. 2px white-padded) yield identical, non-empty OCR outputs.
 
+### 7. 📚 Global Terminology & Entity Consistency (`terminology_harmonizer.py`)
+- **Custom Glossary Prompt Injection**: Automatically loads `glossary.json` from the source or work directory and injects matched character names and recurring terminology directly into Sakura translation prompts.
+- **Whole-Volume Terminology Audit & Alignment**: Automatically scans Katakana named entities and recurring nouns across the entire volume upon completion, producing `terminology-audit.json`. Supports majority-vote alignment and batch replacement across ledgers and project files to ensure 100% naming consistency from first page to last.
+
 ---
 
 ## 🚀 Key Features & Pipeline Capabilities

@@ -19,6 +19,7 @@ from run_context_probe import _reply_valid, IncompleteResponse
 from source_layout import write_render_request
 from sfx_review import register_review, verify_completed_review
 from translation_recovery import recover_page
+from terminology_harmonizer import load_glossary, format_glossary_prompt, audit_volume_terminology
 
 MODEL = 'sukinishiro:latest'
 POLICY = 'Exact local model output plus OpenCC s2tw; no semantic edits'
@@ -226,11 +227,13 @@ def prepare(source, pages, output, cancel_file=None, cpu_threads=4, legacy=None)
     return output
 
 
-def payload_for(model, rows):
+def payload_for(model, rows, glossary=None):
     original_text = '\n'.join('「' + row['japanese'] + '」' for row in rows)
+    glossary_hint = format_glossary_prompt(glossary, [row['japanese'] for row in rows]) if glossary else ''
+    user_content = '将下面的日文文本翻译成中文：' + (glossary_hint + '\n\n' if glossary_hint else '') + original_text
     return {'model': model, 'stream': True, 'keep_alive': '60m',
             'messages': [{'role': 'system', 'content': TRANSLATE_SYSTEM},
-                         {'role': 'user', 'content': '将下面的日文文本翻译成中文：' + original_text}],
+                         {'role': 'user', 'content': user_content}],
             'options': {'num_ctx': 8192, 'num_predict': 2048, 'seed': 20261001,
                         'temperature': 0.1, 'top_p': 0.3, 'repeat_penalty': 1.0, 'frequency_penalty': 0.05}}
 
@@ -411,6 +414,8 @@ def finish(source, pages, output, cancel_file=None, cpu_threads=4, server=None, 
     failed = {name: value for name, value in previous['failed_pages'].items() if name in frozen} if previous else {}
     complete = [name for name in pages if previous and name in previous['completed_pages']]
     converter, render_pages, recovered_pages = OpenCC('s2tw'), [], []
+    glossary_file = source / 'glossary.json' if (source / 'glossary.json').is_file() else (output / 'glossary.json' if (output / 'glossary.json').is_file() else None)
+    glossary = load_glossary(glossary_file)
     has_text = any(order[name]['rows'] for name in fresh_pages)
     context = nullcontext(server) if server or not has_text else LocalServer(11436, HERE / 'ollama-models', MODEL, translation_dir)
     if previous:
@@ -436,9 +441,10 @@ def finish(source, pages, output, cancel_file=None, cpu_threads=4, server=None, 
                 blocks, page_items = deepcopy(doc['pages'][name]), []
                 try:
                     label = Path(name).stem
-                    cache = response_cache(translation_dir, legacy, label, payload_for(active.model, rows), len(rows))
+                    current_payload = payload_for(active.model, rows, glossary=glossary)
+                    cache = response_cache(translation_dir, legacy, label, current_payload, len(rows))
                     try:
-                        result = chat(active, payload_for(active.model, rows), label, translation_dir,
+                        result = chat(active, current_payload, label, translation_dir,
                                       reuse_dir=cache, cancel_file=cancel_file, expected_lines=len(rows))
                     except IncompleteResponse:
                         last = read(translation_dir / (label + '-response.json'))
@@ -447,7 +453,8 @@ def finish(source, pages, output, cancel_file=None, cpu_threads=4, server=None, 
                                 or metrics.get('done') is not True or metrics.get('done_reason') != 'stop'):
                             raise
                         emit('page_block_recovery_started', page=name, blocks=len(rows))
-                        result = recover_page(active, rows, label, translation_dir, payload_for=payload_for,
+                        result = recover_page(active, rows, label, translation_dir,
+                                              payload_for=lambda m, r: payload_for(m, r, glossary=glossary),
                                               chat=chat, read=read, save=save, cancel_file=cancel_file)
                         recovered_pages.append(name)
                         emit('page_block_recovery_completed', page=name, blocks=len(rows), review_required=True)
@@ -577,9 +584,13 @@ def finish(source, pages, output, cancel_file=None, cpu_threads=4, server=None, 
             writer = csv.DictWriter(stream, fieldnames=FIELDS)
             writer.writeheader()
             writer.writerows(translated)
+        term_audit = audit_volume_terminology(translated, custom_glossary=glossary)
+        save(audit / 'terminology-audit.json', term_audit)
         verification = {'pages': len(pages), 'blocks': len(translated), 'images': images,
             'completed_pages': complete, 'failed_pages': failed, 'model_output_preserved': True,
             'human_semantic_or_punctuation_edits': False,
+            'terminology_audit': {'entities_detected': term_audit['total_entities_detected'],
+                                  'custom_glossary_enforced': term_audit['custom_glossary_enforced']},
             'small_text_blocks': [row for row in translated if row['small_text_review']],
             'no_text_detected_pages': [name for name in complete if not order[name]['rows']],
             'reading_order': {name: item['method'] for name, item in order.items()},
